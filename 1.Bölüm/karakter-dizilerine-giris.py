@@ -1,5 +1,5 @@
 print('-' * 30)
-#karakter dizilerini birleştirme.
+#karakter dizilerini birleştirme işlemi.
 print("www" + ".google." + "com") #www.google.com
 print("www" "." "google" "." "com") #www.google.com
 print("www",".","google",".","com") #www . google . com
