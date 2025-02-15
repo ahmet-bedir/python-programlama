@@ -17,7 +17,7 @@ donus_ucreti = 1.4
 masraf = gun * (gidis_ucreti + donus_ucreti)
 
 print("-" * 31)
-print("=== " + isletme, "===")
+print("=== " + isletme + " ===")
 print("-" * 31)
 print("Çalışılan Gün Sayısı\t: ", gun)
 print("İşe Gidiş Ücreti\t: ", gidis_ucreti)
