@@ -1,3 +1,4 @@
+###
 import keyword
 print("-" * 45)
 print("Kullanabileceğimiz Fonksiyonlar (keyword) :\n", dir(keyword), sep="", end="\n\n")
