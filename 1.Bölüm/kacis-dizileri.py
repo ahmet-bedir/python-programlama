@@ -1,3 +1,4 @@
+###
 print('İstanbul\'un 5 günlük hava durumu tahmini...')
 print("Python 1990 yılında \
 Guido Van Rossum tarafından \
