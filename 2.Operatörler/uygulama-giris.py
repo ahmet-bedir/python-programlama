@@ -2,7 +2,7 @@
 if kullanici_adi == '':
 if bool(kullanici_adi) == True:
 if kullanici_adi:
-Yukarıdaki kullanım şekilleri tamamen aynıdır...
+Yukarıdaki üç kullanım şekilleri tamamen aynıdır...
 '''
 a = "=== Kullanıcı Girişi ==="
 print('='*len(a), a, '='*len(a), sep='\n')
