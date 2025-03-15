@@ -1,7 +1,7 @@
 print('-'*40)
-print("for döngüsü ile türkçe harfler.")
 tr_harfler = "çÇğĞıİöÖşŞüÜ"
 
+print("for döngüsü ile türkçe harfler.")
 for harf in tr_harfler:
     print(harf, end='  ')
 print('\n','-'*40, sep='')
