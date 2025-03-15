@@ -11,36 +11,35 @@ Lütfen Tekrar Deneyin!""")
 print("""Parolanız Başarılı Bir Şekilde Oluşturulmuştur...
 Parolanız :""", parola)
 
-'''
-###2
+###
 tr_harfler = "çÇğĞıİöÖşŞüÜ"
 while True:
-  parola = input("Parola : ")
+  parola = input("Parola Belirleyiniz : ")
   for karakter in parola:
       if karakter in tr_harfler:
           print("Parolada Türkçe Karakter Kullanılamaz...")
           break
   else:
-      print("Parolanız : ", parola)
+      print("Parolanız :", parola)
       break
 
-#3
+###
 while True:
-    parola = input("Parola Belirleyin : ")
+    parola = input("Parola Belirleyiniz : ")
     if ' ' in parola:
         print("Parolanızda Boşluk Olmamalı.!")
     elif len(parola) in range(3, 9): #eğer parolanızın uzunluğu 2 ile 9 karakter aralığında ise...
-        print("Parolalanız : ", parola)
+        print("Parolalanız :", parola)
         break
     else:
         print("Parola 8 Karakterden Uzun, 3 Karakterden Kısa Olmamalı...")
 
-####
+### Karakter Dizilerinin İçeriğini Karşılaştırma.
 metin1 = "123451234589"
 metin2 = "135797979"
 fark = ""
 
-### metin1 adlı değişken içinde bulunan, ama metin2 adlı değişken içinde bulunmayan öğeleri ayırma...
+#metin1 adlı değişken içinde bulunan, ama metin2 adlı değişken içinde bulunmayan öğeleri ayırma...
 for m1 in metin1: #metin1'deki bütün öğeleri 'm1' adını verdiğimiz değişkene verdik...
     if m1 not in metin2: #eğer 'm1' adlı bu öğe metin2'de yoksa...
         if not m1 in fark: #eğer 'm1' adlı bu öğe fark'dada yoksa 'fark' değişkenini ekrana bas...
@@ -87,5 +86,3 @@ for i in metin:
     if i in metin and i not in harf:
         harf += i
 print(*harf)
-
-'''
