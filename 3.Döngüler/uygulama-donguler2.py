@@ -3,9 +3,9 @@ while True:
     parola = input("Parola Belirleyiniz (çıkış 'q') : ")
     
     for harf in parola:
-            if harf in tr_harfler:
-                print("Parolanızda Türkçe Karakter Kullanamazsınız!")
-                break
+        if harf in tr_harfler:
+            print("Parolanızda Türkçe Karakter Kullanamazsınız!")
+            break
     else:
         if parola == 'q':
             print("Programdan Çıkılıyor...")
@@ -18,6 +18,6 @@ while True:
             print("Parolanız Üç Karakterden Kısa, Yedi Karakterden Uzun  Olmamalıdır!")
         else:
             print("""Parolanız Başarılı Bir Şekilde Oluşturulmuştur.
-Parolanız : """, parola)
+Parolanız :""", parola)
             break
         
