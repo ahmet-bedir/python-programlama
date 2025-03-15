@@ -3,9 +3,9 @@ while <koşul>: koşul true olduğu müddetce döngü çalışır.
     <kodlar>   
 """
 a = 1
-while a <= 10:
+while a <= 10: #a’nın değeri 10’dan küçük olduğu müddetçe döngü çalışmaya devam eder.
     print('Döngü {}.defa çalıştı...'.format(a))
-    a += 1
+    a += 1 #a'nın değerini bir arttırmazsak programlamı sonsuz döngüye (infinite loop) sokmuş oluruz.
 
 ########################################
 tekrar = 1
