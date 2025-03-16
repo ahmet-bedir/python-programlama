@@ -2,7 +2,7 @@
 tr_harfler = "çÇğĞıİöÖşŞüÜ"
 parola = input("Parola Belirleyiniz : ")
 
-for karakter in parola: #parola değişkenindeki her karakteri karakter adlı değişkene attık.
+for karakter in parola: #parola değişkenine girdiğimiz her karakteri tek tek karakter adlı değişkene attık.
     if karakter in tr_harfler: #karakter değişkenindeki her bir karakterin tr_harfler değişkenindeki karakterlerde olup olmadığına bakıyoruz.
         print("""Parolada Türkçe Karakter Kullanılamaz...
 Lütfen Tekrar Deneyin!""")
