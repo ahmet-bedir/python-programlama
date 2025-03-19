@@ -37,32 +37,7 @@ while True:
 
 
 
-#### dosya içeriklerini karşılaştırıp, farklı öğeleri ortaya sermek.
-d1 = open("isimler1.txt") # dosyayı açıyoruz
-d1_satırlar = d1.readlines() # satırları okuyoruz
 
-d2 = open("isimler2.txt")
-d2_satırlar = d2.readlines()
-
-for i in d2_satırlar:
-    if not i in d1_satırlar:
-        print(i)
-
-d1.close()
-d2.close()
-
-####
-metin = """Bu programlama dili Guido
-Van Rossum adlı Hollandalı bir 
-programcı tarafından 90’lı yılların 
-başında geliştirilmeye başlanmıştır..."""
-g = input("Sorgulamak İsrediğiniz Harfi Giriniz : ")
-harf = ''
-for i in metin: #metin içindeki her bir öğeyi 'i' değişkenine at
-    if i == g: #i eşitse girilen harfe...
-        harf += i #harfe i'yi ekle
-print(g, "harfi metinde", len(harf),
-"kere geçiyor...")
 
 #### metindeki her bir karakteri bir kere ekrana yaz...
 metin = "python programlama dili..."
