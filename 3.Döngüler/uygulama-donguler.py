@@ -34,22 +34,8 @@ while True:
     else:
         print("Parola 8 Karakterden Uzun, 3 Karakterden Kısa Olmamalı...")
 
-### Karakter Dizilerinin İçeriğini Karşılaştırma.
-metin1 = "123451234589"
-metin2 = "135797979"
-fark = ""
 
-#metin1 adlı değişken içinde bulunan, ama metin2 adlı değişken içinde bulunmayan öğeleri ayırma...
-for m1 in metin1: #metin1'deki bütün öğeleri 'm1' adını verdiğimiz değişkene verdik...
-    if m1 not in metin2: #eğer 'm1' adlı bu öğe metin2'de yoksa...
-        if not m1 in fark: #eğer 'm1' adlı bu öğe fark'dada yoksa 'fark' değişkenini ekrana bas...
-            fark += m1
-print(*fark)
 
-#for m1 in metin1:
-   #if not m1 in metin2 and not m1 in fark:
-        #fark += m1
-#print(*fark)
 
 #### dosya içeriklerini karşılaştırıp, farklı öğeleri ortaya sermek.
 d1 = open("isimler1.txt") # dosyayı açıyoruz
