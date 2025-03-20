@@ -1,12 +1,13 @@
-###
+### Karakter Dizisindeki Karakterleri Sayma
 metin = """Bu programlama dili Guido
 Van Rossum adlı Hollandalı bir 
 programcı tarafından 90’lı yılların 
 başında geliştirilmeye başlanmıştır..."""
-g = input("Sorgulamak İsrediğiniz Harfi Giriniz : ")
-harf = ''
-for i in metin: #metin içindeki her bir öğeyi 'i' değişkenine at
-    if i == g: #i eşitse girilen harfe...
-        harf += i #harfe i'yi ekle
-print(g, "harfi metinde", len(harf),
-"kere geçiyor...")
+print(metin)
+giris = input("Sorgulamak İsrediğiniz Harfi Giriniz : ")
+harf_sayisi = 0
+
+for harf in metin: #metin içindeki her bir öğeyi 'harf' değişkenine yolla.
+    if harf == giris: #harf değişkeni eşitse girilen harfe...
+        harf_sayisi += 1 #harf_sayisi değişkenini bir arttır.
+print("'{}' harfi metinde {} kere geçiyor...".format(giris, harf_sayisi))
