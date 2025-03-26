@@ -35,15 +35,11 @@ while True:
         print("Parola 8 Karakterden Uzun, 3 Karakterden Kısa Olmamalı...")
 
 
-
-
-
-
 #### metindeki her bir karakteri bir kere ekrana yaz...
 metin = "python programlama dili..."
 
-harf = ''
-for i in metin:
-    if i in metin and i not in harf:
-        harf += i
-print(*harf)
+karakterler = ''
+for harf in metin:
+    if harf in metin and harf not in karakterler:
+        karakterler += harf
+print(*karakterler)
