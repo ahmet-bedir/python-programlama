@@ -30,7 +30,7 @@ print("'{}' harfi metinde {} kez geçiyor...".format(giris, len(harf_sayisi)))
 
 
 
-### metindeki her karakterin kaç kez geçtiğini bulma.
+### metindeki her karakterin kaç kez geçtiğini bulma.(yapım aşamasında)
 metin = "pythonpytho"
 sayi = 0
 karakterler = ''
