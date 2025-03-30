@@ -63,18 +63,18 @@ finally:
     dosya.close()
 
 ### Kullanıcının yaptığı bir işlem normal şartlar altında hata vermeyecek olsa bile biz ona ‘Python tarzı’ bir hata mesajı göstermek için raise deyimini kullanıyoruz.
-bolunen = int(input("bölünecek sayı: "))
+bolunen = int(input("bölünecek sayı : "))
 
 if bolunen == 23:
     raise Exception("Bu programda 23 sayısını görmek istemiyorum!")
 
-bolen = int(input("bölen sayı: "))
+bolen = int(input("bölen sayı : "))
 print(bolunen/bolen)
 
 ###
 tr_karakter = "şçğüöıİ"
 
-parola = input("Parolanız: ")
+parola = input("Parolanız : ")
 
 for i in parola:
     if i in tr_karakter:
