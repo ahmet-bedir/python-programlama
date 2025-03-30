@@ -32,10 +32,7 @@ while True:
 '''
 Her hata için ayrı bir mesaj göstermek en iyisidir. Ama tabii dilerseniz hata türlerini gruplayıp hepsi için tek bir hata mesajı göstermeyi de tercih edebilirsiniz.
 '''
-###
-'''
-Bütün kodlarımızı tek bir try... bloğu içine koymaktansa istersek bu kodlarda verilebilecek hataları gruplamayı da tercih edebiliriz.
-'''
+### Bütün kodlarımızı tek bir try... bloğu içine koymaktansa istersek bu kodlarda verilebilecek hataları gruplamayı da tercih edebiliriz.
 try:
     bolunen = int(input("bölünecek sayı: "))
     bolen = int(input("bölen sayı: "))
@@ -65,10 +62,7 @@ except IOError:
 finally:
     dosya.close()
 
-###
-'''
-Kullanıcının yaptığı bir işlem normal şartlar altında hata vermeyecek olsa bile biz ona ‘Python tarzı’ bir hata mesajı göstermek için raise deyimini kullanıyoruz.
-'''
+### Kullanıcının yaptığı bir işlem normal şartlar altında hata vermeyecek olsa bile biz ona ‘Python tarzı’ bir hata mesajı göstermek için raise deyimini kullanıyoruz.
 bolunen = int(input("bölünecek sayı: "))
 
 if bolunen == 23:
@@ -90,10 +84,7 @@ for i in parola:
 
 print("Parola kabul edildi!")
 
-###
-'''
-raise deyimini, bir hata mesajına ek olarak bir işlem yapmak istediğimizde de kullanabiliriz.
-'''
+### raise deyimini, bir hata mesajına ek olarak bir işlem yapmak istediğimizde de kullanabiliriz.
 try:
     bolunen = 7
     bolen = 0
