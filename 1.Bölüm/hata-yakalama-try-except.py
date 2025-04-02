@@ -34,8 +34,8 @@ Her hata için ayrı bir mesaj göstermek en iyisidir. Ama tabii dilerseniz hata
 '''
 ### Bütün kodlarımızı tek bir try... bloğu içine koymaktansa istersek bu kodlarda verilebilecek hataları gruplamayı da tercih edebiliriz.
 try:
-    bolunen = int(input("bölünecek sayı: "))
-    bolen = int(input("bölen sayı: "))
+    bolunen = int(input("bölünecek sayı : "))
+    bolen = int(input("bölen sayı : "))
 except ValueError:
     print("Lütfen sadece sayı girin!")
 else:
