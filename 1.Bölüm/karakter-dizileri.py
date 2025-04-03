@@ -41,21 +41,33 @@ for i in site1,site2,site3:
     print(i)
     print(i[4:-7])
     print(i[4:-4] + ".uk", "-"*25)
-    
-kardiz = "Sana Gül Bahçesi Vadetmedim"
-#print(kardiz[0:4]) #Sana
-#print(kardiz[:4]) #Sana
-#print(kardiz[17:27]) #Vadetmedim
-#print(kardiz[17:]) #Vadetmedim
-#print(kardiz[::-1]) #midemtedaV iseçhaB lüG anaS
-#print(kardiz[7:4:-1]) #lüG
+### bu atasözlerinin sonunda bulunan ünlem işaretlerini nokta işareti ile değiştirme.
+ata1 = "Akıllı bizi arayıp sormaz deli bacadan akar!"
+ata2 = "Ağa güçlü olunca  kul suçlu olur!"
+ata3 = "Avcı ne kadar hile bilirse ayı da o kadar yol bilir!"
+ata4 = "Lafla pilav pişse deniz kadar yağ benden!"
+ata5 = "Zenginin gönlü oluncaya kadar fukaranın canı çıkar!"
+for ata in ata1, ata2, ata3, ata4, ata5:
+    print('• ' + ata[0:-1] + '.')
 
-#reversed(kardiz)
+###    
+kardiz = "Sana Gül Bahçesi Vadetmedim"
+print(kardiz[0:4]) #Sana
+print(kardiz[:4]) #Sana
+print(kardiz[17:27]) #Vadetmedim
+print(kardiz[17:]) #Vadetmedim
+print(kardiz[::-1]) #midemtedaV iseçhaB lüG anaS
+print(kardiz[7:4:-1]) #lüG
+
+print(reversed(kardiz))
 #<reversed object at 0x00E8E250>
-#print(*reversed(kardiz), sep='')
+print(*reversed(kardiz), sep='')
 #midemtedaV iseçhaB lüG anaS
-#for i in reversed(kardiz):
-    #print(i, sep="",end="")
+for i in reversed(kardiz):
+    print(i, sep="",end="")
+    #midemtedaV iseçhaB lüG anaS
+for i in range(len(kardiz)-1,-1,-1):
+    print(kardiz[i], sep="",end="")
     #midemtedaV iseçhaB lüG anaS
 
 ###Karakter Dizilerini Alfabe Sırasına Göre Dizmek
