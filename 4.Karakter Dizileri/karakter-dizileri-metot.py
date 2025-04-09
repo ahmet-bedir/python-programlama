@@ -1,39 +1,46 @@
 ### replace() bir karakter dizisi içindeki karakterleri başka karakterlerle değiştirmek için kullanılır.
-a = "elma"
-print(a.replace("e","E")) #Elma
-print(a) #elma
+kelime = "elma"
+print(kelime.replace("e","E")) #Elma
+print(kelime) #elma
 print("memleket".replace('e','')) #mmlkt
 print("memleket".replace('e','',2)) #mmlket
 
 ### split(), rsplit(), splitlines()
-a = "İstanbul Büyükşehir Belediyesi"
+metin = "İstanbul Büyükşehir Belediyesi"
 
-print(a[0],a[9],a[20],sep='') #İBB (verimsiz yöntem)
+print(metin[0],metin[9],metin[20],sep='') #İBB (verimsiz yöntem)
 
-b = a.split()
-print(b) #[İstanbul', 'Büyükşehir', 'Belediyesi']
+kelimeler = metin.split()
+print(kelimeler) #[İstanbul', 'Büyükşehir', 'Belediyesi']
 
-print(b[0][0],b[1][0],b[2][0],sep='') #İBB
+print(kelimeler[0][0],kelimeler[1][0],kelimeler[2][0],sep='') #İBB (kendi tanımladığımız değişken dışında verimsiz yöntem)
 
-for i in range(len(b)):
-    print(b[i][0], end='') #İBB
+for i in range(len(kelimeler)):
+    print(kelimeler[i][0], end='') #İBB
 
-for bol in a.split():
-    print(bol[0], end='') #İBB
-
+for kelime in metin.split():
+    print(kelime[0], end='') #İBB
+    
+##
 giris = input("Kısaltmasını öğrenmek istediğiniz kurum adını girin : ")
-for i in giris.split():
-    print(i[0],end='')
+giris_kelimeler = giris.split()
+for i in range(len(giris_kelimeler)):
+    print(giris_kelimeler[i][0],end='')
+##
+giris = input("Kısaltmasını öğrenmek istediğiniz kurum adını girin : ")
+for kelime in giris.split():
+    print(kelime[0],end='')
 
 kardiz = "Bolvadin, Kilis, Siverek, İskenderun, İstanbul"
 print(kardiz.split()) #['Bolvadin,', 'Kilis,', 'Siverek,', 'İskenderun,', 'İstanbul']
 print(kardiz.split(', ')) #[Bolvadin', 'Kilis', 'Siverek', 'İskenderun', 'İstanbul']
-print(a.split(' ',1)) #['İstanbul', 'Büyükşehir Belediyesi']
-print(a.rsplit(' ',1)) #['İstanbul Büyükşehir', 'Belediyesi']
-
+print(metin.split(' ',1)) #['İstanbul', 'Büyükşehir Belediyesi']
+print(metin.rsplit(' ',1)) #['İstanbul Büyükşehir', 'Belediyesi']
+##
 import sys
-print(sys.version.split()[0]) #3.8.1
+print(sys.version.split()[0]) #3.12.1
 
+##
 metin = """Python programlama dili Guido
 Van Rossum adlı Hollandalı bir programcı
 tarafından 90'lı yılların başında
