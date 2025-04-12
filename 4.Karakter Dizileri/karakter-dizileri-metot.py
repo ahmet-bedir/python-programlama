@@ -1,3 +1,9 @@
+i = 0
+for metot in dir(str):
+    if '_' not in metot:
+        i += 1
+        print("{}.{}".format(i,metot))
+
 ### replace() bir karakter dizisi içindeki karakterleri başka karakterlerle değiştirmek için kullanılır.
 kelime = "elma"
 print(kelime.replace("e","E")) #Elma
@@ -5,10 +11,10 @@ print(kelime) #elma
 print("memleket".replace('e','')) #mmlkt
 print("memleket".replace('e','',2)) #mmlket
 
-### split(), rsplit(), splitlines()
+### split() metodu üzerine uygulandığı karakter dizilerini parçalarına ayırır ve kelime kelime ayırarak böler, rsplit() metodu bölme işlemine sağdan başlar, splitlines() metodu bir karakter dizisini satır satır ayırmak için kullanılır.
 metin = "İstanbul Büyükşehir Belediyesi"
 
-print(metin[0],metin[9],metin[20],sep='') #İBB (verimsiz yöntem)
+print(metin[0],metin[9],metin[20],sep='') #İBB (Verimsiz yöntem, çünkü bu metot yalnızca “İstanbul Büyükşehir Belediyesi” adlı karakter dizisi için geçerlidir. Eğer karakter dizisi değişirse bu yöntem geçersiz olur)
 
 kelimeler = metin.split()
 print(kelimeler) #[İstanbul', 'Büyükşehir', 'Belediyesi']
@@ -36,24 +42,26 @@ print(kardiz.split()) #['Bolvadin,', 'Kilis,', 'Siverek,', 'İskenderun,', 'İst
 print(kardiz.split(', ')) #[Bolvadin', 'Kilis', 'Siverek', 'İskenderun', 'İstanbul']
 print(metin.split(' ',1)) #['İstanbul', 'Büyükşehir Belediyesi']
 print(metin.rsplit(' ',1)) #['İstanbul Büyükşehir', 'Belediyesi']
-##
+
+## split() metoduyla boşluklardan bölerek bir liste elde ettik. Bu listenin ilk öğesi, kullandığımız Python serisinin sürüm numarasını verecektir.
 import sys
 print(sys.version.split()[0]) #3.12.1
 
-##
-metin = """Python programlama dili Guido
-Van Rossum adlı Hollandalı bir programcı
-tarafından 90'lı yılların başında
-geliştirilmeye başlanmıştır.Çoğu insan,
-isminin Python olmasına bakarak, bu
-programlama dili, adını piton yılanından
-aldığını düşünür.Ancak zannedildiğinin
-aksine bu programlama dilinin adı piton
-yılanından gelmez..."""
+## Metnimiz enter tuşuna bastığımız noktalardan bölündü.
+metin = """Python programlama dili
+Guido Van Rossum adlı Hollandalı
+bir programcı tarafından 90'lı yılların
+başında geliştirilmeye başlanmıştır.
+Çoğu insan, isminin Python olmasına
+bakarak, bu programlama dili,
+adını piton yılanından aldığını düşünür.
+Ancak zannedildiğinin aksine
+bu programlama dilinin adı
+piton yılanından gelmez..."""
 print(metin.splitlines())
 print(metin.splitlines(True))
 
-##lower()
+### lower() metodu, karakter dizisindeki bütün harfleri küçük harfe çeviriyor.
 print("Kocaeli".lower()) #kocaeli
 
 isim = "Ali Er"
@@ -65,31 +73,31 @@ else:
 
 print("İstanbul Iğdır".replace('İ','i').replace('I','ı').lower()) #istanbul ığdır
 
-##upper()
+### upper() metodu, karakter dizisindeki bütün harfleri büyük harfe çeviriyor.
 print("konya".upper()) #KONYA
 
 print("izmit".upper()) #IZMIT
 print("izmit".replace('i','İ').upper()) #İZMİT
 
-##islower(), isupper()
+### islower() metodu karakter dizisinin tamamen küçük harflerden oluşup oluşmadığını sorguluyor.
 print("python".islower()) #True
 print("Python".islower()) #False
+
 ad = "ali tonbul"
 if not ad.islower():
     print("Sadece Küçük Harf Kullanın!")
 else:
     print("İsminiz : ", ad)
 
+### isupper() metodu karakter dizisinin tamamen büyük harflerden oluşup oluşmadığını sorguluyor.
 print("PYTHON".isupper()) #True
 print("Python".isupper()) #False
 
 mesaj = """
-SELAM
-NABER
-NASILSIN
-Napıyosun
-GEL"""
-bol = mesaj.splitlines()
+SELAM NasıLsıN 
+İşlerin Nasıl gidiyor
+neler yapıyorsun?"""
+bol = mesaj.split()
 for i in bol:
     if i.isupper():
        print("Tamamı Büyük Harf Olmamalı!")
