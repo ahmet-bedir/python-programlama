@@ -103,8 +103,10 @@ for i in bol:
        print("Tamamı Büyük Harf Olmamalı!")
        break
 
-##endswith()
+### endswith() metodu bir karakter dizisinin hangi karakter dizisi ile bittiğini sorguluyor.
 print("izmit".endswith('it')) #True
+print("izmit".endswith('il')) #False
+
 d1 = "python.ogg"
 d2 = "tkinter.mp3"
 d3 = "pygtk.ogg"
@@ -116,14 +118,16 @@ d8 = "dosya.avi"
 d9 = "perl.ogg"
 d10 = "c.avi"
 d11 = "c++.mp3"
-
-for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11:
-    if i.endswith(".mp3"):
+## mp3 uzantılı dosyaları listeleme.
+for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11: #bütün değişkenleri for döngüsü içine alıyoruz.
+    if i.endswith(".mp3"): #değişkenlerin herbirinin içeriğini tek tek kontrol ediyoruz, eğer baktığımız bu değişkenlerin değerleri “.mp3” ifadesi ile bitiyorsa...
         print(i)
+## 2.yöntem      
+for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11:
     if i[-4:len(i)] == ".ogg":
         print(i)
 
-##startswith()
+### startswith() metodu bir karakter dizisinin hangi karakter dizisi ile başladığını sorguluyor.
 for i in d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11:
-    if i.startswith("p"):
+    if i.startswith("p"): #yada (if i[0] == "p":)
         print(i)
