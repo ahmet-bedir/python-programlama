@@ -6,47 +6,64 @@ print(a.capitalize()) #Python programlama dili
 for i in a.split():
     print(i.capitalize(), end=' ') #Python Programlama Dili
 
-##title()
-print(a.title()) #Python Prog Dili
+print("istanbul".capitalize()) #Istanbul
 
-kardiz = "istanbul büyükşehir belelediyesi"
-if kardiz.startswith("i"):
-    kardiz = "İ" + kardiz[1:]
-kardiz = kardiz.title()
-#İstanbul Büyükşehir Belelediyesi
-print(kardiz)
+a = "istanbul"
+if a.startswith("i"):
+    a = "İ" + a[1:]
+a = a.capitalize()
+print(a) #İstanbul
 
-metin = "hükümet istifa on iki ada"
+### title() metodu birden fazla kelimeden oluşan karakter dizilerinin her kelimesinin ilk harflerini büyütür.
+a = "python programlama dili"
+print(a.title()) #Python Programlama Dili
+print("izmit belediyesi".title()) #Izmit Belediyesi
+
+metin = "istanbul büyükşehir belelediyesi"
+if metin.startswith("i"):
+    metin = "İ" + metin[1:]
+metin = metin.title()
+print(metin) #İstanbul Büyükşehir Belelediyesi
+
+metin = "hükümet istifa! on iki ada"
 for kelime in metin.split():
     if kelime.startswith('i'):
         kelime = 'İ' + kelime[1:]
     kelime = kelime.title()
-    print(kelime, end=' ')
+    print(kelime, end=' ') #Hükümet İstifa! On İki Ada
     
-##swapcase()
-kardiz = "python"
-print(kardiz.swapcase()) #PYTHON
-kardiz = "PYTHON"
-print(kardiz.swapcase()) #python
-kardiz = "Python"
-print(kardiz.swapcase()) #pYTHON
+### swapcase() metodu bir karakter dizisi içindeki büyük harfleri küçük harfe; küçük harfleri de büyük harfe dönüştürür.
+kelime = "python"
+print(kelime.swapcase()) #PYTHON
+kelime = "PYTHON"
+print(kelime.swapcase()) #python
+kelime = "Python"
+print(kelime.swapcase()) #pYTHON
 
-kardiz = "istanbul"
-print(kardiz.swapcase()) #ISTANBUL
-for k in kardiz:
+kelime = "istanbul"
+print(kelime.swapcase()) #ISTANBUL
+
+for k in kelime:
     if k == 'i':
-        kardiz = kardiz.replace('i','İ')
+        kelime = kelime.replace('i','İ')
     elif k == 'İ':
-        kardiz = kardiz.replace('İ','i')
+        kelime = kelime.replace('İ','i')
     else:
-        kardiz = kardiz.replace(k, k.swapcase())
-print(kardiz) #İSTANBUL
+        kelime = kelime.replace(k, k.swapcase())
+print(kelime) #İSTANBUL
 
-##strip(), lstrip(), rstrip()
-kardiz = " istihza "
-print(kardiz) #' istihza '
+### casefold()
+print("ß".lower()) #ß
 
-print(kardiz.strip()) #'istihza'
+print("ß".casefold()) #ss
+
+### strip() metodu parametresiz olarak kullanıldığında, bir karakter dizisinin sağında veya solunda bulunan belli başlı karakterleri(boşluk, \n, \t vb) kırpar.
+### lstrip() metodu karakter dizisinin sadece sol tarafındaki karakterleri kırpar.
+### rstrip() metodu karakter dizisinin sadece sağ tarafındaki karakterleri kırpar.
+kelime = " istihza "
+print(kelime) #' istihza '
+
+print(kelime.strip()) #'istihza'
 
 print("kazak".strip('k').lstrip('a').rstrip('a')) #aza za z
 
@@ -63,16 +80,16 @@ metin = """
 for i in metin.split():
     print(i.strip("> "), end=" ")
 
-##join()
-list = ["Bjk","Jimnastik","Kulübü"]
-print(' '.join(list)) #Bjk Jimnastik Kulübü
+### join() metodu karakter dizisine ait bölünmüş parçaları tekrar bir araya getirir.
+liste = ["Bjk","Jimnastik","Kulübü"]
+print(' '.join(liste)) #Bjk Jimnastik Kulübü
 
-##count()
+### count() metodunun görevi bir karakter dizisi içinde belli bir karakterin kaç kez geçtiğini sorgulamaktır. 
 sehir = "Kahramanmaraş"
 print(sehir.count("a")) #5
-
-
-parola = input("Parola Belirleniz : ")
+print(sehir.count("a",6)) #3 (6. indisten sonra saymaya başlar)
+print(sehir.count("a",6,9)) #1 (python’ın sorgulama işlemini hangi sıra aralıklarından gerçekleştireceğini gösterir)
+parola = input("Parola Belirleyiniz : ")
 kontrol = True
 for i in parola:
     if parola.count(i) > 1:
@@ -82,18 +99,19 @@ if kontrol:
 else:
     print('Parolanızda Aynı Harfi Bir Kez Kullanabilirsiniz!')
 
-
+#karakter dizisindeki bütün harflerin sayısını bulma.
 metin = "python programlama dili"
 tekle = ''
-for i in metin:
-  if i not in tekle and i != ' ':
-    tekle += i
-print("Metnin Tekil Harfleri : ", tekle)
-for i in tekle:
-    print(i, " harfi '", metin, "' metni içinde ", metin.count(i), " kez geçiyor...", sep='')
+for harf in metin:
+  if harf not in tekle and harf != ' ':
+    tekle += harf
+print("Metnin Orjinal Hali :", metin)
+print("Metnin Tekrarlanmayan Harfleri :", tekle)
+for harf in tekle:
+    print("'{}' harfi '{}' metni içinde {} kez geçiyor...".format(harf,metin,metin.count(harf)))
 
-
-##index(), rindex()
+### index() metodu karakterlerin, bir karakter dizisi içinde hangi sırada bulunduğunu öğrenmek için kullanılır.
+### rindex() 
 print("python".index('p')) #0
 
 kardiz = "adana"
