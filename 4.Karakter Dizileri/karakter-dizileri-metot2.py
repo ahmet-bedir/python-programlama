@@ -127,16 +127,17 @@ for i in range(len(kardiz)):
 
 print(kardiz.index("a", 2, 3)) #2 (python’ın sorgulama işlemini hangi sıra aralıklarından gerçekleştireceğini gösterir)
 
-kelime = "adana"
-aranacak = "d"
-for i in range(len(kelime)):
-    print(kelime.index(aranacak,i))
-
-kardiz = "ada"
+kelime = "ada"
 aranacak = 'd'
-for i in range(len(kardiz)):
-    print("i'nin değeri: ", i)
-    if i == kardiz.index(aranacak, i):
+for i in range(len(kelime)-1):
+    print(kelime.index(aranacak,i))
+    
+
+kelime = "ada"
+aranacak = 'd'
+for i in range(len(kelime)-1):
+    print("i'nin değeri :", i)
+    if i == kelime.index(aranacak, i):
         print("{}. sırada 1 adet {} harfi bulunuyor".format(i, aranacak))
     else:
         print("{}. sırada {} harfi bulunmuyor".format(i, aranacak))
