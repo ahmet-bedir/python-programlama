@@ -113,14 +113,19 @@ for harf in tekle:
 ### index() metodu karakterlerin, bir karakter dizisi içinde hangi sırada bulunduğunu öğrenmek için kullanılır.
 ### rindex() 
 print("python".index('p')) #0
+#print("python".index('z')) #hata!
 
 kardiz = "adana"
-print(kardiz.index("a", 0)) #0
+print(kardiz.index("a", 0)) #0 (sıfırıncı indisten itibaren sorgulamaya başlar)
 print(kardiz.index("a", 1)) #2
 print(kardiz.index("a", 2)) #2
 print(kardiz.index("a", 3)) #4
 print(kardiz.index("a", 4)) #4
 
+for i in range(len(kardiz)):
+    print(kardiz.index("a", i)) #0 2 2 4 4
+
+print(kardiz.index("a", 2, 3)) #2 (python’ın sorgulama işlemini hangi sıra aralıklarından gerçekleştireceğini gösterir)
 
 kelime = "adana"
 aranacak = "d"
