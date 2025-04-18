@@ -126,21 +126,23 @@ for i in range(len(kardiz)):
     print(kardiz.index("a", i)) #0 2 2 4 4
 
 print(kardiz.index("a", 2, 3)) #2 (python’ın sorgulama işlemini hangi sıra aralıklarından gerçekleştireceğini gösterir)
-
+#
 kelime = "ada"
-aranacak = 'd'
-for i in range(len(kelime)-1):
+aranacak = 'a'
+for i in range(len(kelime)):
     print(kelime.index(aranacak,i))
     
 
 kelime = "ada"
-aranacak = 'd'
-for i in range(len(kelime)-1):
-    print("i'nin değeri :", i)
+aranacak = 'a'
+print("'{}' kelimesinde '{}' karakteri varmı?".format(kelime,aranacak))
+input()
+for i in range(len(kelime)):
+    #print("i'nin değeri :", i)
     if i == kelime.index(aranacak, i):
-        print("{}. sırada 1 adet {} harfi bulunuyor".format(i, aranacak))
+        print("{}.sırada '{}' harfi bulunuyor...".format(i+1, aranacak))
     else:
-        print("{}. sırada {} harfi bulunmuyor".format(i, aranacak))
+        print("{}.sırada '{}' harfi bulunmuyor...".format(i+1, aranacak))
 
 
 print("python".index('p')) #0
