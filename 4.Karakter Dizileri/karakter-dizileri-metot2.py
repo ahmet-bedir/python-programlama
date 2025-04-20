@@ -110,8 +110,8 @@ print("Metnin Tekrarlanmayan Harfleri :", tekle)
 for harf in tekle:
     print("'{}' harfi '{}' metni içinde {} kez geçiyor...".format(harf,metin,metin.count(harf)))
 
-### index() metodu karakterlerin, bir karakter dizisi içinde hangi sırada bulunduğunu öğrenmek için kullanılır.
-### rindex() 
+### index() metodu karakter dizisi içinde aranan karakterin hangi sırada bulunduğunu öğrenmek için kullanılır.(soldan sağa doğru okur)
+### rindex() metodu karakter dizisi içinde aranan karakterin hangi sırada bulunduğunu öğrenmek için kullanılır.(sağdan sola doğru okur)
 print("python".index('p')) #0
 #print("python".index('z')) #hata!
 
@@ -135,7 +135,7 @@ for i in range(len(kelime)):
 
 kelime = "ada"
 aranacak = 'a'
-print("'{}' kelimesinde '{}' karakteri varmı?".format(kelime,aranacak))
+print("'{}' kelimesinde '{}' karakteri varmı?\nDevam etmek için enter tuşuna basınız...".format(kelime,aranacak))
 input()
 for i in range(len(kelime)):
     #print("i'nin değeri :", i)
@@ -145,11 +145,11 @@ for i in range(len(kelime)):
         print("{}.sırada '{}' harfi bulunmuyor...".format(i+1, aranacak))
 
 
-print("python".index('p')) #0
-print("python".rindex('n')) #5
+print("adana".index('a')) #0
+print("adana".rindex('a')) #4
 
 
-##find, rfind()
+### find() ve rfind() metotlarının görevi de bir karakter dizisi içindeki bir karakterin konumunu sorgulamaktır.
 kardiz = "adana"
 print(kardiz.find("a")) #0
 print(kardiz.rfind("a")) #4
@@ -157,26 +157,28 @@ print(kardiz.rfind("a")) #4
 print(kardiz.find("a",3)) #4
 print(kardiz.find("c")) #-1
 
-kardiz = "ada"
-aranacak = 'b'
-for i in range(len(kardiz)):
-    print("i'nin değeri: ", i)
-    if i == kardiz.find(aranacak, i):
-        print("{}. sırada 1 adet {} harfi bulunuyor".format(i, aranacak))
+#
+kelime = "adad"
+aranacak = 'a'
+print("'{}' kelimesinde '{}' karakteri varmı?\nDevam etmek için enter tuşuna basınız...".format(kelime,aranacak))
+input()
+for i in range(len(kelime)):
+    #print("i'nin değeri :", i)
+    if i == kelime.find(aranacak, i):
+        print("{}.sırada '{}' harfi bulunuyor...".format(i+1, aranacak))
     else:
-        print("{}. sırada {} harfi bulunmuyor".format(i, aranacak))
+        print("{}.sırada '{}' harfi bulunmuyor...".format(i+1, aranacak))
 
-
-##center()
-print('|','a'.center(5),'|') #|  a  |
+### center() metodu karakter dizilerini ortalamak için kullanır.
+print('|' + 'a'.center(5) + '|') #|  a  |
 
 for i in range(10):
-    print('|','*'.center(i),'|')
+    print('|' + '*'.center(i) + '|')
     
-print('|',"python".center(8,'-'),'|', sep='') #|-python-|
+print('|' + "python".center(8,'-') + '|') #|-python-|
 
 
-##rjust(), ljust()
+### rjust() metodu bir karakter dizisini sağa yaslarken, ljust() metodu karakter dizisini sola yaslar.
 print('|','a'.ljust(5),'|', sep='') #|a    |
 print('|','a'.rjust(5),'|', sep='')  #|    a|
 print("ahmet".ljust(8,'.')) #ahmet...
@@ -185,24 +187,25 @@ for i in "elma","armut","muz","kayısı":
     print(i.ljust(8,'.'))
 
 
-##zfill()
+### zfill() metodu karakter dizilerinin sol tarafına istediğimiz sayıda sıfır eklemek için kullanır.
 print('5'.zfill(2)) #05
 
 for i in range(1,11):
     print(str(i).zfill(2), end=' ') #01 02 03 04 05 06 07 08 09 10
-    
-##partition(), rpartition()
+
+
+### partition() metodu bir karakter dizisini belli bir ölçüte göre üçe böler.partition metodu karakter dizilerini soldan sağa doğru okur. rpartition() metodu ise sağdan sola doğru okur.
 print("istanbul".partition("an")) #('ist', 'an', 'bul')
 print("istanbul".partition('f')) #('istanbul', '', '')
 print("istizha".partition('i')) #('', 'i', 'stizha')
 print("istizha".rpartition('i')) #('ist', 'i', 'zha')
 
 
-##encode()
+### encode() karakter dizilerini istediğimiz kodlama sistemine göre kodlamak için kullanır.
 print("çilek".encode("cp1254")) #b'\xe7ilek'
 
 
-##expandtabs()
+### expandtabs() metodu karakter dizisi içindeki sekme boşluklarını genişletmek için kullanır.
 a = "elma\tbir\tmeyvedir"
 print(a) #elma	bir	meyvedir
 print(a.expandtabs(10)) #elma      bir       meyvedir
