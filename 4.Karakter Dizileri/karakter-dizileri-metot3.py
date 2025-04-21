@@ -22,3 +22,5 @@ f_klavye_duzeni = "fgğıodrnhpqwuieaütkmlyşxjövcçzsb.,"
 ceviri_tablosu = str.maketrans(q_klavye_duzeni, f_klavye_duzeni)
 
 print(metin.translate(ceviri_tablosu))
+
+###
