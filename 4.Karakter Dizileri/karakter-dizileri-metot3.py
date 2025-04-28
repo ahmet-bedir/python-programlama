@@ -62,3 +62,5 @@ silinecek = "aeıioöuüAEIİOÖUÜ"
 ceviri = str.maketrans('','',silinecek)
 
 print(metin.translate(ceviri))
+
+
