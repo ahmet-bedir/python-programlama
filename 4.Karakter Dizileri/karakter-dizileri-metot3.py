@@ -63,4 +63,14 @@ ceviri = str.maketrans('','',silinecek)
 
 print(metin.translate(ceviri))
 
+#
+metin = "Can Yılmaz"
 
+kaynak = "CY"
+hedef  = "cy"
+silinecek = "aı "
+
+çeviri_tablosu = str.maketrans(kaynak, hedef, silinecek)
+
+print(metin)
+print(metin.translate(çeviri_tablosu))
