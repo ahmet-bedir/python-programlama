@@ -1,4 +1,4 @@
-###
+### 
 sayilar = "123456789"
 for sayi in sayilar:
     print("{} x 2 = {}".format(sayi,int(sayi)*2))
