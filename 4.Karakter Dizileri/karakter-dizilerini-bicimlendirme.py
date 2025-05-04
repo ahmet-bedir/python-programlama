@@ -58,8 +58,3 @@ sayfa = """
 """
 print(sayfa %{"d":dil})
 
-<<<<<<< HEAD
-input()
-=======
-####
->>>>>>> origin/master
