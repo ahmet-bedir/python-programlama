@@ -58,3 +58,4 @@ sayfa = """
 """
 print(sayfa %{"d":dil})
 
+####
