@@ -58,3 +58,8 @@ sayfa = """
 """
 print(sayfa %{"d":dil})
 
+#
+sayi = input("Sayı: ")
+
+print("%d" %float(sayi))
+
