@@ -69,3 +69,7 @@ print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yal
 
 print("%d" %10.3) #10
 
+#
+sayi = input("Sayı: ")
+
+print("%d" %float(sayi))
