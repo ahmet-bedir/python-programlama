@@ -4,7 +4,7 @@ parola = input("parola: ")
 
 print("Girdiğiniz parola (%s) kurallara uygun bir paroladır!" %parola)
 
-#
+# s harfi karakter dizilerini ve karakter dizisine çevrilebilen değerleri temsil eder.
 print("%s ve %s iyi bir ikilidir!" %("Python","Django"))
 
 # hata! çünkü karakter dizisi içindeki %s işaretlerinin sayısı ile karakter dizisi dışında bu işaretlere karşılık gelen değerlerin sayısı birbirini tutmuyor.
@@ -43,7 +43,7 @@ sayfa = """
 """
 print(sayfa %(dil,dil,dil))
 
-## veya
+## veya tekrardan kaçınmak için:
 dil = "Python Programlama Dili"
 sayfa = """
 <html>
@@ -57,4 +57,15 @@ sayfa = """
 </html>
 """
 print(sayfa %{"d":dil})
+
+# "%(değişken_adı)s " % {"değişken_adı": "değişken_değeri"}
+print("Depoda %(miktar)s kilo %(ürün)s kaldı" %{"ürün": "elma", "miktar": 25})
+
+### d harﬁ sayıları temsil eder.
+print("Şubat ayı bu yıl %d gün çekiyor" %28)
+
+#
+print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yalnızca sayı değerleri temsil edebilir, bu harﬂe birlikte karakter dizilerini kullanamayız.
+
+print("%d" %10.3) #10
 
