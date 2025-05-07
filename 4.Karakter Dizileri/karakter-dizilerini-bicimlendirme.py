@@ -74,8 +74,41 @@ sayi = input("Sayı: ")
 
 print("%d" %float(sayi))
 
-### o harf octal (sekizli) kelimesinin kısaltmasıdır. Adından da anlaşılacağı gibi, sekizli düzendeki sayıları temsil eder. Dolayısıyla bu harﬁ kullanarak onlu düzendeki bir sayıyı sekizli düzendeki karşılığına dönüştürebilirsiniz.
 
+### i harfi de integer, yani ‘tam sayı’ kelimesinin kısaltmasıdır. Kullanım ve işlev olarak, d harfinden hiç bir farkı yoktur.
+
+### o harfi octal (sekizli) düzendeki sayıları temsil eder. Dolayısıyla bu harfi kullanarak onlu düzendeki bir sayıyı sekizli düzendeki karşılığına dönüştürebilirsiniz.
+print("%i sayısının sekizli düzendeki karşılığı %o sayısıdır." %(10, 10))
+
+
+### x harfi hexadecimal, yani onaltılı düzendeki sayıları temsil eder. Bu harfi kullanarak onlu düzendeki bir sayıyı onaltılı düzendeki karşılığına çevirebilirsiniz.
+print("%i sayısının onaltılı düzendeki karşılığı %x sayısıdır." %(20, 20))
+
+print("%i sayısının onaltılı düzendeki karşılığı %x sayısıdır." %(10, 10))
+print("%i sayısının onaltılı düzendeki karşılığı %X sayısıdır." %(10, 10))
+
+
+### f kayan noktalı sayıları(float) temsil etmek için kullanılır.
+print("Dolar %f TL olmuş..." %1.4710) #1.471000 (Python’da bir karakter dizisi içindeki sayıyı %f yapısı ile kayan noktalı sayıya çevirdiğimizde noktadan sonra öntanımlı olarak 6 hane yer alacaktır)
+print("Dolar %.2f TL olmuş..." %1.4710) #1.47
+
+
+### c harf tek bir karakteri temsil eder. c harfinin bir başka özelliği de ASCII tablosunda sayılara karşılık gelen karakterleri de gösterebilmesidir.
+print("%c" %"a")
+print("%c" %"ani") #hata!
+print("%c" %65) #A
 #
+for i in range(128):    
+    print("%i ==> %c" %(i, i))
+#
+for sira, karakter in enumerate(dir(str)):
+    if sira % 3 == 0:
+        print("\n", end="")
+    print("%-20s" %karakter, end="")
+#    
+for i in range(20):
+    print("%(deger)5d%(deger)5o%(deger)5x" %{"deger":i})
+    
+### format() Metodu ile Biçimlendirme (Yeni Yöntem)
 print("{} ve {} iyi bir ikilidir!".format("Django", "Python"))
 
