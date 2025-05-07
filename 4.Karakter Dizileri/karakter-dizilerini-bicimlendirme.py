@@ -112,3 +112,4 @@ for i in range(20):
 ### format() Metodu ile Biçimlendirme (Yeni Yöntem)
 print("{} ve {} iyi bir ikilidir!".format("Django", "Python"))
 
+#
