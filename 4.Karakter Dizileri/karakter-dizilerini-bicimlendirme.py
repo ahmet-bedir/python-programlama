@@ -73,3 +73,9 @@ print("%d" %10.3) #10
 sayi = input("Sayı: ")
 
 print("%d" %float(sayi))
+
+### o harf octal (sekizli) kelimesinin kısaltmasıdır. Adından da anlaşılacağı gibi, sekizli düzendeki sayıları temsil eder. Dolayısıyla bu harﬁ kullanarak onlu düzendeki bir sayıyı sekizli düzendeki karşılığına dönüştürebilirsiniz.
+
+#
+print("{} ve {} iyi bir ikilidir!".format("Django", "Python"))
+
