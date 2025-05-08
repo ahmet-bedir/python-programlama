@@ -129,3 +129,27 @@ metin = """{} noktasından {} noktasına, 14:30 hareket saatli sefer için
 {} adına {} adet bilet ayrılmıştır!"""
 print(metin.format(kalkis, varis, isim_soyisim, bilet_sayisi))
 
+##
+kodlama = "utf-8"
+site_adi = "Python Programlama Dili"
+dosya = open("deneme.html", "w", encoding=kodlama)
+icerik = """
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={0}"/>
+        <title>{1}</title>
+    </head>
+    <body>
+        <h1>istihza.com web sitesine hoş geldiniz!</h1>
+        <p><b>{1}</b> için bir Türkçe belgelendirme projesi...</p>
+    </body>
+</html>
+"""
+print(icerik.format(kodlama, site_adi), file=dosya)
+dosya.close()
+
+##
+print("{0} {1}".format("Ahmet","Bedir"))
+print("{1} {0}".format("Ahmet","Bedir"))
+print("{0} {1} {1} {0}".format("Ahmet","Bedir"))
+
