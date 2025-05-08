@@ -112,4 +112,20 @@ for i in range(20):
 ### format() Metodu ile Biçimlendirme (Yeni Yöntem)
 print("{} ve {} iyi bir ikilidir!".format("Django", "Python"))
 
-#
+# 1.yöntem
+kalkis = input("Kalkış yeri: ")
+varis = input("Varış yeri: ")
+isim_soyisim = input("İsim ve soyisim: ")
+bilet_sayisi = input("Bilet sayısı: ")
+print("""{} noktasından {} noktasına, 14:30 hareket saatli sefer için
+{} adına {} adet bilet ayrılmıştır!""".format(kalkis, varis, isim_soyisim, bilet_sayisi))
+
+# 2.yöntem
+kalkis = input("Kalkış yeri : ")
+varis = input("Varış yeri : ")
+isim_soyisim = input("İsim ve soyisim : ")
+bilet_sayisi = input("Bilet sayısı : ")
+metin = """{} noktasından {} noktasına, 14:30 hareket saatli sefer için
+{} adına {} adet bilet ayrılmıştır!"""
+print(metin.format(kalkis, varis, isim_soyisim, bilet_sayisi))
+
