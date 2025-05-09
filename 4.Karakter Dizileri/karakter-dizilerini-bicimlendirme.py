@@ -153,3 +153,8 @@ print("{0} {1}".format("Ahmet","Bedir"))
 print("{1} {0}".format("Ahmet","Bedir"))
 print("{0} {1} {1} {0}".format("Ahmet","Bedir"))
 
+#
+print("{dil} dersleri".format(dil="python"))
+
+print("|{:>15}|".format("python"))
+print("|{:<15}|".format("python"))
