@@ -8,7 +8,7 @@ print("Girdiğiniz parola (%s) kurallara uygun bir paroladır!" %parola)
 print("%s ve %s iyi bir ikilidir!" %("Python","Django"))
 
 # hata! çünkü karakter dizisi içindeki %s işaretlerinin sayısı ile karakter dizisi dışında bu işaretlere karşılık gelen değerlerin sayısı birbirini tutmuyor.
-print("Benim adım %s , soyadım %s " %"Ali")
+#print("Benim adım %s , soyadım %s " %"Ali")
 
 #
 kelime = "istihza"
@@ -65,7 +65,7 @@ print("Depoda %(miktar)s kilo %(ürün)s kaldı" %{"ürün": "elma", "miktar": 2
 print("Şubat ayı bu yıl %d gün çekiyor" %28)
 
 #
-print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yalnızca sayı değerleri temsil edebilir, bu harﬂe birlikte karakter dizilerini kullanamayız.
+#print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yalnızca sayı değerleri temsil edebilir, bu harﬂe birlikte karakter dizilerini kullanamayız.
 
 print("%d" %10.3) #10
 
@@ -95,7 +95,7 @@ print("Dolar %.2f TL olmuş..." %1.4710) #1.47
 
 ### c harf tek bir karakteri temsil eder. c harfinin bir başka özelliği de ASCII tablosunda sayılara karşılık gelen karakterleri de gösterebilmesidir.
 print("%c" %"a")
-print("%c" %"ani") #hata!
+#print("%c" %"ani") #hata!
 print("%c" %65) #A
 #
 for i in range(128):    
