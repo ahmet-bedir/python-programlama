@@ -158,3 +158,4 @@ print("{dil} dersleri".format(dil="python"))
 
 print("|{:>15}|".format("python"))
 print("|{:<15}|".format("python"))
+print("|{:^15}|".format("python"))
