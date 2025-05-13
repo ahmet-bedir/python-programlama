@@ -167,3 +167,6 @@ for sira, karakter in enumerate(dir(str)):
     print("{:<20}".format(karakter), end="")
 
 ### s harfi karakter dizilerini temsil eder.
+print("{:s}".format("karakter dizisi"))
+print("{:s}".format(1)) # hata!
+
