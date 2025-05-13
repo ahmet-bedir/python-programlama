@@ -170,3 +170,30 @@ for sira, karakter in enumerate(dir(str)):
 print("{:s}".format("karakter dizisi"))
 print("{:s}".format(1)) # hata!
 
+### c harfi 0 ile 256 arası sayıların ASCII tablosundaki karşılıklarını temsil eder.
+print("{:c}".format(97)) # a
+
+### d harfi sayıları temsil eder.
+print("{:d}".format(65))
+print("{:d}".format("65")) # hata!
+
+### o harfi onlu düzendeki sayıları sekizli düzendeki karşılıklarına çevirir.
+print("{:o} ".format(65))
+
+### x harfi onlu düzendeki sayıları onaltılı düzendeki karşılıklarına çevirir.
+print("{:x} ".format(65))
+
+print("{:x} ".format(10)) # a
+print("{:X} ".format(10)) # A
+#
+for i in range(21):
+    print("{:x}{:20X}".format(i,i))
+
+### b harfi onlu düzendeki sayıları ikili düzendeki karşılıklarına çevirir.
+print("{:b} ".format(5)) # 101
+
+### f
+print("{:.5f} ".format(50)) # 50.00000
+
+## , işareti sayıları basamaklarına ayırmak için kullanılır.
+print("{:,}".format(123456789)) # 123,456,789
