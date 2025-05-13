@@ -4,7 +4,7 @@ parola = input("parola: ")
 
 print("Girdiğiniz parola (%s) kurallara uygun bir paroladır!" %parola)
 
-# s harfi karakter dizilerini ve karakter dizisine çevrilebilen değerleri temsil eder.
+### s harfi karakter dizilerini ve karakter dizisine çevrilebilen değerleri temsil eder.
 print("%s ve %s iyi bir ikilidir!" %("Python","Django"))
 
 # hata! çünkü karakter dizisi içindeki %s işaretlerinin sayısı ile karakter dizisi dışında bu işaretlere karşılık gelen değerlerin sayısı birbirini tutmuyor.
@@ -160,3 +160,10 @@ print("|{:>15}|".format("python"))
 print("|{:<15}|".format("python"))
 print("|{:^15}|".format("python"))
 
+#
+for sira, karakter in enumerate(dir(str)):
+    if sira % 3 == 0:
+        print("\n", end="")
+    print("{:<20}".format(karakter), end="")
+
+### s harfi karakter dizilerini temsil eder.
