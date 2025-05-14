@@ -1,3 +1,11 @@
+x, y, z = 1, "2", 3.0
+
+print(x, type(x))
+print(y, type(y))
+print(z, type(z))
+
+###################################################
+
 import keyword
 print("-" * 45)
 print("Kullanabileceğimiz Fonksiyonlar (keyword) :\n", dir(keyword), sep="", end="\n\n")
