@@ -1,13 +1,17 @@
+print("-" * 45)
 x, y, z = 1, "2", 3.0
 
 print(x, type(x))
 print(y, type(y))
-print(z, type(z))
+print(z, type(z), "\n")
+
+x = y = z = 4
+print(x, y, z)
 
 ###################################################
 
-import keyword
 print("-" * 45)
+import keyword
 print("Kullanabileceğimiz Fonksiyonlar (keyword) :\n", dir(keyword), sep="", end="\n\n")
 a = keyword.kwlist
 print("Tanımlayamayacağımız Değişken İsimleri :\n", a, sep="")
