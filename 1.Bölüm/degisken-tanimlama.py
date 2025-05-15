@@ -5,7 +5,7 @@ print(x, type(x))
 print(y, type(y))
 print(z, type(z), "\n")
 
-x = y = z = 4
+x = y = z = 4 #x, y, z = 4, 4, 4
 print(x, y, z)
 
 ###################################################
