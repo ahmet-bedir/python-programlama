@@ -13,3 +13,8 @@ isim = 'Ahmet'
 yas = 36
 metin = 'Benim adım {} ve ben {} yaşındayım.'
 print(metin.format(isim,yas))
+
+#
+sayi1 = 3
+sayi2 = 2
+print(F'{sayi1} + {sayi2} = {sayi1+sayi2}')
