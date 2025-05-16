@@ -4,11 +4,11 @@ parola = input("parola: ")
 
 print("Girdiğiniz parola (%s) kurallara uygun bir paroladır!" %parola)
 
-# s harfi karakter dizilerini ve karakter dizisine çevrilebilen değerleri temsil eder.
+### s harfi karakter dizilerini ve karakter dizisine çevrilebilen değerleri temsil eder.
 print("%s ve %s iyi bir ikilidir!" %("Python","Django"))
 
 # hata! çünkü karakter dizisi içindeki %s işaretlerinin sayısı ile karakter dizisi dışında bu işaretlere karşılık gelen değerlerin sayısı birbirini tutmuyor.
-print("Benim adım %s , soyadım %s " %"Ali")
+#print("Benim adım %s , soyadım %s " %"Ali")
 
 #
 kelime = "istihza"
@@ -65,7 +65,7 @@ print("Depoda %(miktar)s kilo %(ürün)s kaldı" %{"ürün": "elma", "miktar": 2
 print("Şubat ayı bu yıl %d gün çekiyor" %28)
 
 #
-print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yalnızca sayı değerleri temsil edebilir, bu harﬂe birlikte karakter dizilerini kullanamayız.
+#print("Şubat ayı bu yıl %d gün çekiyor" %"28") #hata! Çünkü d harﬁ yalnızca sayı değerleri temsil edebilir, bu harﬂe birlikte karakter dizilerini kullanamayız.
 
 print("%d" %10.3) #10
 
@@ -95,7 +95,7 @@ print("Dolar %.2f TL olmuş..." %1.4710) #1.47
 
 ### c harf tek bir karakteri temsil eder. c harfinin bir başka özelliği de ASCII tablosunda sayılara karşılık gelen karakterleri de gösterebilmesidir.
 print("%c" %"a")
-print("%c" %"ani") #hata!
+#print("%c" %"ani") #hata!
 print("%c" %65) #A
 #
 for i in range(128):    
@@ -159,3 +159,41 @@ print("{dil} dersleri".format(dil="python"))
 print("|{:>15}|".format("python"))
 print("|{:<15}|".format("python"))
 print("|{:^15}|".format("python"))
+
+#
+for sira, karakter in enumerate(dir(str)):
+    if sira % 3 == 0:
+        print("\n", end="")
+    print("{:<20}".format(karakter), end="")
+
+### s harfi karakter dizilerini temsil eder.
+print("{:s}".format("karakter dizisi"))
+print("{:s}".format(1)) # hata!
+
+### c harfi 0 ile 256 arası sayıların ASCII tablosundaki karşılıklarını temsil eder.
+print("{:c}".format(97)) # a
+
+### d harfi sayıları temsil eder.
+print("{:d}".format(65))
+print("{:d}".format("65")) # hata!
+
+### o harfi onlu düzendeki sayıları sekizli düzendeki karşılıklarına çevirir.
+print("{:o} ".format(65))
+
+### x harfi onlu düzendeki sayıları onaltılı düzendeki karşılıklarına çevirir.
+print("{:x} ".format(65))
+
+print("{:x} ".format(10)) # a
+print("{:X} ".format(10)) # A
+#
+for i in range(21):
+    print("{:x}{:20X}".format(i,i))
+
+### b harfi onlu düzendeki sayıları ikili düzendeki karşılıklarına çevirir.
+print("{:b} ".format(5)) # 101
+
+### f
+print("{:.5f} ".format(50)) # 50.00000
+
+## , işareti sayıları basamaklarına ayırmak için kullanılır.
+print("{:,}".format(123456789)) # 123,456,789
