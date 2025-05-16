@@ -28,3 +28,15 @@ print("mantıksal :", m, type(m))
 print("str => bool")
 s = bool(metin)
 print("metin :", s, type(s))
+
+###
+sayi1 = input("1.sayı: ")
+sayi2 = input("2.sayı: ")
+toplam = sayi1 + sayi2 #toplama işlemi yerine string birleştirme işlemi yapar.
+print('Birleşim :', toplam)
+
+#toplam = int(sayi1) + int(sayi2) #toplama işlemi.
+#print('Toplam :', toplam)
+
+toplam = float(sayi1) + float(sayi2) #ondalıklı sayı girdiğimizde hata almamak için.
+print('Toplam :', toplam)
