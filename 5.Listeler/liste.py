@@ -1,4 +1,4 @@
-### listeler değiştirilebilnir.
+### listelerde elemanlar değiştirilebilinir ve yeni eleman eklenebilir.
 liste = ["Python", 1, 2.5, True]
 print(f"Liste : {liste}, Türü : {type(liste)}")
 for i, eleman in enumerate(liste,1):
