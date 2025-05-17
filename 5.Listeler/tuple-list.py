@@ -1,0 +1,1 @@
+#tupleler değiştirilemezler.
