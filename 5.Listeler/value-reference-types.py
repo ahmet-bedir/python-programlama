@@ -16,7 +16,8 @@ print("liste2 :", liste2)
 
 # liste kopyalama (değer tip)
 listeA = [1,2,3]
-listeB = listeA.copy()
+listeB = listeA.copy() # 1.yol
+listeB = list(listeA)
 listeA[0] = 11
 print("listeA :", listeA)
 print("listeB :", listeB)
