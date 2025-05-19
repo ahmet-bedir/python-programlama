@@ -19,3 +19,15 @@ sayi1 = 3
 sayi2 = 2
 print(F'{sayi1} + {sayi2} = {sayi1+sayi2}')
 
+fstring = "f-string"
+print(f"{{ {fstring} : f'{{ifade}}' şeklinde kullanılır. }}")
+
+kaynak = "Python"
+sene = 2022
+print(f"{kaynak = } {sene = }")
+
+print(f"|{kaynak:^20}|")
+print(f"{kaynak:#^20}")
+print(f"|{kaynak:<20}|")
+print(f"|{kaynak:>20}|")
+print(f"|{kaynak:<020}|")
