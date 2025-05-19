@@ -31,3 +31,7 @@ print(f"{kaynak:#^20}")
 print(f"|{kaynak:<20}|")
 print(f"|{kaynak:>20}|")
 print(f"|{kaynak:<020}|")
+
+#
+print(f'Sayıların toplamı {int(input("Birinci sayıyı girin: ")) + int(input("İkinci sayıyı girin: "))} eder.')
+
