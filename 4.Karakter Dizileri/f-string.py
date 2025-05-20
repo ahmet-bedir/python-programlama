@@ -35,7 +35,7 @@ print(f"|{kaynak:<020}|")
 #
 print(f'Sayıların toplamı {int(input("Birinci sayıyı girin: ")) + int(input("İkinci sayıyı girin: "))} eder.')
 
-# sayı formatlama...
+## sayı formatlama...
 sayi = 123
 print(f"{sayi:>6}") #'   123'
 
