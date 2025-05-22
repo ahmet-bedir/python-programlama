@@ -15,7 +15,7 @@ markalar = ["opel","bmw","togg"]
 # for i,marka in obj:
 #     print(f"{i}_{marka}")
 
-### zip metodu liste birleştirmek için kullanılır.
+### zip metodu liste birleştirmek için kullanılır...
 
 numara = [100,200,300]
 ogrenci = ["Ali","Ayşe","Canan","Mehmet"]
