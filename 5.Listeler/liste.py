@@ -24,5 +24,4 @@ if varMi:
 else:
     print(f"Liste içerisinde '{eleman}' elemanı bulunmamaktadır!")
 
-#
 
