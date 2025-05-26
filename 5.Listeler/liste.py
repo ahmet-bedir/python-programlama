@@ -61,6 +61,3 @@ for i in range(len(liste)):
 #     print(f"Liste içerisinde '{eleman}' elemanı bulunmaktadır.")
 # else:
 #     print(f"Liste içerisinde '{eleman}' elemanı bulunmamaktadır!")
-#
-#
-#
