@@ -26,3 +26,14 @@ for satir in f.readlines():
 f.close()
 
 print(f.closed) #dosyanın kapatılma durumunu sorgular.
+
+
+### dosyayı otomatik olarak kapatır.
+with open("log.txt", encoding="utf-8") as file:
+    print(file.read())
+
+    file.seek(0)
+    for i in file:
+        print(i, end="")
+
+print(file.closed)
