@@ -38,8 +38,7 @@ print(metin, type(metin)) #6.5 <class 'float'>
 
 metin = "6.5"
 #metin = int(metin) #hata!
-metin = float(metin)
-metin = int(metin)
+metin = int(float(metin))
 print(metin, type(metin)) #6 <class 'int'>
 
 metin = "6"
