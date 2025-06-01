@@ -30,12 +30,33 @@ s = bool(metin)
 print("metin :", s, type(s))
 
 ###
+metin = "6.5"
+print(metin, type(metin)) #6.5 <class 'str'>
+
+metin = float(metin)
+print(metin, type(metin)) #6.5 <class 'float'>
+
+metin = "6.5"
+#metin = int(metin) #hata!
+metin = float(metin)
+metin = int(metin)
+print(metin, type(metin)) #6 <class 'int'>
+
+metin = "6"
+metin = int(metin)
+print(metin, type(metin)) #6 <class 'int'>
+
+metin = "6"
+metin = float(metin)
+print(metin, type(metin)) #6.0 <class 'float'>
+
+### input fonksiyonundan gelen değer her zaman bi karakter dizisidir.
 sayi1 = input("1.sayı: ")
 sayi2 = input("2.sayı: ")
 toplam = sayi1 + sayi2 #toplama işlemi yerine string birleştirme işlemi yapar.
 print('Birleşim :', toplam)
 
-#toplam = int(sayi1) + int(sayi2) #toplama işlemi.
+#toplam = int(sayi1) + int(sayi2) #toplama işlemi yapar.
 #print('Toplam :', toplam)
 
 toplam = float(sayi1) + float(sayi2) #ondalıklı sayı girdiğimizde hata almamak için.
