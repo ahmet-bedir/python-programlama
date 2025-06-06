@@ -6,3 +6,5 @@ mesaj = "kurs adı: " + kursAdi + " " + "kurs acıklaması: " + kursAciklama + "
 
 print(mesaj[-1])
 print(mesaj[0])
+
+###
