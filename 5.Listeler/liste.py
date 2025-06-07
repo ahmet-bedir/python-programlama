@@ -7,10 +7,17 @@ liste = ["Python", 1, 2.5, [True,False]]
 # print(liste[2])
 # print(liste[3][0])
 # print(liste[3][1])
+# print(liste[-1])
+# print(liste[0:2])
+# print(liste[::-1])
 # print(liste[4]) #hata! liste 4 elemanlı bir liste, biz olmayan elemanı yazdıramayız.
-#
-for i in range(len(liste)):
-    print("{} -> {}".format(i+1,liste[i]))
+
+# yeni_liste = liste[3]
+# print(yeni_liste[0])
+# print(yeni_liste[1])
+
+# for i in range(len(liste)):
+#     print("{} -> {}".format(i+1,liste[i]))
 # for i, eleman in enumerate(liste,1):
 #     print(f"Listenin {i}. elemanı : '{eleman}' türü : {type(eleman)}")
 #
