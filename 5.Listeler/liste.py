@@ -1,5 +1,5 @@
-### listelerde elemanlar değiştirilebilinir ve yeni eleman eklenebilir.
-liste = ["Python", 1, 2.5, [True,False]]
+### listeler değiştirilen (mutable) veri tipleridir.
+# liste = ["Python", 1, 2.5, [True,False]]
 # print(f"Liste : {liste}, Türü : {type(liste)}")
 #
 # print(liste[0])
@@ -42,20 +42,54 @@ liste = ["Python", 1, 2.5, [True,False]]
 ## sıfırdan ikiyüze kadar olan sayılardan bir liste oluşturma.
 # liste = list(range(200))
 # print(liste)
-#
-#
-#
-#
+
+
 # listeyi güncelleme.
+# liste = ["Python", 1, 2.5, [True,False]]
 # liste[1] = "Php"
 # print("Listenin 2.elemanı 'Php' ile değiştirildi.")
 # print(liste)
-#
-# listeye eleman ekleme.
+
+###
+liste = [1, 2, 3]
+print(liste)
+liste[0:len(liste)] = 5, 6, 7 #liste[:] = 5, 6, 7
+print(liste)
+
+### listeye eleman ekleme.
 # liste += [False, 'A', "Ali", 2]
 # print("Listeye 4 eleman daha eklendi.")
 # print(liste)
-#
+
+###listeleri birleştirme.
+derlenen_diller = ["C", "C++", "C#", "Java"]
+yorumlanan_diller = ["Python", "Perl", "Ruby"]
+programlama_dilleri = derlenen_diller + yorumlanan_diller
+print(programlama_dilleri)
+
+###Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
+sayilar = 0
+for i in range(5):
+    sayilar += int(input("Sayı : "))
+
+print("Ortalama : ", sayilar/5)
+
+###Kullanıcı tarafından girilen sayıların ortalamasını hesaplayan program.
+sayilar = list()
+toplam = 0
+while True:
+    sayi = input("Sayı (çıkış 'q') : ")
+    if sayi == "q":
+        break
+    sayilar += [sayi]
+for i,sayi in enumerate(sayilar,1):
+    toplam += int(sayi)
+    print(f"{i}.Sayı : {sayi}")
+
+print("Ortalama :", toplam / len(sayilar))
+
+
+
 # listeden eleman silme.
 # del liste[0]
 # print("Listenin ilk elemanı silindi.")
