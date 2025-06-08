@@ -103,7 +103,7 @@ for i,sayi in enumerate(sayilar,1):
 
 print("Ortalama :", toplam/len(sayilar))
 
-
+~~~
 
 # listeden eleman silme.
 # del liste[0]
