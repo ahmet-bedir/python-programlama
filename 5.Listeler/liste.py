@@ -67,14 +67,27 @@ yorumlanan_diller = ["Python", "Perl", "Ruby"]
 programlama_dilleri = derlenen_diller + yorumlanan_diller
 print(programlama_dilleri)
 
-###Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
+## Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
 sayilar = 0
 for i in range(5):
     sayilar += int(input("Sayı : "))
 
 print("Ortalama : ", sayilar/5)
 
-###Kullanıcı tarafından girilen sayıların ortalamasını hesaplayan program.
+## Kullanıcı tarafından girilen beş adet sayıyı listeye ekleyip ortalamasını hesaplayan program.
+sayilar = []
+toplam = 0
+for i in range(5):
+    print(f"{i+1}.", end='')
+    sayi = int(input("Sayı : "))
+    sayilar += [sayi]
+print('#'*25)  
+for i in range(5):
+    print(f"{i+1}.sayı : {sayilar[i]}")
+    toplam += sayilar[i]
+
+print("Ortalama :", toplam/5)
+## Kullanıcı tarafından sınırsız girilen sayıların ortalamasını hesaplayan program.
 sayilar = list()
 toplam = 0
 while True:
@@ -82,6 +95,7 @@ while True:
     if sayi == "q":
         break
     sayilar += [sayi]
+print('#'*25)
 for i,sayi in enumerate(sayilar,1):
     toplam += int(sayi)
     print(f"{i}.Sayı : {sayi}")
