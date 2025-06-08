@@ -40,15 +40,15 @@
 # print(liste)
 #
 ## sıfırdan ikiyüze kadar olan sayılardan bir liste oluşturma.
-# liste = list(range(200))
-# print(liste)
+liste = list(range(200))
+print(liste)
 
 
-# listeyi güncelleme.
-# liste = ["Python", 1, 2.5, [True,False]]
-# liste[1] = "Php"
-# print("Listenin 2.elemanı 'Php' ile değiştirildi.")
-# print(liste)
+### listeyi güncelleme.
+liste = ["Python", 1, 2.5, [True,False]]
+liste[1] = "Php"
+print("Listenin 2.elemanı 'Php' ile değiştirildi.")
+print(liste)
 
 ###
 liste = [1, 2, 3]
@@ -57,24 +57,24 @@ liste[0:len(liste)] = 5, 6, 7 #liste[:] = 5, 6, 7
 print(liste)
 
 ### listeye eleman ekleme.
-# liste += [False, 'A', "Ali", 2]
-# print("Listeye 4 eleman daha eklendi.")
-# print(liste)
+liste += [False, 'A', "Ali", 2]
+print("Listeye 4 eleman daha eklendi.")
+print(liste)
 
-###listeleri birleştirme.
+### listeleri birleştirme.
 derlenen_diller = ["C", "C++", "C#", "Java"]
 yorumlanan_diller = ["Python", "Perl", "Ruby"]
 programlama_dilleri = derlenen_diller + yorumlanan_diller
 print(programlama_dilleri)
 
-## Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
+#Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
 sayilar = 0
 for i in range(5):
     sayilar += int(input("Sayı : "))
 
 print("Ortalama : ", sayilar/5)
 
-## Kullanıcı tarafından girilen beş adet sayıyı listeye ekleyip ortalamasını hesaplayan program.
+#Kullanıcı tarafından girilen beş adet sayıyı listeye ekleyip ortalamasını hesaplayan program.
 sayilar = []
 toplam = 0
 for i in range(5):
@@ -87,7 +87,8 @@ for i in range(5):
     toplam += sayilar[i]
 
 print("Ortalama :", toplam/5)
-## Kullanıcı tarafından sınırsız girilen sayıların ortalamasını hesaplayan program.
+
+#Kullanıcı tarafından sınırsız girilen sayıların ortalamasını hesaplayan program.
 sayilar = list()
 toplam = 0
 while True:
@@ -98,9 +99,9 @@ while True:
 print('#'*25)
 for i,sayi in enumerate(sayilar,1):
     toplam += int(sayi)
-    print(f"{i}.Sayı : {sayi}")
+    print(f"{i}.sayı : {sayi}")
 
-print("Ortalama :", toplam / len(sayilar))
+print("Ortalama :", toplam/len(sayilar))
 
 
 
