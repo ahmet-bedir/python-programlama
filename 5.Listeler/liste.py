@@ -1,44 +1,44 @@
 ### listeler değiştirilen (mutable) veri tipleridir.
-# liste = ["Python", 1, 2.5, [True,False]]
-# print(f"Liste : {liste}, Türü : {type(liste)}")
-#
-# print(liste[0])
-# print(liste[1])
-# print(liste[2])
-# print(liste[3][0])
-# print(liste[3][1])
-# print(liste[-1])
-# print(liste[0:2])
-# print(liste[::-1])
-# print(liste[4]) #hata! liste 4 elemanlı bir liste, biz olmayan elemanı yazdıramayız.
+liste = ["Python", 1, 2.5, [True,False]]
+print(f"Liste : {liste}, Türü : {type(liste)}")
 
-# yeni_liste = liste[3]
-# print(yeni_liste[0])
-# print(yeni_liste[1])
+print(liste[0])
+print(liste[1])
+print(liste[2])
+print(liste[3][0])
+print(liste[3][1])
+print(liste[-1])
+print(liste[0:2])
+print(liste[::-1])
+print(liste[4]) #hata! liste 4 elemanlı bir liste, biz olmayan elemanı yazdıramayız.
 
-# for i in range(len(liste)):
-#     print("{} -> {}".format(i+1,liste[i]))
-# for i, eleman in enumerate(liste,1):
-#     print(f"Listenin {i}. elemanı : '{eleman}' türü : {type(eleman)}")
-#
-# print("Eleman Sayısı :", len(liste))
-# print("Kullanabileceğimiz metodlar :\n", dir(list), "\n", type(dir([])), sep='')
-#
-# bldy = "İzmit Büyükşehir Belediyesi"
-# print(bldy, type(bldy))
-# s_bldy = bldy.split()
-# print(s_bldy, type(s_bldy))
-#
+yeni_liste = liste[3]
+print(yeni_liste[0])
+print(yeni_liste[1])
+
+for i in range(len(liste)):
+    print("{} -> {}".format(i+1,liste[i]))
+for i, eleman in enumerate(liste,1):
+    print(f"Listenin {i}. elemanı : '{eleman}' türü : {type(eleman)}")
+
+print("Eleman Sayısı :", len(liste))
+print("Kullanabileceğimiz metodlar :\n", dir(list), "\n", type(dir([])), sep='')
+
+bldy = "İzmit Büyükşehir Belediyesi"
+print(bldy, type(bldy))
+s_bldy = bldy.split()
+print(s_bldy, type(s_bldy))
+
 ##
-# sayilar = [[0, 10], [6, 60], [12, 54], [67, 99]]
-# for i in sayilar:
-#     print(*range(i[0],i[1])) #print(*range(*i))
-#
+sayilar = [[0, 10], [6, 60], [12, 54], [67, 99]]
+for i in sayilar:
+    print(*range(i[0],i[1])) #print(*range(*i))
+
 ## list fonksiyonu.
-# alfabe = "abcçdefgğhıijklmnoöprsştuüvyz"
-# liste = list(alfabe)
-# print(liste)
-#
+alfabe = "abcçdefgğhıijklmnoöprsştuüvyz"
+liste = list(alfabe)
+print(liste)
+
 ## sıfırdan ikiyüze kadar olan sayılardan bir liste oluşturma.
 liste = list(range(200))
 print(liste)
@@ -70,16 +70,15 @@ print(programlama_dilleri)
 #Kullanıcı tarafından girilen beş adet sayının ortalamasını hesaplayan program.
 sayilar = 0
 for i in range(5):
-    sayilar += int(input("Sayı : "))
+    sayilar += int(input("{}.sayı : ".format(i+1)))
 
-print("Ortalama : ", sayilar/5)
+print("Ortalama :", sayilar/5)
 
 #Kullanıcı tarafından girilen beş adet sayıyı listeye ekleyip ortalamasını hesaplayan program.
 sayilar = []
 toplam = 0
 for i in range(5):
-    print(f"{i+1}.", end='')
-    sayi = int(input("Sayı : "))
+    sayi = int(input(f"{i+1}.sayı : "))
     sayilar += [sayi]
 print('#'*25)  
 for i in range(5):
@@ -103,17 +102,78 @@ for i,sayi in enumerate(sayilar,1):
 
 print("Ortalama :", toplam/len(sayilar))
 
-~~~
+#
+liste = []
+alfabe = "abcçdefgğhıijklmnoöprsştuüvyz"
+for harf in alfabe:
+    liste += harf
+
+print(liste)
+
+#
+alfabe = "abcçdefgğhıijklmnoöprsştuüvyz"
+liste = list(alfabe)
+print(liste)
+
+#
+sayi = 12345 #hata!
+liste = list(sayi)
+print(liste)
 
 # listeden eleman silme.
-# del liste[0]
-# print("Listenin ilk elemanı silindi.")
-# print(liste)
+del liste[0]
+print("Listenin ilk elemanı silindi.")
+print(liste)
+
+# listeyi silme.
+liste = [1, 5, 3, 2, 9]
+print(liste)
+del liste
+print(liste)
+
+# listeyi kopyalama.
+liste = ['a','b','c']
+print(liste)
+liste2 = liste
+print(liste2)
+
+liste[0] = 1
+print(liste)
+print(liste2)
+#liste ve liste2 adlı listeler aynı kimlik numarasına sahip. Yani bu iki nesne birbiriyle aynı. Dolayısıyla birinde yaptığınız değişiklik öbürünü de etkiler. 
+print(id(liste) == id(liste2)) #True
+
 #
+liste = ['a','b','c']
+print(liste)
+liste2 = liste[:]
+print(liste2)
+
+liste[0] = 1
+print(liste)
+print(liste2)
+
+print(id(liste) == id(liste2)) #False
+
+#
+liste = ['a','b','c']
+print(liste)
+liste2 = list(liste)
+print(liste2)
+
+liste[0] = 1
+print(liste)
+print(liste2)
+
+print(id(liste) == id(liste2)) #False
+
 # listede eleman arama.
-# eleman = "Python"
-# varMi = eleman in liste
-# if varMi:
-#     print(f"Liste içerisinde '{eleman}' elemanı bulunmaktadır.")
-# else:
-#     print(f"Liste içerisinde '{eleman}' elemanı bulunmamaktadır!")
+eleman = "Python"
+varMi = eleman in liste
+if varMi:
+    print(f"Liste içerisinde '{eleman}' elemanı bulunmaktadır.")
+else:
+    print(f"Liste içerisinde '{eleman}' elemanı bulunmamaktadır!")
+    
+### Liste Üreteçleri (List Comprehensions)
+
