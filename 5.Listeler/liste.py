@@ -176,4 +176,13 @@ else:
     print(f"Liste içerisinde '{eleman}' elemanı bulunmamaktadır!")
     
 ### Liste Üreteçleri (List Comprehensions)
+liste = []
 
+for i in range(1000):
+    liste += [i]
+print(liste)
+
+liste = [i for i in range(1000)] #Burada 0’dan 1000’e kadar olan sayıları tek satırda bir liste haline getirdik.
+print(liste)
+
+#
