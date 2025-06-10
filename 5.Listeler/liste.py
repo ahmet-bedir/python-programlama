@@ -177,7 +177,6 @@ else:
     
 ### Liste Üreteçleri (List Comprehensions)
 liste = []
-
 for i in range(1000):
     liste += [i]
 print(liste)
@@ -186,3 +185,21 @@ liste = [i for i in range(1000)] #Burada 0’dan 1000’e kadar olan sayıları 
 print(liste)
 
 #
+liste = [i for i in range(1000) if i % 2 == 0]
+print(liste)
+
+#Burada iç içe geçmiş 4 adet liste var. Bu listenin bütün öğelerini tek bir listeye alma.
+liste = [[1, 2, 3],
+         [4, 5, 6],
+         [7, 8, 9],
+         [10, 11, 12]]
+tumu = []
+for i in liste:
+    for z in i:
+        tumu += [z]
+print(tumu)
+
+#liste üretecleri ile.
+tumu = [z for i in liste for z in i]
+print(tumu)
+
