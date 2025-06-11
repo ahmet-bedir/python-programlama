@@ -1,9 +1,39 @@
-#tupleler değiştirilemezler.
-my_tuple = (1,2,3) #my_tuple = 1,2,3
-print(my_tuple, type(my_tuple))
+#demetler değiştirilemez (immutable) bir veri tipidir. 
+demet = (1,2,3)
+print(demet, type(demet)) #(1, 2, 3) <class 'tuple'>
+
+#demet oluşturmanın 2.yolu.
+demet = 1,2,3
+print(demet, type(demet))
+
+#demet oluşturmanın 3.yolu.
+demet = tuple("123")
+print(demet, type(demet)) #('1', '2', '3') <class 'tuple'>
+
+#list => tuple
+liste = ["ali", "cenk", "murat"]
+demet = tuple(liste)
+print(demet, type(demet))
+
+#Tek Öğeli bir Demet Tanımlama.
+demet = ('ahmet')
+print(demet, type(demet)) #ahmet <class 'str'>
+demet = ('ahmet',) #veya demet = 'ahmet',
+print(demet, type(demet)) #('ahmet',) <class 'tuple'>
+
+###
+demet = ('elma', 'armut', 'kiraz')
+demet[0] #'elma'
+demet[-1] #'kiraz'
+demet[:2] #('elma', 'armut')
 
 #
-sonuc = my_tuple[0]
-print(sonuc)
-#my_tuple[0] = 2 hata! çünkü tupleler değiştirilemezler.
+#sonuc = demet[0]
+#print(sonuc, type(sonuc))
+#demet[0] = "muz" hata! çünkü demetler değiştirilemezler.
 
+demet = ('elma', 'armut', 'kiraz')
+
+#demet += ('muz') #hata! Python programlama dilinde sadece aynı tür verileri birbiriyle birleştirebilirsiniz.
+demet += ('muz',)
+print(demet)
