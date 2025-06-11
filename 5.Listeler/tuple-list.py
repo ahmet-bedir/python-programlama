@@ -23,9 +23,9 @@ print(demet, type(demet)) #('ahmet',) <class 'tuple'>
 
 ###
 demet = ('elma', 'armut', 'kiraz')
-demet[0] #'elma'
-demet[-1] #'kiraz'
-demet[:2] #('elma', 'armut')
+print(demet[0]) #'elma'
+print(demet[-1]) #'kiraz'
+print(demet[:2]) #('elma', 'armut')
 
 #
 #sonuc = demet[0]
