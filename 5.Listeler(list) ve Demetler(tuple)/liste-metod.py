@@ -49,3 +49,4 @@ if len(liste) < 2:
     print("En az iki sayı girilmeli!")
 else:
     print("Toplam :", toplam)
+
