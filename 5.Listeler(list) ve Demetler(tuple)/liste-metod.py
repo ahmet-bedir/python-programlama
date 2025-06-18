@@ -50,3 +50,21 @@ if len(liste) < 2:
 else:
     print("Toplam :", toplam)
 
+
+### extend() metodu listeleri genişletmek için kullanıyoruz.
+li1 = [1, 3, 4]
+li2 = [10, 11, 12]
+li1.append(li2) #append() metodu bir listeye her defasında sadece tek bir öğe eklenmesine izin verir.
+print(li1) #[1, 3, 4, [10, 11, 12]]
+
+li1 = [1, 3, 4]
+li2 = [10, 11, 12]
+li1.extend(li2) #extend() metodu tam da kelime anlamına uygun olarak listeyi yeni öğelerle genişletti.
+print(li1) #[1, 3, 4, 10, 11, 12]
+
+#
+isletim_sistemleri = ["Windows", "GNU/Linux", "Mac OS X"]
+platformlar = ["IPhone", "Android", "S60"]
+isletim_sistemleri.extend(platformlar)
+print(isletim_sistemleri)
+
