@@ -8,7 +8,7 @@ print(z, type(z), "\n")
 x = y = z = 4 #x, y, z = 4, 4, 4
 print(x, y, z)
 
-###################################################
+#################################################
 
 print("-" * 45)
 import keyword
@@ -19,7 +19,7 @@ print("-" * 45)
 print("Yasaklı Kelime Adedi :", len(a))
 print("-" * 45, end="\n\n")
 
-############################################
+#################################################
 
 isletme = "Sefa Bilişim"
 gun = 20
@@ -38,7 +38,7 @@ print("-" * 31)
 print("Aylık Yol Masrafı\t: ", masraf)
 print("-" * 31, end="\n\n")
 
-############################################
+################################################
 
 cap = 16
 yari_cap = cap / 2
@@ -52,7 +52,7 @@ print("Yarıçapı " + str(int(yari_cap)) + " Olan Dairenin Alanı : " + str(ala
 print("Yarıçapı", int(yari_cap) ,"Olan Dairenin Çevresi :", cevre)
 print(45 * "-", end="\n\n")
 
-############################################
+################################################
 
 print(45 * "-")
 print("İki üzeri üç :", 2**3) #8
@@ -62,7 +62,7 @@ print("Üç üzeri iki bölü iki kalan :", pow(3,2,2)) #1
 print("Üç üzeri iki bölü üç kalan :", pow(3,2,3)) #0
 print("-" * 45, end="\n\n")
 
-############################################
+################################################
 
 ocak = mart = mayis = temmuz = agustos = ekim = aralik = 31
 nisan = haziran = eylul = kasim = 30
@@ -77,7 +77,7 @@ print("-" * 45)
 print("Nisan Ayı Faturası : ", nisan_fatura)
 print("-" * 45, end="\n\n")
 
-############################################
+################################################
 
 print("-" * 45)
 osman = "Araştırma Geliştirme Müdürü"
