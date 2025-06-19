@@ -68,3 +68,43 @@ platformlar = ["IPhone", "Android", "S60"]
 isletim_sistemleri.extend(platformlar)
 print(isletim_sistemleri)
 
+### insert() metodu, öğeleri listenin istediğimiz bir konumuna yerleştirir.
+liste = ["elma", "armut", "çilek"]
+liste.insert(0, "erik")
+print(liste)
+
+### remove() metodu listeden öğe silmemizi sağlar.
+liste = ["elma", "armut", "çilek"]
+liste.remove("armut")
+print(liste)
+
+### reverse() metodu liste öğelerini ters çevirmek için kullanılır.
+meyveler = ["elma", "armut", "çilek", "kiraz"]
+print(meyveler[::-1]) #dilimleme yöntemi ile listeyi ters çevirme.
+
+#reversed() metodu ile listeyi ters çevirme.
+print(*reversed(meyveler))
+#veya
+print(list(reversed(meyveler)))
+#yada
+for  meyve in reversed(meyveler):
+    print(meyve)
+    
+## listelerin reverse() metodu ile listeyi ters çevirme.
+meyveler.reverse()
+print(meyveler)
+
+### pop() tıpkı remove() metodu gibi, bu metot da bir listeden öğe silmemizi sağlar.
+liste = ["elma", "armut", "çilek"]
+print("Listenin orjinal hali")
+print(liste)
+
+silinen = liste.pop()
+print("Silinen eleman:", silinen)
+print(liste)
+
+silinen = liste.pop(0)
+print("Silinen eleman:", silinen)
+print(liste)
+
+### sort() metodu bir listenin öğelerini belli bir ölçüte göre sıraya dizmemizi sağlar.
