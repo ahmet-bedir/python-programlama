@@ -85,7 +85,7 @@ print(bool(3)) #True
 print(bool("py")) #True
 print(bool(" ")) #True
 print(bool("    ")) #True
-print(bool("0")) #True (0’ın bir sayı, “0”’ın ise bir karakter dizisidir. Sayı olan 0’ın bool değeri False’tur, ama karakter dizisi olan “0”’ın değeri True’dur)
+print(bool("0")) #True (0 bir sayı, “0”’ın ise bir karakter dizisidir. Sayı olan 0’ın bool değeri False’tur, ama karakter dizisi olan “0”’ın bool değeri True’dur)
 print(bool(0)) #False
 print(bool("")) #False
 
@@ -122,6 +122,18 @@ a %= 5 #a = a % 5
 a **= 2
 a //= 2 #a = a // 2
 print("Değer Atama İşleçleri :", a) #4
+
+a, b, c = 4, 8, (12, 2)
+
+### Kullanıcıdan aldığınız 2 sayının çarpımı ile a,b,c toplamının farkı nedir?
+
+sayi1 = int(input("sayı 1: "))
+sayi2 = int(input("sayı 2: "))
+
+carpim = sayi1 * sayi2
+toplam = a + b + (c[0] + c[1])
+
+sonuc = carpim - toplam
 
 #
 giris = len(input("Adın ne? "))
