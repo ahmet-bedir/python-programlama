@@ -55,6 +55,20 @@ print('#' * 45)
 ### not    değil     ###
 ########################
 
+# 1- And 
+# True, True => True
+# True, False => False
+# False, False => False
+
+# 2- Or
+# True, True => True
+# True, False => True
+# False, False => False
+
+# 3- Not
+# False => True
+# True => False
+
 print(1==1) #True
 print(1!=1) #False
 
