@@ -108,3 +108,29 @@ print("Silinen eleman:", silinen)
 print(liste)
 
 ### sort() metodu bir listenin öğelerini belli bir ölçüte göre sıraya dizmemizi sağlar.
+uyeler = ['Ahmet', 'Mehmet', 'Ceylan', 'Seyhan', 'Mahmut', 'Zeynep',
+'Abdullah', 'Kadir', 'Kemal','Kamil', 'Selin', 'Senem', 'Sinem', 'Tayfun', 'Tuna','Tolga']
+uyeler.sort()
+print(uyeler)
+
+#
+sayilar = [1, 0, -1, 4, 10, 3, 6]
+sayilar.sort(reverse=True)
+print(sayilar)
+
+##
+isimler = ["samet", "ahmet", "ışık", "ismail", "çiğdem", "can", "şule"]
+
+isimler.sort()
+print(isimler)
+
+#türkçe karakterleri düzgün sıralayabilmemiz için.
+harfler = "abcçdefgğhıijklmnoöprsştuüvyz"
+cevrim = {harf: harfler.index(harf) for harf in harfler}
+
+
+isimler = ["samet", "ahmet", "ışık", "ismail", "çiğdem", "can", "şule"]
+
+isimler.sort(key=lambda x: cevrim.get(x[0]))
+
+print(isimler)
