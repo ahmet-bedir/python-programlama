@@ -109,6 +109,7 @@ for sira, karakter in enumerate(dir(str)):
 for i in range(20):
     print("%(deger)5d%(deger)5o%(deger)5x" %{"deger":i})
     
+#####################################
 ### format() Metodu ile Biçimlendirme (Yeni Yöntem)
 print("{} ve {} iyi bir ikilidir!".format("Django", "Python"))
 
