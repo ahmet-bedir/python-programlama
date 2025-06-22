@@ -132,5 +132,31 @@ cevrim = {harf: harfler.index(harf) for harf in harfler}
 isimler = ["samet", "ahmet", "ışık", "ismail", "çiğdem", "can", "şule"]
 
 isimler.sort(key=lambda x: cevrim.get(x[0]))
-
 print(isimler)
+
+### index() metodu bir liste öğesinin liste içindeki konumunu öğrenmek için kullanılır.
+liste = ["elma", "armut", "çilek"]
+print(liste.index("elma"))
+
+### count() metodu bir öğenin o veri tipi içinde kaç kez geçtiğini söyler.
+print(liste.count("armut"))
+
+### copy() metodu liste kopyalamak için kullanılır.
+liste2 = liste.copy()
+print(liste2)
+liste[0] = "ayva"
+print(liste)
+print(liste2)
+
+### clear() metodunun görevi bir listenin içeriğini boşaltmaktır.
+liste2.clear()
+print(liste2)
+
+### Demetlerin Metodları.
+# index() metodu bir demet öğesinin demet içindeki konumunu söyler bize.
+demet = ("elma", "armut", "çilek")
+print(demet.index("elma")) #0
+
+#count() metodu da bir öğenin o veri tipi içinde kaç kez geçtiğini söyler.
+demet = ("elma", "armut", "elma", "çilek")
+print(demet.count("elma")) #2
