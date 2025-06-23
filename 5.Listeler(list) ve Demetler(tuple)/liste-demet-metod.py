@@ -23,7 +23,7 @@ isletim_sistemleri = ["Windows", "GNU/Linux", "Mac OS X"]
 platformlar = ["IPhone", "Android", "S60"]
 
 for platform in platformlar:
-    isletim_sistemleri.append(platform)
+isletim_sistemleri.append(platform)
 
 print(isletim_sistemleri)
 
@@ -31,7 +31,7 @@ print(isletim_sistemleri)
 liste = [1, 2, 3]
 #liste.append(1,2,3) #hata!
 for i in [4, 5, 6]:
-    liste.append(i)
+liste.append(i)
 
 print(liste)
 
@@ -39,16 +39,16 @@ print(liste)
 toplam = 1
 liste = []
 while True:
-    giris = input("Sayı (çıkış 'q') : ")
-    if giris == 'q':
-        break
-    liste.append(giris)
-    toplam *= int(giris)
-    
+giris = input("Sayı (çıkış 'q') : ")
+if giris == 'q':
+break
+liste.append(giris)
+toplam *= int(giris)
+
 if len(liste) < 2:
-    print("En az iki sayı girilmeli!")
-else:
-    print("Toplam :", toplam)
+print("En az iki sayı girilmeli!")
+else :
+print("Toplam :", toplam)
 
 
 ### extend() metodu listeleri genişletmek için kullanıyoruz.
@@ -87,9 +87,9 @@ print(*reversed(meyveler))
 #veya
 print(list(reversed(meyveler)))
 #yada
-for  meyve in reversed(meyveler):
-    print(meyve)
-    
+for meyve in reversed(meyveler):
+print(meyve)
+
 ## listelerin reverse() metodu ile listeyi ters çevirme.
 meyveler.reverse()
 print(meyveler)
@@ -109,13 +109,13 @@ print(liste)
 
 ### sort() metodu bir listenin öğelerini belli bir ölçüte göre sıraya dizmemizi sağlar.
 uyeler = ['Ahmet', 'Mehmet', 'Ceylan', 'Seyhan', 'Mahmut', 'Zeynep',
-'Abdullah', 'Kadir', 'Kemal','Kamil', 'Selin', 'Senem', 'Sinem', 'Tayfun', 'Tuna','Tolga']
+    'Abdullah', 'Kadir', 'Kemal','Kamil', 'Selin', 'Senem', 'Sinem', 'Tayfun', 'Tuna','Tolga']
 uyeler.sort()
 print(uyeler)
 
 #
 sayilar = [1, 0, -1, 4, 10, 3, 6]
-sayilar.sort(reverse=True)
+sayilar.sort(reverse = True)
 print(sayilar)
 
 ##
@@ -126,12 +126,14 @@ print(isimler)
 
 #türkçe karakterleri düzgün sıralayabilmemiz için.
 harfler = "abcçdefgğhıijklmnoöprsştuüvyz"
-cevrim = {harf: harfler.index(harf) for harf in harfler}
+cevrim = {
+    harf: harfler.index(harf) for harf in harfler
+}
 
 
 isimler = ["samet", "ahmet", "ışık", "ismail", "çiğdem", "can", "şule"]
 
-isimler.sort(key=lambda x: cevrim.get(x[0]))
+isimler.sort(key = lambda x: cevrim.get(x[0]))
 print(isimler)
 
 ### index() metodu bir liste öğesinin liste içindeki konumunu öğrenmek için kullanılır.
