@@ -22,9 +22,12 @@ f.close()
 ###
 f = open("./log.txt","r")
 
-r = f.readline() #Dosyanın ilk satırını okur.
+r = f.readline() #Dosyayı satır satır okur.
 
 print("Tip:", type(r)) #Tip: <class 'str'>
+print(r)
+
+r = f.readline()
 print(r)
 
 f.close()
@@ -44,16 +47,19 @@ for satir in r:
 f.close()
 
 
-###
-print(f.closed) #dosyanın kapatılma durumunu sorgular.
-
-
-### dosyayı otomatik olarak kapatır.
-with open("log.txt", encoding="utf-8") as file:
+### Dosyayı otomatik olarak kapatır.
+with open("log.txt") as file:
     print(file.read())
 
-    file.seek(0)
-    for i in file:
-        print(i, end="")
+print(f.closed) #True (dosyanın kapatılma durumunu sorgular)
 
-print(file.closed)
+###Dosyayı İleri-Geri Sarmak
+with open("log.txt") as file:
+    print(file.read())
+
+    file.seek(0) #imleci en başa alır.
+
+    for i in file.read():
+        print(i, end='')
+
+
