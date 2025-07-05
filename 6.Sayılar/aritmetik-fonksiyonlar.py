@@ -51,4 +51,10 @@ print("En uzun isim:", max(isimler, key=len))
 print("En kısa sayı:", min(sayilar))
 
 print("En kısa isim:", min(isimler, key=len))
-          
+
+#sum() fonksiyonu bir dizi içinde yer alan bütün sayıları birbiriyle toplar.
+
+a = [10, 20, 43, 45 , 77, 2, 0, 1]
+print(sum(a))
+
+print(sum(a,10)) #ikinci parametre toplam değere eklenecektir.
