@@ -1,11 +1,22 @@
-#with open("markalar.txt","a") as file: #dosyanın sonuna ekleme yapar.
-#    file.write("6-Bmw")
+# "a": (Append) ekleme. Dosya konumda yoksa oluşturur. Varsa dosyaya ekleme yapar.
+# "r": (Read) okuma. Dosya konumda yoksa hata verir.
+# "w": (Write) yazma modu. 
+#    ** Dosyayı konumda oluşturur. 
+#    ** Dosya mevcut ise dosyayı siler ve yeniden oluşturur. 
+# "r+": Hem okuma hem yazma modunda açılır. Dosya konumda yoksa hata verir.
 
-# with open("markalar.txt","r+", encoding="utf-8") as file: #dosyanın başına ekleme yapar.
-#     markalar = file.read()
-#     markalar = "1-Toyota\n" + markalar
-#     file.seek(0)
-#     file.write(markalar)
+#Dosyaların Sonunda Değişiklik Yapmak
+with open("markalar.txt","a") as file:
+    file.write("6.Bmw\n")
+
+
+#Dosyaların Başında Değişiklik Yapmak
+
+
+
+
+
+
 
 with open("markalar.txt","r+",encoding="utf-8") as file: #dosyanın ortasına ekleme yapar.
     markalar = file.readlines()

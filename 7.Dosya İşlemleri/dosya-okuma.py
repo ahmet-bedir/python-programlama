@@ -57,9 +57,22 @@ print(f.closed) #True (dosyanın kapatılma durumunu sorgular)
 with open("log.txt") as file:
     print(file.read())
 
-    file.seek(0) #imleci en başa alır.
+    file.seek(0) #Bu metoda verdiğimiz parametre, dosya içinde kaçıncı bayt konumuna gideceğimizi gösteriyor. Biz burada 0 sayısını kullanarak dosyanın ilk baytına, yani en başına dönmüş olduk.
 
     for i in file.read():
         print(i, end='')
 
 
+#
+with open("log.txt") as file:
+    print(file.read())
+    
+    print(file.tell()) #Eğer o anda dosyanın hangi bayt konumunda bulunduğunuzu öğrenmek için.
+    
+    file.seek(5)
+    print(file.tell())
+    
+    for i in file.read():
+        print(i, end='')
+        
+    print(file.tell())
