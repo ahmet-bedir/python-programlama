@@ -11,7 +11,17 @@ with open("markalar.txt","a") as file:
 
 
 #Dosyaların Başında Değişiklik Yapmak
-
+with open("markalar.txt","r+", encoding="utf-8") as file:
+     markalar = file.read()
+     print(markalar)
+     
+     input("Dosyaya ekleme yapmak için herhangi bir tuşa basınız.")
+     
+     markalar = "1.Toyota\n" + markalar
+     file.seek(0)
+     file.write(markalar)
+     
+     print(markalar)
 
 
 
