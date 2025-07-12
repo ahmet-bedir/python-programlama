@@ -29,12 +29,12 @@ with open("markalar.txt","r+",encoding="utf-8") as file:
     markalar = file.readlines()
     markalar.insert(2, "3-Renault\n")
     file.seek(0)
-    file.writelines(markalar) #writelines() metodu bir dosyaya yalnızca liste veri tipinde veriler yazabilir.
+    file.writelines(markalar) #writelines() metodu bir dosyaya yalnızca liste veri tipinde veriler yazılabilir.
     
     """
     veya...
     for marka in markalar:
-        file.write(marka) #write() metodu bir dosyaya yalnızca karakter dizilerini yazabilir.
+        file.write(marka) #write() metodu ile bir dosyaya yalnızca karakter dizileri yazılabilir.
     """
 
 
