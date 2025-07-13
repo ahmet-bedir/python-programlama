@@ -1,0 +1,20 @@
+dosya = open("log.txt", "r")
+print(*[metot for metot in dir(dosya) if not metot.startswith("_")], sep="\n")
+print('#'*33)
+"""
+Bu nitelik, bir dosyanın kapalı olup olmadığını sorgulamamızı sağlar.
+Eğer dosya kapalıysa True çıktısı, açıksa False çıktısı verilecektir.
+"""
+print(dosya.closed) #False
+dosya.close()
+print(dosya.closed) #True
+
+#readable() Metodu bir dosyanın okuma yetkisine sahip olup olmadığını sorgulamamızı sağlar. Eğer bir dosya “r” gibi bir kiple açılmışsa, yani o dosya ‘okunabilir’ özellikle ise bu metot bize True çıktısı verir. Ama eğer dosya yazma kipinde açılmışsa bu metot bize False çıktısı verecektir.
+print(dosya.readable()) #True
+
+#writable() Metodu bir dosyanın yazma yetkisine sahip olup olmadığını sorgulamamızı sağlar. Eğer bir dosya “w” gibi bir kiple açılmışsa, yani o dosya ‘yazılabilir’ özellikle ise bu metot bize True çıktısı verir. Ama eğer dosya okuma kipinde açılmışsa bu metot bize False çıktısı verecektir.
+print(dosya.writable()) #False
+
+
+
+
