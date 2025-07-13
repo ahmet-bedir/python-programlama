@@ -16,5 +16,16 @@ print(dosya.readable()) #True
 print(dosya.writable()) #False
 
 
+#truncate() Metodu ile dosyalarımızı istediğimiz boyuta getirebiliyoruz.
+with open("log.txt","r+") as dosya:
+    print("### dosyanın ilk hali ###", dosya.read(), sep='\n')
+    
+    dosya.truncate(5)
+    
+    dosya.seek(0)
+    print("### dosyanın son hali ###", dosya.read(), sep='\n')
+    
+
+
 
 
