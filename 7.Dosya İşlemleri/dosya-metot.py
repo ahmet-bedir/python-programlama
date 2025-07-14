@@ -26,6 +26,12 @@ with open("log.txt","r+") as dosya:
     print("### dosyanın son hali ###", dosya.read(), sep='\n')
     
 
+#mode niteliği bize bir dosyanın hangi kipte açıldığına dair bilgi verir:
+f = open("log.txt")
+print(f.mode) #'r'
 
+#name niteliği bize bir dosyanın adını verir:
+print(f.name) #'falanca.txt'
 
-
+#encoding niteliği bir dosyanın hangi dil kodlaması ile kodlandığını söyler:
+print(f.encoding) #'utf-8' veya 'cp1254' => Windows
