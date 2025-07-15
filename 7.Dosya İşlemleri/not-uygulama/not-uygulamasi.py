@@ -15,6 +15,8 @@
     # 50-59  -> DD
     # 40-49  -> FD
     # 0 -39  -> FF
+""" 
+# Fonksiyon kullanarak.
 
 def not_hesapla(satir):
     satir = satir[:-1]
@@ -87,3 +89,17 @@ while True:
         notlari_kaydet()
     else:
         break
+"""
+###
+while True:
+    islem = input("1-Not Gir\n2-Notları Oku\n3-Notları Kayıt Et\n4-Çıkış\nSeçim: ")
+    
+    if islem == "1":
+        ad = input("Öğrenci ismi: ")
+        soyad = input("Öğrenci soyismi: ")
+        not1 = input("1.Sınav notu: ")
+        not2 = input("2.Sınav notu: ")
+        not3 = input("3.Sınav notu: ")
+    
+   else:
+       break
