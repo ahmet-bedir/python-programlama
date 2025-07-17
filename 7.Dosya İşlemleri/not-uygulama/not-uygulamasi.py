@@ -95,8 +95,7 @@ while True:
     islem = input("=== MENÜ ===\n\
 1-Not Gir\n\
 2-Notları Oku\n\
-3-Notları Kayıt Et\n\
-4-Çıkış\n\
+3-Çıkış\n\
 Seçiminiz : ")
     
     if islem == "1":
@@ -105,27 +104,46 @@ Seçiminiz : ")
         not1 = input("1.Sınav notu: ")
         not2 = input("2.Sınav notu: ")
         not3 = input("3.Sınav notu: ")
-
+        ortalama = (int(not1) + int(not2) + int(not3)) / 3
+        
+        if ortalama >= 90 and ortalama <= 100:
+            harf = "AA"
+        elif ortalama >= 80 and ortalama <= 89:
+            harf = "BA"
+        elif ortalama >= 75 and ortalama <= 79:
+            harf = "BB"
+        elif ortalama >= 70 and ortalama <= 74:
+            harf = "CB"
+        elif ortalama >= 65 and ortalama <= 69:
+            harf = "CC"
+        elif ortalama >= 60 and ortalama <= 64:
+            harf = "DC"
+        elif ortalama >= 50 and ortalama <= 59:
+            harf = "DD"
+        elif ortalama >= 40 and ortalama <= 49:
+            harf = "FD"
+        elif ortalama >= 0 and ortalama <= 39:
+            harf = "FF"
+        print(f"Ortalama : {ortalama} ({harf})")
+        
         onay = input("Girilen Bilgiler Kayıt Edilsinmi? [E/H]: ")
-        if onay == "e":
+        if onay == "e" or onay == "E":
             with open("notlar.txt","a") as dosya:
-                ogrenci = f"{ad} {soyad}:{not1},{not2},{not3}"
+                ogrenci = f"{ad} {soyad} : {not1}, {not2}, {not3} => {ortalama} ({harf})"
                 dosya.write(ogrenci + "\n")
             print("Kayıt İşlemi Yapılmıştır.")
-        elif onay == "h":
+        elif onay == "h" or onay == "H":
             print("Kayıt İşlemi İptal Edilmiştir!")
         else:
             print("Yalış Seçim!")
     
     elif islem == "2":
         with open("notlar.txt") as dosya:
-            liste = dosya.readlines()
-            for satir in liste:
-                satir = satir.split(":")
-                notlar = satir[-1].split(",")
-                ortalama = (int(notlar[0]) + int(notlar[1]) + int(notlar[2])) / 3
-                print(f"{satir[0]} : {notlar[0]},{notlar[1]},{notlar[2]} => {ortalama}") 
+            print(dosya.read())
 
-    elif islem == "4":
+    elif islem == "3":
         break
+
+    else:
+        print("Yalış Seçim!")
    
