@@ -15,7 +15,7 @@
     # 50-59  -> DD
     # 40-49  -> FD
     # 0 -39  -> FF
-""" 
+"""
 # Fonksiyon kullanarak.
 
 def not_hesapla(satir):
@@ -92,7 +92,12 @@ while True:
 """
 ###
 while True:
-    islem = input("1-Not Gir\n2-Notları Oku\n3-Notları Kayıt Et\n4-Çıkış\nSeçim: ")
+    islem = input("=== MENÜ ===\n\
+1-Not Gir\n\
+2-Notları Oku\n\
+3-Notları Kayıt Et\n\
+4-Çıkış\n\
+Seçiminiz : ")
     
     if islem == "1":
         ad = input("Öğrenci ismi: ")
@@ -100,8 +105,27 @@ while True:
         not1 = input("1.Sınav notu: ")
         not2 = input("2.Sınav notu: ")
         not3 = input("3.Sınav notu: ")
-    else:
+
+        onay = input("Girilen Bilgiler Kayıt Edilsinmi? [E/H]: ")
+        if onay == "e":
+            with open("notlar.txt","a") as dosya:
+                ogrenci = f"{ad} {soyad}:{not1},{not2},{not3}"
+                dosya.write(ogrenci + "\n")
+            print("Kayıt İşlemi Yapılmıştır.")
+        elif onay == "h":
+            print("Kayıt İşlemi İptal Edilmiştir!")
+        else:
+            print("Yalış Seçim!")
+    
+    elif islem == "2":
+        with open("notlar.txt") as dosya:
+            liste = dosya.readlines()
+            for satir in liste:
+                satir = satir.split(":")
+                notlar = satir[-1].split(",")
+                ortalama = (int(notlar[0]) + int(notlar[1]) + int(notlar[2])) / 3
+                print(f"{satir[0]} : {notlar[0]},{notlar[1]},{notlar[2]} => {ortalama}") 
+
+    elif islem == "4":
         break
    
-with open("sinav_notlari.txt") as f:
-    print(f.readlines())
