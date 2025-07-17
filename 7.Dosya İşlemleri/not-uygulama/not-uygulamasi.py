@@ -100,6 +100,8 @@ while True:
         not1 = input("1.Sınav notu: ")
         not2 = input("2.Sınav notu: ")
         not3 = input("3.Sınav notu: ")
-    
-   else:
-       break
+    else:
+        break
+   
+with open("sinav_notlari.txt") as f:
+    print(f.readlines())
