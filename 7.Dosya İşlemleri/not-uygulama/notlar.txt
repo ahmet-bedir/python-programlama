@@ -1,1 +1,2 @@
-asaf guru : 50, 4, 36 => 30.0 (FF)
+ahmet bedir : 75, 50, 85 => 70.0 (CB)
+efe der : 2, 3, 1 => 2.0 (FF)
