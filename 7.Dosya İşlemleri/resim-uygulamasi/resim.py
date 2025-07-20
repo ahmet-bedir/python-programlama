@@ -13,7 +13,7 @@ else:
 dosya.close()
 
 # Çok dosyayı kontrol işlemi.
-dosyalar = ["1","2","3"]
+dosyalar = ["1","2","3","4"]
 for dosya in dosyalar:
-	with open(dosya,"rb") as dosya:
-		print(dosya.read(10))
+	with open(dosya,"rb") as file:
+		print(file.read(10))
