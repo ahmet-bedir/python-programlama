@@ -12,8 +12,15 @@ else:
 
 dosya.close()
 
+print('\n', '*'*45, '\n', sep='')
+
 # Çok dosyayı kontrol işlemi.
-dosyalar = ["1","2","3","4"]
+dosyalar = ["dosya1","dosya2","dosya3","dosya4","dosya5"]
 for dosya in dosyalar:
 	with open(dosya,"rb") as file:
-		print(file.read(10))
+		okunan = file.read(16)
+		print(okunan)
+		if okunan[6:10] in [b"JFIF", b"Exif"]:
+		    print(f"'{dosya}' Dosyası JPEG Dosyasıdır.\n")
+		elif okunan[1:4] in b"PNG":
+		    print(f"'{dosya}' Dosyası PNG Dosyasıdır.\n")
