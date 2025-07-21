@@ -15,7 +15,7 @@ dosya.close()
 print('\n', '*'*45, '\n', sep='')
 
 # Çok dosyayı kontrol işlemi.
-dosyalar = ["dosya1","dosya2","dosya3","dosya4","dosya5"]
+dosyalar = ["dosya1","dosya2","dosya3","dosya4","dosya5","dosya6"]
 for dosya in dosyalar:
 	with open(dosya,"rb") as file:
 		okunan = file.read(16)
