@@ -1,10 +1,7 @@
-with open("bilgi-iletisim-teknolojileri.pdf","rb") as file:
-    print(file.read(8))
-    
-    
-#PDF dosyasından bilgi alma.
+### PDF dosyasından bilgi alma.
 with open("bilgi-iletisim-teknolojileri.pdf","rb") as file:
     okunan = file.read()
+    print(okunan[1:8])
     producer_index = okunan.index(b"/Producer")
     
     print(okunan[producer_index:producer_index+80])
