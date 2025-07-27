@@ -11,6 +11,7 @@ print(f"Hexadecimal sayı sistemindeki '{str_karakter[4:6]}' sayısı, decimal s
 print(f"Hexadecimal sayı sistemindeki '{str("ü".encode("cp857"))[4:6]}' sayısı, decimal sayı sisteminde '{int(str("ü".encode("cp857"))[4:6],16)}' sayısına karşılık gelir. ('cp857' kod sayfasında 129 sayısına karşılık 'ü' harfi gelir.)")
 
 
+######################################
 #print("Ç".encode("ascii")) #ASCII kodlama sisteminde 'Ç' harfi bulunmadığı için hata alırız.
 print("a".encode("ascii"))
 
