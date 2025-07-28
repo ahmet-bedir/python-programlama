@@ -8,4 +8,5 @@ print(str_karakter, type(str_karakter))
 
 print(f"Hexadecimal sayı sistemindeki '{str_karakter[4:6]}' sayısı, decimal sayı sisteminde '{int(str_karakter[4:6],16)}' sayısına karşılık gelir. ('cp857' kod sayfasında 128 sayısına karşılık 'Ç' harfi gelir.)")
 
-print(f"Hexadecimal sayı sistemindeki '{str("ü".encode("cp857"))[4:6]}' sayısı, decimal sayı sisteminde '{int(str("ü".encode("cp857"))[4:6],16)}' sayısına karşılık gelir. ('cp857' kod sayfasında 129 sayısına karşılık 'ü' harfi gelir.)")
+str_karakter = str("ü".encode("cp857"))[4:6]
+print(f"Hexadecimal sayı sistemindeki '{str_karakter}'' sayısı, decimal sayı sisteminde '{int(str_karakter,16)}' sayısına karşılık gelir. ('cp857' kod sayfasında 129 sayısına karşılık 'ü' harfi gelir.)")
