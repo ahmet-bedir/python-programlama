@@ -1,13 +1,14 @@
-kod_sayfalari = ["ascii","utf-8"]
-harfler = "abcçdefghijklmnoprstuvyz"
+kod_sayfalari = ["ASCII ","utf-8","cp1254"]
+harfler = "abcçdefgğhıijklmnoöprsştuüvyz"
 
-print('+'+('-'*32)+'+')
-print("|{:<10}|{:<10}|{:<10}|".format("karakter", kod_sayfalari[0], kod_sayfalari[1]))
-print('+'+('-'*32)+'+')
-for kd in kod_sayfalari:
-    for harf in harfler:
-        print("|{:<10}|{:<10}|{:<10}|".format(harf, str(len(harf.encode(kd,errors="ignore")))+'p bayt', str(len(harf.encode(kd)))+' bayt'))
-print('+'+('-'*32)+'+')
+print('+'+('-'*43)+'+')
+print("|{:<10}|{:<10}|{:<10}|{:<10}|".format("karakter", kod_sayfalari[0], kod_sayfalari[1], kod_sayfalari[2]))
+print('+'+('-'*43)+'+')
+
+for harf in harfler:
+   print("|{:<10}|{:<10}|{:<10}|{:<10}|".format(harf, len(harf.encode(kod_sayfalari[0],errors="ignore")), len(harf.encode(kod_sayfalari[1])), len(harf.encode(kod_sayfalari[2]))))
+print('+'+('-'*43)+'+')
+
 
 """
 kod_çözücüler = ['UTF-8', 'cp1254', 'latin-1', 'ASCII']
