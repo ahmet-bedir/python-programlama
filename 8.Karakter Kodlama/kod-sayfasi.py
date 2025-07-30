@@ -5,6 +5,7 @@
 print("a".encode("ascii")) #b'a'
 print("a".encode("cp857")) #b'a'
 print("a".encode("utf-8")) #b'a'
+print("Bu türkçe bir cümledir.".encode("ascii", errors="ignore"))
 
 ###
 karakter = "Ç".encode("utf-8") #b'\xc3\x87'(c387 sayısı utf-8 kod çözücüsünde 'Ç' harfine karşılık gelir)
