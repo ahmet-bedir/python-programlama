@@ -7,9 +7,12 @@
     seek                : cursor konumu
 
     Python’da bir dosyayı “r” kipinde açtığımızda o adda bir dosya olmalıdır, eğer o adda bir dosya yoksa hata alırız. Bir dosyayı okumak için read(), readline() ve readlines() adlı üç farklı metot kullanılır.
+    
+    encoding parametresi bir dosyanın hangi kod çözücü ile açılacağını belirtmemizi sağlar.
+
 """
 ###
-f = open("log.txt","r")
+f = open("log.txt","r",encoding="utf-8")
 
 r = f.read() #Dosyanın tüm içeriğini okur.
 
@@ -76,3 +79,8 @@ with open("log.txt") as file:
         print(i, end='')
         
     print(file.tell())
+    
+#
+import locale
+print(dir(locale))
+print(locale.getpreferredencoding()) #dosyaların varsayılan olarak hangi kod çözücü ile açılacağını öğrenmek için kullanılır.
