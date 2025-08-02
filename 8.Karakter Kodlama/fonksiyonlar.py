@@ -1,3 +1,4 @@
+"""
 #Python programlama dilinde nesneler iki farklı şekilde temsil edilir:
 #1.Python’ın göreceği şekilde
 #2.Kullanıcının göreceği şekilde
@@ -6,7 +7,6 @@ print("Python\n")
 
 print(repr("Python\n"))
 
-print('-'*47)
 
 a = "elma "
 
@@ -14,4 +14,36 @@ print("{} kilo {} kaldı!".format(13,a)) #Gördüğünüz gibi, “elma” karak
 print(repr(a))
 print("{} kilo {} kaldı!".format(13,a.strip()))
 
+print('-'*47)
+#ascii() fonksiyonu karakterlerin UNICODE kod konumlarını (code points) gösterir.
+print(ascii('İ')) #'\u0130'
 
+print(repr('İ')) #'İ' (Gördüğünüz gibi repr() fonksiyonu ASCII tablosunda yer almayan karakterleri de göründükleri gibi temsil ediyor.)
+
+#ascii() fonksiyonunun UNICODE kod konumlarını gösterme özelliğinin bir benzerini, encode() metodu yardımıyla da elde edebilirsiniz:
+print("€".encode("unicode_escape")) #b'\\u20ac'
+print(ascii('€')) #'\u20ac'
+
+
+print('-'*47)
+#ord() fonksiyonu bir karakterin sayı karşılığını verir:
+
+print(ord("\n")) #10
+print(ord('€')) #8364
+
+harfler = "a⁶⁷z/~@£Çç"
+for i in harfler:
+    print(f"{i:<5}{ord(i):<5}{(ord(i).bit_length())} bit")
+    
+"""   
+print('ç'.encode("utf-8"))
+print(int('c3a7',16))
+print((50087).bit_length())
+print(ord('ç'))
+print(ord('ç').bit_length())
+
+#chr() fonksiyonu bir sayının karakter karşılığını verir:
+print(chr(231))
+
+for i in range(800):
+    print(f"{i} => {chr(i)}")
