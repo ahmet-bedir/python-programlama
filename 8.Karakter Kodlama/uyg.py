@@ -7,6 +7,7 @@ print('+'+('-'*43)+'+')
 
 for harf in harfler:
    print("|{:<10}|{:<10}|{:<10}|{:<10}|".format(harf, len(harf.encode(kod_sayfalari[0],errors="ignore")), len(harf.encode(kod_sayfalari[1])), len(harf.encode(kod_sayfalari[2],errors="ignore"))))
+
 print('+'+('-'*43)+'+')
 
 

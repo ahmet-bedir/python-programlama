@@ -36,14 +36,15 @@ for i in harfler:
     print(f"{i:<5}{ord(i):<5}{(ord(i).bit_length())} bit")
     
 """   
-print('ç'.encode("utf-8"))
-print(int('c3a7',16))
-print((50087).bit_length())
-print(ord('ç'))
-print(ord('ç').bit_length())
+print('ç'.encode("utf-8")) #b'\xc3\xa7'
+print(int('c3a7',16)) #50087
+print((50087).bit_length()) #16
+
+print(ord('ç')) #231
+print((231).bit_length()) #8
 
 #chr() fonksiyonu bir sayının karakter karşılığını verir:
-print(chr(231))
+#print(chr(231))
 
-for i in range(800):
-    print(f"{i} => {chr(i)}")
+#for i in range(800):
+    #print(f"{i} => {chr(i)}")
