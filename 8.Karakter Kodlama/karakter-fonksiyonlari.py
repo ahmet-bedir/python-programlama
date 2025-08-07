@@ -30,10 +30,17 @@ print('-'*47)
 print(ord("\n")) #10
 print(ord('€')) #8364
 
-harfler = "a⁶⁷z/~@£Çç"
-for i in harfler:
-    print(f"{i:<5}{ord(i):<5}{(ord(i).bit_length())} bit")
-    
+k = "€"
+print(k.encode("utf-8"))
+print(int("e282ac",16))
+print((14844588).bit_length(), "bit.")
+
+##
+karakterler = "a⁶⁷z/~@£Çç"
+for i in karakterler:
+    a = i.encode("utf-8")
+    print(f"'{i}' karakteri {ord(i)} sayısı ile, {len(a)} bayt uzunluğundadır.")
+
 
 ##
 print('ç'.encode("utf-8")) #b'\xc3\xa7'

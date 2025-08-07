@@ -1,12 +1,13 @@
+#karakterler değişkenindeki karakterlerin, kod_sayfalari listesindeki kod çözücülerde kaç bayt ile temsil edildiklerini gösteren program.
 kod_sayfalari = ["ASCII ","utf-8","cp1254"]
-harfler = "abcçÇoöŒÄþĀstĂ"
+karakterler = "abcçÇoöŒÄþĀstĂ_€"
 
 print('+'+('-'*43)+'+')
 print("|{:<10}|{:<10}|{:<10}|{:<10}|".format("karakter", kod_sayfalari[0], kod_sayfalari[1], kod_sayfalari[2]))
 print('+'+('-'*43)+'+')
 
-for harf in harfler:
-   print("|{:<10}|{:<10}|{:<10}|{:<10}|".format(harf, len(harf.encode(kod_sayfalari[0],errors="ignore")), len(harf.encode(kod_sayfalari[1])), len(harf.encode(kod_sayfalari[2],errors="ignore"))))
+for k in karakterler:
+   print("|{:<10}|{:<10}|{:<10}|{:<10}|".format(k, len(k.encode(kod_sayfalari[0],errors="ignore")), len(k.encode(kod_sayfalari[1])), len(k.encode(kod_sayfalari[2],errors="ignore"))))
 
 print('+'+('-'*43)+'+')
 
