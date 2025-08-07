@@ -48,3 +48,8 @@ print((231).bit_length()) #8
 
 #for i in range(800):
     #print(f"{i} => {chr(i)}")
+    
+    
+#Kullandığınız işletim sisteminde öntanımlı kod çözücünün hangisi olduğunu şu komutla bulabilirsiniz:
+import locale
+print(locale.getpreferredencoding())
