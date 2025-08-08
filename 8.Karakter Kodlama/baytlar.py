@@ -42,3 +42,5 @@ print(bytes.fromhex("c4b0")) #b'\xc4\xb0'
 
 
 ### Bayt Dizileri
+pdf = bytearray(b'PDF-1.7')
+print(pdf)
