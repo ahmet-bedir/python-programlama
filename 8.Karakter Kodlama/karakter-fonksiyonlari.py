@@ -36,10 +36,10 @@ print(int("e282ac",16))
 print((14844588).bit_length(), "bit.")
 
 ##
-karakterler = "a⁶⁷z/~@£Çç"
+karakterler = "a⁶⁷z/~@£Çç€°✓∆§π√•|"
 for i in karakterler:
     a = i.encode("utf-8")
-    print(f"'{i}' karakteri {ord(i)} sayısı ile, {len(a)} bayt uzunluğundadır.")
+    print(f"'{i}' karakteri {ord(i)} sayısı ile temsil edilmektedir, {len(a)} bayt uzunluğundadır.")
 
 
 ##

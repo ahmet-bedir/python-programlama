@@ -16,11 +16,29 @@ print(f"{b.bit_length()} bit.") #16 bit.
 
 ##
 b = bytes("Fırat", "ascii", errors="xmlcharrefreplace")
-print(b)
+print(b) #b'F&#305;rat'
+
+
+##
+print(len(b'')) #0
+print(len(b'abc')) #3
+print(len(b'abc\xc3\xa7')) #5
+
+print(len(b'\xc3\xa7')) #2
+print(len('ç')) #1
 
 
 ### Baytların Metotları
 ### decode() metodu baytları belli bir kodlama biçimine göre karakter dizilerine dönüştürebilmek için kullanılır.
-
 d = b"\xc4\xb0".decode("utf-8")
 print(d)
+
+print('ç'.encode("utf-8")) #b'\xc3\xa7'
+print(b'\xc3\xa7'.decode("utf-8")) #ç
+
+### fromhex metodu onaltılı sayma sistemindeki bir sayıdan oluşan bir karakter dizisini alıp, bayta dönüştürür.
+
+print(bytes.fromhex("c4b0")) #b'\xc4\xb0'
+
+
+### Bayt Dizileri
