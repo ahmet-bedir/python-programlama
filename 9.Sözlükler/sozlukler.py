@@ -45,3 +45,18 @@ kisiler = {
     }
 }
 print(f"Memleket : {kisiler["Ahmet Özkoparan"]["Memleket"]}\nMeslek : {kisiler["Ahmet Özkoparan"]["Meslek"]}\nYaş : {kisiler["Ahmet Özkoparan"]["Yaş"]}")
+print("+-+"*48)
+### Sözlüklere Öğe Eklemek
+sozluk = {}
+sozluk["a"] = 1
+sozluk[2] = "b"
+sozluk["liste"] = ['x','y','z']
+sozluk["sözlük"] = {
+    "ad" : "ahmet", 
+    "soyad" : "bedir", 
+    "yaş" : 35}
+sozluk["a"] = True
+sozluk[(1,2,3)] = 'a'
+print(sozluk)
+
+### Sözlük Öğeleri Üzerinde Değişiklik Yapmak
