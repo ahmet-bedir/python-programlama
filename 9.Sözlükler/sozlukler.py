@@ -86,7 +86,8 @@ sozluk = {}
 sozluk = {i: harfler.index(i) for i in harfler}
 print(sozluk)
 
-#isim listesindeki isim ve kelime sayısını sözlük üreteçleri kullanarak bulma.
+#isim listesindeki isim ve kelime sayısını sözlük üreteçleri kullanarak yapmak.
 isimler = ["ahmet", "mehmet", "fırat", "zeynep", "selma", "abdullah", "cem"]
 sozluk = {i:len(i) for i in isimler}
 print(sozluk)
+
