@@ -22,3 +22,13 @@ print(sozluk.items())
 #
 for anahtar, deger in sozluk.items():
     print("{} = {}".format(anahtar, deger))
+
+# get() metodu sözlükte kelime sorgulama için kullanılır.
+ing_sozluk = {
+    "dil"       : "language",
+    "bilgisayar": "computer",
+    "masa"      : "table"}
+
+sorgu = input("Lütfen anlamını öğrenmek istediğiniz kelimeyi yazınız : ")
+
+print(ing_sozluk.get(sorgu, "Bu kelime veritabanımızda yoktur!"))
