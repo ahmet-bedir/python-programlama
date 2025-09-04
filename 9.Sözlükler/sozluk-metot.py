@@ -22,6 +22,8 @@ print(sozluk.items())
 #
 for anahtar, deger in sozluk.items():
     print("{} = {}".format(anahtar, deger))
+    
+print('\n')
 
 # get() metodu sözlükte kelime sorgulama için kullanılır.
 ing_sozluk = {
@@ -31,4 +33,15 @@ ing_sozluk = {
 
 sorgu = input("Lütfen anlamını öğrenmek istediğiniz kelimeyi yazınız : ")
 
-print(ing_sozluk.get(sorgu, "Bu kelime veritabanımızda yoktur!"))
+print(ing_sozluk.get(sorgu, "Bu kelime veritabanımızda yoktur!"), end='\n\n')
+
+# clear() metodunun görevi sözlükteki öğeleri temizlemektir.
+print(ing_sozluk)
+ing_sozluk.clear()
+print(ing_sozluk)
+
+#
+del ing_sozluk #bir sözlüğü bellekten tamamen kaldırmak için del kullanıyoruz.
+#print(ing_sozluk)
+
+#
