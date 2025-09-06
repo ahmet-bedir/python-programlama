@@ -44,4 +44,60 @@ print(ing_sozluk)
 del ing_sozluk #bir sözlüğü bellekten tamamen kaldırmak için del kullanıyoruz.
 #print(ing_sozluk)
 
+
 #
+sozluk = {
+    "a" : 1,
+    "b" : 2,
+    "c" : 3
+}
+
+kopya_sozluk = sozluk #Varolan bir sözlüğü başka bir değişkene atadığımızda aslında yaptığımız şey bir kopyalama işleminden ziyade bellekteki aynı nesneye gönderme yapan iki farklı isim belirlemekten ibaret.
+
+print(sozluk)
+print(kopya_sozluk)
+
+kopya_sozluk["d"] = 4 #kopya_sozluk adlı sözlüğe yaptığımız ekleme sozluk adlı sözlüğü de etkiledi. Eğer bunu istemiyorsak sözlüklerin copy() adlı metodu kullanılmalı.
+
+print(sozluk)
+print(kopya_sozluk)
+
+# copy()
+sozluk = {
+    "a" : 1,
+    "b" : 2,
+    "c" : 3
+}
+
+kopya_sozluk = sozluk.copy()
+
+print(sozluk)
+print(kopya_sozluk)
+
+kopya_sozluk["d"] = 4 #Gördüğünüz gibi kopya_sozluk adlı sözlüğe yaptığımız ekleme sozluk adlı sözlüğü etkilemedi.
+
+print(sozluk)
+print(kopya_sozluk)
+
+
+# fromkeys()’in görevi listeler veya demetlerden yararlanarak yeni bir sözlük oluşturmaktır.
+# fromkeys()’in görevi listeler veya demetlerden yararlanarak yeni bir sözlük oluşturmaktır.
+elemanlar = "Ahmet", "Mehmet", "Can"
+elemanlar = ["Ahmet", "Mehmet", "Can"]
+elemanlar = "Ahmet Mehmet Can"
+
+adresler = dict.fromkeys(elemanlar, "Kadıköy")
+
+print(adresler)
+
+
+# pop() metodu sözlükte belirlediğimiz anahtarın değerini silerek ve sildiği bu öğenin değerini ekrana basacaktır.
+sepet = {
+    "meyveler": ("elma", "armut"),
+    "sebzeler": ("pırasa", "fasulye"),
+    "içecekler": ("su", "kola", "ayran")}
+
+print(sepet.pop("meyveler"))
+
+#print(sepet.pop("mey")) #hata! Eğer silmeye çalıştığımız anahtar sözlükte yoksa Python bize bir hata mesajı gösterecektir.
+print(sepet.pop("mey","Silinecek öğe sözlükte bulunmamaktadır!"))
