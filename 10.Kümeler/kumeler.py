@@ -28,3 +28,19 @@ print(kume, type(kume))
 kume = {'Python', 'C++', 'Ruby', 'PHP'}
 
 print(kume, type(kume))
+
+## Listede aynı öğeden iki-üç tane bulunsa bile, kümemiz bu öğeleri teke indirecektir.
+liste = ["elma", "armut", "elma", "kebap", "şeker", "armut", "çilek", "ağaç", "şeker", "kebap", "şeker"]
+for i in set(liste):
+	print(i)
+
+##
+liste = ["elma", "armut", "elma", "kiraz", "çilek", "kiraz", "elma", "kebap"]
+
+for i in set(liste):
+	print("{} listede {} kez geçiyor!".format(i, liste.count(i)))
+
+##
+import random
+liste = [random.randint(0,10) for i in range(10)]
+print(set(liste))
