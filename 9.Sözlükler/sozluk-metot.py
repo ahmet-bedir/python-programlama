@@ -101,3 +101,13 @@ print(sepet.pop("meyveler"))
 
 #print(sepet.pop("mey")) #hata! Eğer silmeye çalıştığımız anahtar sözlükte yoksa Python bize bir hata mesajı gösterecektir.
 print(sepet.pop("mey","Silinecek öğe sözlükte bulunmamaktadır!"))
+
+
+### update() buu metot yardımıyla oluşturduğumuz sözlükleri yeni verilerle güncelleyeceğiz.
+
+stok = {"elma": 5, "armut": 10, "peynir": 6, "sosis": 15}
+
+yeni_stok = {"elma": 3, "armut": 20, "peynir": 8, "sosis": 4, "sucuk": 6}
+
+stok.update(yeni_stok)
+print(stok)
