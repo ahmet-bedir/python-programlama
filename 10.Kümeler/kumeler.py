@@ -44,3 +44,4 @@ for i in set(liste):
 import random
 liste = [random.randint(0,10) for i in range(10)]
 print(set(liste))
+
