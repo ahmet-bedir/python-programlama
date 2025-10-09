@@ -33,3 +33,6 @@ def uzunluk(kelime):
 uzunluk("python")
 # diğer kodlar...
 uzunluk("ali")
+# diğer kodlar...
+liste = ["bardak",5,True]
+uzunluk(liste)
