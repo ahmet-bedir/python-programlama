@@ -1,4 +1,4 @@
-def kayit(isim,soyisim,sistem,sehir):
+def kayit(isim="",soyisim="",sistem="",sehir="ankara"):
 	print("-"*30)
 	print("İsim :", isim)
 	print("Soyisim :", soyisim)
@@ -8,7 +8,9 @@ def kayit(isim,soyisim,sistem,sehir):
 
 kayit("ahmet","bedir","linux","kocaeli")
 kayit("ali","koz","windows","kars")
-kayit("ersin","şeker","unix","istanbul")
+kayit("unix","istanbul","ersin","şeker") #sıralama sırası değiiştimi sıkıntı oluyor.
+
+kayit(sistem="dos",isim="can",soyisim="saka")
 
 
 ###
@@ -34,5 +36,6 @@ uzunluk("python")
 # diğer kodlar...
 uzunluk("ali")
 # diğer kodlar...
-liste = ["bardak",5,True]
+liste = ["bardak",'a',5,True]
 uzunluk(liste)
+
