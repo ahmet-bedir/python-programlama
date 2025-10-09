@@ -39,3 +39,4 @@ uzunluk("ali")
 liste = ["bardak",'a',5,True]
 uzunluk(liste)
 
+	
