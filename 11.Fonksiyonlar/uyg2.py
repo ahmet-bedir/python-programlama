@@ -8,6 +8,6 @@ def sayi_uret(basla=0,bitis=10,adet=5):
 		#print(sayilar)
 	return sayilar
 
-
-a = sayi_uret(0,5,5)
-print(a)
+for i in range(10):
+    a = sayi_uret()
+    print(a)
