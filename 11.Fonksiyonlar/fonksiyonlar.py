@@ -14,7 +14,7 @@ kayit(sistem="dos",isim="can",soyisim="saka")
 
 
 ###
-def sistem_blgisi():
+def sistem_bilgisi():
 	import sys
 	print("\nSistemde kurulu Python'ın;")
 	print("\tana sürüm numarası:", sys.version_info.major)
@@ -23,7 +23,7 @@ def sistem_blgisi():
 	print("\nKullanılan işletim sisteminin;")
 	print("\tadı:", sys.platform)
 
-sistem_blgisi()
+sistem_bilgisi()
 
 ###
 def uzunluk(kelime):
