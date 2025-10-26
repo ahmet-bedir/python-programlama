@@ -11,4 +11,8 @@ elif os.name == 'nt':
 print(os.getcwd())
 
 # o anda içinde bulunduğunuz dizinde yeni bir dizin oluşturmak için:
-print(os.makedirs('DATA'))
+#print(os.makedirs('DATA'))
+
+### subprocess modülü, harici komutları Python içinden çalıştırabilmemizi sağlayan bir araçtır.
+import subprocess as sp
+sp.call(['bash','komut.sh'])
