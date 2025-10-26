@@ -1,8 +1,7 @@
 #
 import os
 
-if os.name != 'posix':
-	print('Kusura bakmayın! Bu programı yalnızca',
-'Linux\'ta kullanabilirsiniz!')
-else:
-	print('Hoşgeldin Linux	 kullanıcısı!')
+if os.name == 'posix':
+	print('Hoşgeldin Linux Kullanıcısı!')
+elif os.name == 'nt':
+	print('Hoşgeldin Linux Kullanıcısı!')
