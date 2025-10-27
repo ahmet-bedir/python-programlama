@@ -3,11 +3,19 @@ sozluk = {
 	"bilgisayar"  : "computer",
 	"programlama" : "programming"}
 
-def ara(sozcuk):
+def ara(kelime):
 	hata = "{} kelimesi sözlükte yok!"
-	return sozluk.get(sozcuk, hata.format(sozcuk))
+	return sozluk.get(kelime, hata.format(kelime))
 
 def ekle(kelime, ing_anlam):
 	mesaj = "{} kelimesi sözlüğe eklendi!"
 	sozluk[kelime] = ing_anlam
 	print(mesaj.format(kelime))
+
+def sil(kelime):
+	try:
+		sozluk.pop(kelime)
+	except KeyError as err:
+		print(err, "kelimesi bulunamadı!")
+	else:
+		print("{} kelimesi sözlükten silindi!".format(kelime))

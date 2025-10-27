@@ -45,13 +45,13 @@ print(bul)
 
 sozluk.ekle("kedi","cat") #manuel ekleme.
 while True:
-	print("=== Çıkış : `q` ===")
-	kelime = input("Yeni Kelime: ")
+	kelime = input("Yeni Kelime (Çıkış için `q` + Enter): ")
 	if kelime == 'q':
 		break
 	ing_anlam = input("Kelimenin İngilizce Karşılığı: ")
 	sozluk.ekle(kelime,ing_anlam) 
 	
+sozluk.sil("kitap")
 	
 print(sozluk.sozluk)
 """
