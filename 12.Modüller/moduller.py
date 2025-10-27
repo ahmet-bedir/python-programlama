@@ -50,8 +50,10 @@ while True:
 		break
 	ing_anlam = input("Kelimenin İngilizce Karşılığı: ")
 	sozluk.ekle(kelime,ing_anlam) 
+print(sozluk.sozluk)
 	
-sozluk.sil("kitap")
+sil = input("Silinecek Kelime: ")
+sozluk.sil(sil)
 	
 print(sozluk.sozluk)
 """
