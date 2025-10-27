@@ -23,11 +23,43 @@ sp.call(['bash','komut.sh'])
 ### webbrowser modülü, bilgisayarımızda kurulu internet tarayıcısını kullanarak internet sitelerini açabilmemizi sağlar.
 import webbrowser as web
 web.open('www.duckduckgo.com')
-"""
+
 
 ### import os gibi bir komutla bütün o isimleri içe aktarmak yerine, yalnızca kullanacağınız isimleri içe aktarmayı tercihde edebilirsiniz. Mesela os modülünün yalnızca name niteliğini kullanacaksanız:
 from os import name, listdir
 print(name)
 #print(getcwd()) #hata!
 print(listdir())
+"""
+# kendimizin oluşturduğu sozluk modüünü içe aktarıyoruz.
+import sozluk 
 
+print(dir(sozluk))
+
+print(sozluk.sozluk)
+
+bul = sozluk.ara("kitap")
+print(bul)
+bul = sozluk.ara("kalem")
+print(bul)
+
+sozluk.ekle("kedi","cat") #manuel ekleme.
+while True:
+	print("=== Çıkış : `q` ===")
+	kelime = input("Yeni Kelime: ")
+	if kelime == 'q':
+		break
+	ing_anlam = input("Kelimenin İngilizce Karşılığı: ")
+	sozluk.ekle(kelime,ing_anlam) 
+	
+	
+print(sozluk.sozluk)
+"""
+import sys
+print(sys.path) # Python bir modül dosyasını ararken, import komutunun verildiği dosyanın dizini ile birlikte, sys.path çıktısında görünen dizinlerin içine bakar.
+
+sys.path.append('/home/ahmet/Masaüstü/') # path a yeni dizin ekliyoruz.
+print(sys.path)
+import prog
+print(prog.a)
+"""
