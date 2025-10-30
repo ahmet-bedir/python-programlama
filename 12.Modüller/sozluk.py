@@ -1,3 +1,7 @@
+"""
+belge dizisi (docstring) veya
+belgelendirme dizisi (documentation string)
+"""
 sozluk = {
 	"kitap"       : "book",
 	"bilgisayar"  : "computer",

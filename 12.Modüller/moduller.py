@@ -30,7 +30,8 @@ from os import name, listdir
 print(name)
 #print(getcwd()) #hata!
 print(listdir())
-"""
+
+
 # kendimizin oluşturduğu sozluk modüünü içe aktarıyoruz.
 import sozluk 
 
@@ -56,7 +57,8 @@ sil = input("Silinecek Kelime: ")
 sozluk.sil(sil)
 	
 print(sozluk.sozluk)
-"""
+
+
 import sys
 print(sys.path) # Python bir modül dosyasını ararken, import komutunun verildiği dosyanın dizini ile birlikte, sys.path çıktısında görünen dizinlerin içine bakar.
 
@@ -65,3 +67,7 @@ print(sys.path)
 import prog
 print(prog.a)
 """
+
+### __doc__
+import sozluk ; print(sozluk.__doc__)
+
