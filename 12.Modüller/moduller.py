@@ -25,20 +25,20 @@ import webbrowser as web
 web.open('www.duckduckgo.com')
 
 
-### import os gibi bir komutla bütün o isimleri içe aktarmak yerine, yalnızca kullanacağınız isimleri içe aktarmayı tercihde edebilirsiniz. Mesela os modülünün yalnızca name niteliğini kullanacaksanız:
+### import os gibi bir komutla bütün o isimleri içe aktarmak yerine, yalnızca kullanacağınız isimleri içe aktarmayı tercihde edebilirsiniz. Mesela os modülünün yalnızca name niteliğini ve listdir fonksiyonunu kullanacaksanız:
 from os import name, listdir
 print(name)
 #print(getcwd()) #hata!
 print(listdir())
+"""
 
-
-# kendimizin oluşturduğu sozluk modüünü içe aktarıyoruz.
+# Bulunduğumuz dizinde bulunan kendimizin oluşturduğu "sozluk" modülünü içe aktarıyoruz.
 import sozluk 
 
 print(dir(sozluk))
 
 print(sozluk.sozluk)
-
+"""
 bul = sozluk.ara("kitap")
 print(bul)
 bul = sozluk.ara("kalem")
@@ -51,6 +51,7 @@ while True:
 		break
 	ing_anlam = input("Kelimenin İngilizce Karşılığı: ")
 	sozluk.ekle(kelime,ing_anlam) 
+	
 print(sozluk.sozluk)
 	
 sil = input("Silinecek Kelime: ")
@@ -67,7 +68,7 @@ print(sys.path)
 import prog
 print(prog.a)
 """
-
+"""
 ### Modüllerin Özel Nitelikleri
 import os, sys, random
 set_os = set(dir(os))
@@ -79,6 +80,7 @@ set_random = set(dir(random))
 
 # Zira ‘kodların yeniden kullanılabilir özellikte olması’ (code reusability) programcılıkta aranan bir niteliktir:
 moduller = ['os', 'sys', 'random', 'sozluk']
+print("Modüller : ", *moduller, sep='  ')
 
 def ortak_nitelikler(moduller):
 	kumeler = [set(dir(__import__(modul))) for modul in moduller]
@@ -89,3 +91,4 @@ print(ortak_nitelikler(moduller))
 ### __doc__ Niteliği
 import sozluk ; print(sozluk.__doc__)
 
+"""
