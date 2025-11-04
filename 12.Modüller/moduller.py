@@ -1,4 +1,3 @@
-"""
 ### Modüller
 import os
 
@@ -26,17 +25,18 @@ web.open('www.duckduckgo.com')
 
 
 ### "import os" gibi bir komutla bütün o isimleri içe aktarmak yerine, yalnızca kullanacağınız isimleri içe aktarmayı tercihde edebilirsiniz. Mesela os modülünün yalnızca name niteliğini ve listdir fonksiyonunu kullanacaksanız:
-from os import name, listdir
+from os import name, listdir #bir modül içindeki bütün fonksiyon ve nitelikleri içe aktarmak için: "from os import *" kullanılır. Böylece os modülü içindeki bütün fonksiyon ve nitelikleri, başlarına modül adını eklemeye gerek olmadan kullanabilirsiniz.
 print(name)
 #print(getcwd()) #hata!
 print(listdir())
-"""
+
 
 # 
 import sys
 print(sys.path) # Python bir modül dosyasını ararken, import komutunun verildiği dosyanın dizini ile birlikte, sys.path çıktısında görünen dizinlerin içine bakar.
 
-sys.path.append('/storage/emulated/0/Download/python-programlama/')#/home/ahmet/Masaüstü/') # path'a yeni dizin yani masaüstü dizinini ekliyoruz.
+sys.path.append('/home/ahmet/Masaüstü/') # path'a yeni dizin yani masaüstü dizinini ekliyoruz.
 print(sys.path)
-import p #böylece masaüstünde bulunan prog modülüne ulaşabiliriz.
-print(p.a)
+import modul #böylece masaüstünde bulunan "modul" modülüne ulaşabiliriz.
+print(modul.degisken)
+modul.fonksiyon()
