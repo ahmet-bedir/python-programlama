@@ -31,11 +31,11 @@ print(name)
 print(listdir())
 
 
-# 
+# path
 import sys
 print(sys.path) # Python bir modül dosyasını ararken, import komutunun verildiği dosyanın dizini ile birlikte, sys.path çıktısında görünen dizinlerin içine bakar.
 
-sys.path.append('/home/ahmet/Masaüstü/') # path'a yeni dizin yani masaüstü dizinini ekliyoruz.
+sys.path.append('/home/ahmet/Masaüstü/') # path listesinin sonuna yeni dizin yani masaüstü dizinini ekliyoruz. (sys.path.insert(0, 'dizin/adı') kodu path listesinin en başına ekleme yapar)
 print(sys.path)
 import modul #böylece masaüstünde bulunan "modul" modülüne ulaşabiliriz.
 print(modul.degisken)
