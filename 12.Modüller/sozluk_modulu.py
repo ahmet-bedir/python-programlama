@@ -8,11 +8,14 @@ sozluk = {
 	"programlama" : "programming"}
 
 def ara(kelime):
-	hata = "{} kelimesi sözlükte yok!"
-	return sozluk.get(kelime, hata.format(kelime))
+    sorgu = sozluk.get(kelime, "hata")
+    if sorgu == "hata":
+        return  "'{}' kelimesi sözlükte bulunmamaktadır!".format(kelime)
+    else:
+	    return "'{}' kelimesinin ingilizce karşılığı : {}".format(kelime,sozluk[kelime])
 
 def ekle(kelime, ing_anlam):
-	mesaj = "{} kelimesi sözlüğe eklendi!"
+	mesaj = "'{}' kelimesi sözlüğe eklendi!"
 	sozluk[kelime] = ing_anlam
 	print(mesaj.format(kelime))
 
@@ -22,4 +25,4 @@ def sil(kelime):
 	except KeyError as err:
 		print(err, "kelimesi bulunamadı!")
 	else:
-		print("{} kelimesi sözlükten silindi!".format(kelime))
+		print("'{}' kelimesi sözlükten silindi!".format(kelime))
