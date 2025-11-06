@@ -18,10 +18,19 @@ def ortak_nitelikler(moduller):
 
 print(ortak_nitelikler(moduller))
 
-### __doc__ Niteliği
-import sozluk_modulu ; print(sozluk_modulu.__doc__)
-
-
+###
 moduller = ['sozluk_modulu','random']
 for modul in moduller:
     print(dir(__import__(modul)))
+
+
+### __doc__ Niteliği
+import sozluk_modulu ; print(sozluk_modulu.__doc__)
+
+### __name__ Niteliği
+
+### __loader__ Niteliği
+
+### __spec__ Niteliği
+
+### __package__ Niteliği

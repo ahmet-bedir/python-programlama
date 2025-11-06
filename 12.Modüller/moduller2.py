@@ -1,7 +1,7 @@
 # Bulunduğumuz dizinde bulunan kendimizin oluşturduğu "sozluk" modülünü içe aktarıyoruz.
 import sozluk_modulu as sozluk
 
-#print(dir(sozluk))
+print(dir(sozluk))
 #print(sozluk.__file__) #buradan aldığımız çıktı bize "sozluk_modulu" modülünün kaynak dosyasının nerede olduğunu gösterir.
 
 while True:
