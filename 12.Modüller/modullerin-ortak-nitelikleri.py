@@ -27,7 +27,7 @@ for modul in moduller:
 ### __doc__ Niteliği
 import sozluk_modulu ; print(sozluk_modulu.__doc__)
 
-### __name__ Niteliği
+
 
 ### __loader__ Niteliği
 
