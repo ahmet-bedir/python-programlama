@@ -82,4 +82,6 @@ if __name__ == '__main__':
 ###
 class Calisan:
     a = 5
-    print(a)
+
+n = Calisan
+print(n.a)
