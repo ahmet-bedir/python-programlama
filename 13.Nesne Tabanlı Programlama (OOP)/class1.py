@@ -11,10 +11,3 @@ c2 = Calisan
 print(c2.kabiliyetleri)
 print(c2.unvani)
 
-### yapıcı metod.
-class Personal:
-    def __init__(self):
-        print("Yapıcı metod!")
-        
-nesne1 = Personal() # print ile yazdırmamamıza reğmen yapıcı metod çalışır.
-
