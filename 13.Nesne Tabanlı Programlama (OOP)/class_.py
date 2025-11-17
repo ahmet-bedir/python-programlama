@@ -85,3 +85,5 @@ class Calisan:
 
 n = Calisan
 print(n.a)
+n1 = type(Calisan)
+print(n1)
