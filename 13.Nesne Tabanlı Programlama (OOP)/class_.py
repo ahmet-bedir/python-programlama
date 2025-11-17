@@ -1,10 +1,6 @@
 ###
 '''
-class Personal:
-    def __init__(self):
-        print("Yapıcı metod!")
-        
-nesne1 = Personal()
+
 
 
 ###
