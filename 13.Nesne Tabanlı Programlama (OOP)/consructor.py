@@ -23,7 +23,7 @@ class Urunler:
     def kdv(self):
         return self.urun_fiyat*0.5
     def bilgi(self):
-        print(f"Ürün Adı: {self.urun_adi}\nFiyatı {self.urun_fiyat}\nKDV: {self.kdv()}", end="\n\n")
+        return f"Ürün Adı: {self.urun_adi}\nFiyatı {self.urun_fiyat}\nKDV: {self.kdv()}"
 
 
 urun1 = Urunler("telefon", 8000, True)
@@ -35,7 +35,7 @@ urun_listesi = [urun1,urun2,urun3,urun4]
 
 for urun in urun_listesi:
     if urun.aktifmi:
-        print(urun.bilgi())
+        print(urun.bilgi(), end="\n\n")
         
 """
 
