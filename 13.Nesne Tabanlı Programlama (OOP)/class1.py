@@ -1,4 +1,4 @@
-### sabit bi sınıftanımlama.
+### sabit bi sınıf tanımlama.
 class Çalışan:
     kabiliyetleri = ["internet","tv"]
     unvanı = 'işçi'
