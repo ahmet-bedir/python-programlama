@@ -1,12 +1,13 @@
-### sabit bi sınıf tanımlama.
-class Çalışan:
+### tek kullanımlık sınıf tanımlama.
+class Calisan:
     kabiliyetleri = ["internet","tv"]
-    unvanı = 'işçi'
+    unvani = 'işçi'
 
-c1 = Çalışan
+c1 = Calisan
 print(c1.kabiliyetleri)
-print(c1.unvanı)
+print(c1.unvani)
 
-c2 = Çalışan
+c2 = Calisan
 print(c2.kabiliyetleri)
-print(c2.unvanı)
+print(c2.unvani)
+
