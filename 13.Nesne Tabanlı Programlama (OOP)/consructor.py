@@ -1,9 +1,11 @@
 ### yapıcı metod.
-#class Personal:
-#   def __init__(self):
-#      print("Yapıcı metod!")
-#nesne1 = Personal() # sınıfın örneklendiği an yapıcı metod çalışır.
+class Personal:
+  def __init__(self):
+     print("Yapıcı metod!")
 
+nesne1 = Personal() # sınıfın örneklendiği an yapıcı metod çalışır.
+
+###
 class Deneme:
     a = 5
     def __init__(self):
@@ -13,7 +15,7 @@ class Deneme:
 ornek1 = Deneme()
 print(ornek1.a, ornek1.b)
 
-"""
+
 ###
 class Urunler:
     def __init__(self, adi, fiyat, durum):
@@ -36,7 +38,4 @@ urun_listesi = [urun1,urun2,urun3,urun4]
 for urun in urun_listesi:
     if urun.aktifmi:
         print(urun.bilgi(), end="\n\n")
-        
-"""
-
 
