@@ -17,6 +17,11 @@ print(ornek1.a, ornek1.b)
 
 
 ###
+class Calisan:
+    kabiliyetleri = [111]
+
+
+###
 class Urunler:
     def __init__(self, adi, fiyat, durum):
         self.urun_adi = adi
