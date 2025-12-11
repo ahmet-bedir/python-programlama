@@ -1,3 +1,4 @@
+#! /usr/bin/python3gs
 import calisan as cal
 
 p1 = cal.Calisan("ali")
