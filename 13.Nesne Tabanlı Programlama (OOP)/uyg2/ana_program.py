@@ -1,4 +1,4 @@
-#! /usr/bin/python3gs
+#! /usr/bin/python3
 import calisan as cal
 
 p1 = cal.Calisan("ali")
@@ -10,6 +10,7 @@ p2.kabiliyet_ekle("liderlik vasfı")
 print('\n')
 
 p1.personel_listesi()
+p2.personel_sayisi()
 print('\n')
 
 p1.kabiliyet_listesi()

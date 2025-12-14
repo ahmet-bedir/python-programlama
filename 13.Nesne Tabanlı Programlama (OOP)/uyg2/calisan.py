@@ -21,3 +21,6 @@ class Calisan:
         print(f"'{self.isim}' adlı personelin kabiliyetleri:")
         for k in self.kabiliyetleri:
             print(k)
+
+    def personel_sayisi(self):
+        print(f"Personel Sayısı: {len(self.personel)}"  )
