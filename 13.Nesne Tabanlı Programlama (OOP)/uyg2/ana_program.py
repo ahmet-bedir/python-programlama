@@ -2,6 +2,9 @@ import calisan as cal
 from calisan import Calisan
 
 print(dir(cal))
+print(dir(Calisan))
+
+Calisan.personel_sayisi()
 
 p1 = cal.Calisan("ali")
 p1.kabiliyet_ekle("üç harfli")
