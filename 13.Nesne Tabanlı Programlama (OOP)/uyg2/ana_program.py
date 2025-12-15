@@ -1,5 +1,8 @@
 #! /usr/bin/python3
 import calisan as cal
+from calisan import Calisan
+
+print(dir(cal))
 
 p1 = cal.Calisan("ali")
 p1.kabiliyet_ekle("üç harfli")
@@ -9,8 +12,8 @@ p2 = cal.Calisan("erdi")
 p2.kabiliyet_ekle("liderlik vasfı")
 print('\n')
 
-p1.personel_listesi()
-p2.personel_sayisi()
+Calisan.personel_listesi()
+Calisan.personel_sayisi()
 print('\n')
 
 p1.kabiliyet_listesi()

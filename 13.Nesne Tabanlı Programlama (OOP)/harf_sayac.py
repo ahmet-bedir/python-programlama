@@ -1,4 +1,3 @@
-###
 class HarfSayaci:
     def __init__(self):
         self.sesli_harfler = 'aeıioöuü'
@@ -28,10 +27,10 @@ class HarfSayaci:
         mesaj = "'{}' kelimesinde {} sesli, {} sessiz harf var."
         print(mesaj.format(self.kelime, sesli, sessiz))
 
-    def çalıştır(self):
+    def calistir(self):
         self.kelime = self.kelime_sor()
         self.ekrana_bas()
 
 if __name__ == '__main__':
-    sayaç = HarfSayacı()
-    sayaç.çalıştır()
+    sayac = HarfSayaci()
+    sayac.calistir()
