@@ -6,4 +6,4 @@ Dosya Yükleme İşlemi Devam Etmektedir...
 
 ---
 
-Son Güncelleme : 10/2025
+Son Güncelleme : 12/2025

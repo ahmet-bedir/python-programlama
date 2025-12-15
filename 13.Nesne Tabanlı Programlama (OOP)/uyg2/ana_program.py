@@ -1,8 +1,8 @@
-import calisan as cal
-from calisan import Calisan
+import calisan_modulu as cal
+from calisan_modulu import Calisan
 
-print(dir(cal))
-print(dir(Calisan))
+print("calisan_modulu.py dosyasının içeriği:", dir(cal), sep='\n')
+print("Calisan sınıfının içeriği:", dir(Calisan), sep='\n')
 
 Calisan.personel_sayisi()
 
