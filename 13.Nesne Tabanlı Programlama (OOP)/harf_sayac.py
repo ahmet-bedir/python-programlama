@@ -1,37 +1,9 @@
-###
-'''
-
-
-
-###
-
-
-###
-class Personal:
-    def __init__(self,a,y):
-        self.ad = a
-        self.yas = y
-    def __str__(self):
-        return f"Kullanıcı Gözüyle:\nİsim : {self.ad}\nYaş : {self.yas}"
-    def __repr__(self):
-        return f"Yazılımcı Gözüyle:\nİsim : {self.ad!r}\nYaş : {self.yas!r}"
-        
-p1 = Personal("ahmet",37)
-p2 = Personal("ali",27)
-p3 = Personal("mehmet",18)
-
-print(repr(p1))
-print(p2)
-print(p3)
-'''
-"""
-###
-class HarfSayacı:
+class HarfSayaci:
     def __init__(self):
         self.sesli_harfler = 'aeıioöuü'
         self.sessiz_harfler = 'bcçdfgğhjklmnprsştvyz'
-        self.sayaç_sesli = 0
-        self.sayaç_sessiz = 0
+        self.sayac_sesli = 0
+        self.sayac_sessiz = 0
 
     def kelime_sor(self):
         return input('Bir kelime girin: ')
@@ -42,26 +14,23 @@ class HarfSayacı:
     def sessizdir(self, harf):
         return harf in self.sessiz_harfler
 
-    def artır(self):
+    def artir(self):
         for harf in self.kelime:
             if self.seslidir(harf):
-                self.sayaç_sesli += 1
+                self.sayac_sesli += 1
             if self.sessizdir(harf):
-                self.sayaç_sessiz += 1
-        return (self.sayaç_sesli, self.sayaç_sessiz)
+                self.sayac_sessiz += 1
+        return (self.sayac_sesli, self.sayac_sessiz)
 
     def ekrana_bas(self):
-        sesli, sessiz = self.artır()
+        sesli, sessiz = self.artir()
         mesaj = "'{}' kelimesinde {} sesli, {} sessiz harf var."
         print(mesaj.format(self.kelime, sesli, sessiz))
 
-    def çalıştır(self):
+    def calistir(self):
         self.kelime = self.kelime_sor()
         self.ekrana_bas()
 
 if __name__ == '__main__':
-    sayaç = HarfSayacı()
-    sayaç.çalıştır()
-"""
-
-###
+    sayac = HarfSayaci()
+    sayac.calistir()
