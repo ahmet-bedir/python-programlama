@@ -32,9 +32,7 @@ class Calisan:
 class Sınıf():
     sınıf_niteliği = 0
 
-    def __init__(self, param1, param2):
-        self.param1 = param1
-        self.param2 = param2
+    def __init__(self):
         self.örnek_niteliği = 0
 
     def örnek_metodu(self):
@@ -45,4 +43,11 @@ class Sınıf():
     def sınıf_metodu(cls):
         cls.sınıf_niteliği += 1
         return cls.sınıf_niteliği
+
+#sınıf metodunu sınıfın ismiyle çağırıyoruz.
+print(Sınıf.sınıf_metodu())
+
+#örnek metodunu sınıfı örnekledikten sonra çağırıyoruz.
+örnek = Sınıf()
+print(örnek.örnek_metodu())
 '''

@@ -1,4 +1,3 @@
-#! /usr/bin/python3
 import calisan as cal
 from calisan import Calisan
 
