@@ -1,4 +1,4 @@
-#yöntem 1 <kendi paketimizi içe aktarma>
+##yöntem 1 <<kendi paketimizi içe aktarma>>
 import paket.islemler
 import paket.metinler as m
 
@@ -9,20 +9,32 @@ print("Toplama:", topla)
 #print(dir(m))
 m.metin1()
 
-#yönem 2 <kendi paketimizi içe aktarma>
+
+##yöntem 2 <<kendi paketimizi içe aktarma>>
 from paket import islemler
 from paket import metinler as m
 
-print("Çıkarma:", islemler.cikarma(2,1))
+cikar = islemler.cikarma(2,1)
+print("Çıkarma:", cikar)
 
 m.metin2()
 
-#yönem 3 <modül içindeki nitelik ve metotlara öneksiz olarak erişmek için>
+
+##yöntem 3 <<modül içindeki nitelik ve metotlara öneksiz olarak erişmek için>>
 from paket.islemler import carpma
+from paket.metinler import metin3
 
-print("Çarpma:", carpma(2,3))
+carp = carpma(2,3)
+print("Çarpma:", carp)
 
-#yöntem 4 <bir paket içindeki bir modülün bütün nitelik ve metotlarını mevcut isim alanına olduğu gibi aktarmak için>>
+metin3()
+
+
+#yöntem 4 <<bir paket içindeki bir modülün bütün nitelik ve metotlarını mevcut isim alanına olduğu gibi aktarmak için>>
 from paket.islemler import *
+from paket.metinler import *
 
-print("Bölme :", bolme(8,2))
+bol = bolme(8,2)
+print("Bölme :", bol)
+
+metin4()
