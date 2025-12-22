@@ -19,6 +19,25 @@ a = "python güçlü bir programlama dilidir."
 # print(a.startswith("python"))
 
 # search() metodu karakter dizisinin genelinde belirtilen kelimenin geçip geçmediğini öğrenmek için kullanılır.
-sorgu = re.search("güçhhlü",a)
+# sorgu = re.search("güçlü",a)
+#
+# if sorgu != None:
+#     print(f"'{sorgu.group()}' kelimesi karakter dizisinde geçmektedir.")
+#     print("Konum:", sorgu.span())
+# else:
+#     print("Aranan kelime karakter dizisinde geçmemektedir!")
 
-print(sorgu.group())
+#
+liste = ["elma","armut","erik"]
+for i in liste:
+    sorgu = re.search("armut",i)
+    if sorgu:
+        print(f"'{sorgu.group()}' kelimesi liste içerisinde geçmektedir.")
+
+import re
+from urllib.request import urlopen
+f = urlopen("https://python-istihza.yazbel.com/")
+for i in f:
+    nesne = re.search(b'programlama', i)
+    if nesne:
+        print(nesne.group())
