@@ -28,16 +28,9 @@ a = "python güçlü bir programlama dilidir."
 #     print("Aranan kelime karakter dizisinde geçmemektedir!")
 
 #
-liste = ["elma","armut","erik"]
-for i in liste:
-    sorgu = re.search("armut",i)
-    if sorgu:
-        print(f"'{sorgu.group()}' kelimesi liste içerisinde geçmektedir.")
+# liste = ["elma","armut","erik"]
+# for i in liste:
+#     sorgu = re.search("armut",i)
+#     if sorgu:
+#         print(f"'{sorgu.group()}' kelimesi liste içerisinde geçmektedir.")
 
-import re
-from urllib.request import urlopen
-f = urlopen("https://python-istihza.yazbel.com/")
-for i in f:
-    nesne = re.search(b'programlama', i)
-    if nesne:
-        print(nesne.group())
