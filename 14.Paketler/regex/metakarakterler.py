@@ -80,6 +80,23 @@ Burada Python’a şu emri verdik: “Bana kelime başında herhangi bir karakte
 ### ? (Soru İşareti) eşleşme sayısının sıfır veya bir olduğu durumları kapsıyor.
 
 yeniliste = ["st", "sat", "saat", "saaat", "falanca"]
+# for i in yeniliste:
+#     if re.match("sa?t",i):
+#         print(i)
+"""
+Kendisinden önce gelen karakterin hiç bulunmadığı (yani sıfır sayıda olduğu) ve bir adet bulunduğu durumları içine alıyor.
+"""
+
+### Metindeki Uluslararası, uluslararası, uluslar arası kelimelerini bulmak için:
+# metin = """Uluslararası hukuk, uluslar arası ilişkiler altında bir disiplindir. İlişkilerin uluslararası hukuksal boyutunu bilimsel bir disiplin içinde inceler. Devletlerarası hukuk da denir. Ancak uluslararası ilişkilere yeni aktörlerin girişi bu dalı sadece devletlerarası olmaktan çıkarmıştır."""
+#
+# nesne = re.findall("[Uu]luslar ?arası", metin)
+# for i in nesne:
+#     print(i)
+
+### { } (Küme Parantezi) metakarakteri yardımıyla bir eşleşmeden kaç adet istediğimizi belirtebiliyoruz.
 for i in yeniliste:
-    if re.match("sa?t",i):
+    if re.search("sa{3}t",i):
         print(i)
+
+### Küme içinde iki farklı sayı yazarak, bir karakterin en az ve en çok kaç kez tekrar etmesini istediğimizi belirtebiliriz.
