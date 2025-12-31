@@ -1,7 +1,7 @@
 import re
 
 ### [] metakarakteri içinde gördüğü bütün karakterleri tek tek liste öğelerine uyguluyor. Önce “öz” ile başlayan bütün öğeleri alıyor, ardından “öz” hecesinden sonra “c” harﬁyle devam eden ve “an” hecesi ile biten öğeyi buluyor. Böylec “özcan” öğesini bulmuş oldu. Aynı işlemi, “öz” hecesinden sonra “h” harﬁni barındıran ve “an” hecesiyle biten öğeye uyguluyor. Bu şekilde ise “özhan” öğesini bulmuş oldu. En son hedef ise “öz” ile başlayıp “k” harﬁ ile devam eden ve “an” ile biten öğe. Yani listedeki “özkan” öğesi. En nihayetinde de elimizde “özcan”, “özhan” ve “özkan” öğeleri kalmış oluyor.
-liste = ["özcan", "mehmet", "süleyman", "selim", "ahmet", "özkan", "esra", "dündar", "esin", "esma", "özhan", "özlem", "özkan"]
+liste = ["özcan", "met", "mehmet", "süleyman", "selim", "ahmet", "özkan", "esra", "dündar", "esin", "esma", "özhan", "özlem", "özkan"]
 # for l in liste:
 #     sorgu = re.search("öz[kch]an", l)
 #     if sorgu:
@@ -56,6 +56,30 @@ devam edebilir.
 Burada “*” sembolü kendinden önce gelen “a” karakterini sıfır veya daha fazla sayıda eşleştiriyor. Yani mesela “st” içinde sıfır adet “a” karakteri var. Dolayısıyla bu karakter yazdığımız düzenli ifadeyle eşleşiyor. “sat” içinde bir adet “a” karakteri var. Dolayısıyla bu da eşleşiyor. “saat” ve “saaat” karakter dizilerinde sırasıyla iki ve üç adet “a” karakteri var. Tabii ki bunlar da yazdığımız düzenli ifadeyle eşleşiyor. Listemizin en son öğesi olan “falanca”da da ilk hecede bir adet “a” karakteri var. Ama bu öğedeki sorun, bunun “s” harﬁyle başlamaması.
 """
 
-for l in liste:
-    if re.match(".*met",l):
-        print(l)
+# for l in liste:
+#     if re.match(".*met",l):
+#         print(l)
+"""
+Burada Python’a şu emri verdik: “Bana kelime başında herhangi bir karakteri (“.” sembolü herhangi bir karakterin yerini tutuyor) sıfır veya daha fazla sayıda içeren ve sonu da “met” ile biten bütün öğeleri ver!”
+"""
+
+# import os
+# import re
+# dizin = os.listdir("/home/ahmet/Masaüstü/yüklenenler/")
+# for i in dizin:
+#     if re.match(".*png",i):
+#         print(i)
+
+
+### “+” metakarakteri ise kendisinden önceki bir veya daha fazla sayıda tekrar eden karakterleri ayıklar.
+# for l in liste:
+#     if re.match(".+met",l):
+#         print(l)
+
+
+### ? (Soru İşareti) eşleşme sayısının sıfır veya bir olduğu durumları kapsıyor.
+
+yeniliste = ["st", "sat", "saat", "saaat", "falanca"]
+for i in yeniliste:
+    if re.match("sa?t",i):
+        print(i)
