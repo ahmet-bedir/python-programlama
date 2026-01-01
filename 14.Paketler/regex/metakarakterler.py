@@ -127,7 +127,15 @@ not: “^” işaretinin “hariç” anlamı sadece “[]” metakarakterinin i
 """
 
 ### $ "dolar işareti" karakter dizilerinin nasıl biteceğini belirliyor.
-liste = ["at", "katkı", "fakat", "atkı", "rahat", "mat", "yat", "sat", "satılık", "katılım"]
+# liste = ["at", "katkı", "fakat", "atkı", "rahat", "mat", "yat", "sat", "satılık", "katılım"]
+# for i in liste:
+#     if re.search("at$",i):
+#         print(i) # sonu "at" ile biten kelimeleri sorgular.
+
+
+### \ (ters bölü) “kaçış sembolü”
+liste = ["10$", "25¿", "20$", "10TL", "25£"]
 for i in liste:
-    if re.search("at$",i):
-        print(i) # sonu "at" ile biten kelimeleri sorgular.
+    sorgu = re.match("[0-9]+\\$",i) # “\” sembolünü kullanarak “$” işaretinin özel anlamından kaçtık.
+    if sorgu:
+        print(sorgu.group())
