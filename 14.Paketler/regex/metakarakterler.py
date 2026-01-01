@@ -95,8 +95,39 @@ Kendisinden önce gelen karakterin hiç bulunmadığı (yani sıfır sayıda old
 #     print(i)
 
 ### { } (Küme Parantezi) metakarakteri yardımıyla bir eşleşmeden kaç adet istediğimizi belirtebiliyoruz.
-for i in yeniliste:
-    if re.search("sa{3}t",i):
-        print(i)
+# for i in yeniliste:
+#     if re.search("sa{3}t",i):
+#         print(i)
 
 ### Küme içinde iki farklı sayı yazarak, bir karakterin en az ve en çok kaç kez tekrar etmesini istediğimizi belirtebiliriz.
+# for i in yeniliste:
+#     if re.search("sa{1,3}t",i):
+#         print(i)
+
+
+### ^ sembolünün iki işlevi var. Birinci işlevi, bir karakter dizisinin en başındaki veriyi sorgulamaktır. İkinci işlevi karakter dizisindeki sorgulamak istediğimiz kelimeyi hariç tutmak için.
+a = ['23BH56', 'TY76Z', '4Y7UZ', 'TYUDZ', '34534', '1agAY54']
+# for i in a:
+#     sorgu = re.search("^[A-Z]+[0-9]",i)
+#     if sorgu:
+#         print(sorgu.group())
+
+# for i in a:
+#     nesne = re.match("[0-9A-Z][^a-z]+",i)
+#     if nesne:
+#         print(nesne.group())
+"""
+1. Aradığımız öğe bir sayı veya büyük harf ile başlamalı
+2. En baştaki sayı veya büyük harften sonra küçük harf GELMEMELİ (Bu ölçütü “^” işareti
+sağlıyor)
+3. Üstelik bu “küçük harf gelmeme durumu” bir veya daha fazla sayıda tekrar etmeli. . . Yani
+baştaki sayı veya büyük harften sonra kaç tane olursa olsun asla küçük harf gelmemeli
+(Bu ölçütü de “+” işareti sağlıyor”)
+not: “^” işaretinin “hariç” anlamı sadece “[]” metakarakterinin içinde kullanıldığı zaman geçerlidir.
+"""
+
+### $ "dolar işareti" karakter dizilerinin nasıl biteceğini belirliyor.
+liste = ["at", "katkı", "fakat", "atkı", "rahat", "mat", "yat", "sat", "satılık", "katılım"]
+for i in liste:
+    if re.search("at$",i):
+        print(i) # sonu "at" ile biten kelimeleri sorgular.
