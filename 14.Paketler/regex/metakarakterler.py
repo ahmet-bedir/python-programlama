@@ -127,15 +127,43 @@ not: “^” işaretinin “hariç” anlamı sadece “[]” metakarakterinin i
 """
 
 ### $ "dolar işareti" karakter dizilerinin nasıl biteceğini belirliyor.
-# liste = ["at", "katkı", "fakat", "atkı", "rahat", "mat", "yat", "sat", "satılık", "katılım"]
+liste = ["at", "katkı", "fakat", "atkı", "rahat", "mat", "yat", "sat", "satılık", "katılım"]
 # for i in liste:
 #     if re.search("at$",i):
 #         print(i) # sonu "at" ile biten kelimeleri sorgular.
 
 
 ### \ (ters bölü) “kaçış sembolü”
-liste = ["10$", "25¿", "20$", "10TL", "25£"]
-for i in liste:
-    sorgu = re.match("[0-9]+\\$",i) # “\” sembolünü kullanarak “$” işaretinin özel anlamından kaçtık.
-    if sorgu:
-        print(sorgu.group())
+# liste = ["10$", "25¿", "20$", "10TL", "25£"]
+# for i in liste:
+#     sorgu = re.match("[0-9]+\\$",i) # “\” sembolünü kullanarak “$” işaretinin özel anlamından kaçtık.
+#     if sorgu:
+#         print(sorgu.group())
+
+
+### | (Dik Çizgi) bu metakarakter, birden fazla düzenli ifade kalıbını birlikte eşleştirmemizi sağlar.
+# for i in liste:
+#     if re.search("^at|at$",i):
+#         print(i)
+"""
+“|” metakarakterini kullanarak başta ve sonda “at” hecesini içeren kelimeleri ayıkladık.
+at
+fakat
+atkı
+rahat
+mat
+yat
+sat
+"""
+
+### ( ) (Parantez) metakarakteri düzenli ifade kalıplarını gruplar. Bu metakarakter bizim bir karakter dizisinin istediğimiz kısımlarını ayıklamamızda çok büyük kolaylıklar sağlayacak.
+import re
+from urllib.request import urlopen
+url = "https://web.archive.org/web/20121025012131/http://www.istihza.com/py2/icindekiler_python.html"
+f = urlopen(url)
+regex = 'href=".+html">.+</a>'
+for i in f:
+    nesne = re.search(regex, str(i, 'utf-8'))
+    if nesne:
+        print(nesne.group())
+
