@@ -18,6 +18,7 @@ print(yeni_liste[1])
 
 for i in range(len(liste)):
     print("{} -> {}".format(i+1,liste[i]))
+    
 for i, eleman in enumerate(liste,1):
     print(f"Listenin {i}. elemanı : '{eleman}' türü : {type(eleman)}")
 
