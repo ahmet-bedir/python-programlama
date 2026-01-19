@@ -4,6 +4,4 @@ class Futbolcu:
 
 f1 = Futbolcu()
 
-print(f1.yas)
-
-		
+print(f1.yas)g
