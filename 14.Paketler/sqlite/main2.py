@@ -1,13 +1,24 @@
 import sqlite3
 
-vt = sqlite3.connect('db.sqlite')
+with sqlite3.connect('db.sqlite') as vt:
+	im = vt.cursor()
 
-im = vt.cursor() 
+	veriler = [('Fırat', 'Özgül', 'Adana'),
+	('Ahmet', 'Söz', 'Bolvadin'),
+	('Veli', 'Göz', 'İskenderun'),
+	('Mehmet', 'Öz', 'Kilis')]
 
-print(im.execute("""SELECT * FROM personel"""))
+	# im.execute("""CREATE TABLE IF NOT EXISTS personel
+	# (isim, soyisim, memleket)""")
 
-vt.commit()
+	# for veri in veriler:
+		# im.execute("""INSERT INTO personel VALUES
+		# (?, ?, ?)""", veri)
 
+	sql = "SELECT * FROM personel"
+	im.execute(sql)
+	veriler = im.fetchall()
+	print(veriler)
 
-vt.close()
+	# vt.commit()
 
