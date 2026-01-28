@@ -8,17 +8,13 @@ with sqlite3.connect('db.sqlite') as vt:
 	('Veli', 'Göz', 'İskenderun'),
 	('Mehmet', 'Öz', 'Kilis')]
 
-	# im.execute("""CREATE TABLE IF NOT EXISTS personel
-	# (isim, soyisim, memleket)""")
+	im.execute("""CREATE TABLE IF NOT EXISTS personel
+	(isim, soyisim, memleket)""")
 
-	# for veri in veriler:
-		# im.execute("""INSERT INTO personel VALUES
-		# (?, ?, ?)""", veri)
+	for veri in veriler:
+		im.execute("""INSERT INTO personel VALUES
+		(?, ?, ?)""", veri)
 
-	sql = "SELECT * FROM personel"
-	im.execute(sql)
-	veriler = im.fetchall()
-	print(veriler)
 
-	# vt.commit()
-
+	vt.commit()
+	
