@@ -1,4 +1,8 @@
-import sqlite3
+import sqlite3, os
+
+dosya = 'kitaplar.sqlite'
+dosya_mevcutmu = os.path.exists(dosya)
+print(dosya_mevcutmu)
 
 with sqlite3.connect("kitaplar.sqlite") as vt:
     im = vt.cursor()
@@ -6,9 +10,11 @@ with sqlite3.connect("kitaplar.sqlite") as vt:
     sql = "SELECT * FROM kitaplar"
     im.execute(sql)
     veriler = im.fetchall()
-    print('-'*154)
-    print("|{:^50}|{:^50}|{:^50}|".format("Kitap Adı", "Yazar", "Fiyat"))
-    print('-'*154)
+    print('-'*158)
+    print("|{:<3}|{:^50}|{:^50}|{:^50}|".format("No", "Kitap Adı", "Yazar", "Fiyat"))
+    print('-'*158)
+    i = 0
     for satir in veriler:
-        print("|{:<50}|{:<50}|{:<50}|".format(satir[0], satir[1], satir[2]))
-    print('-'*154)
+        i += 1
+        print("|{:<3}|{:<50}|{:<50}|{:<50}|".format(i, satir[0], satir[1], satir[2]))
+    print('-'*158)
