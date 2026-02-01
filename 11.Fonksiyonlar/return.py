@@ -5,6 +5,7 @@ def ornek():
 a = ornek()
 print(a)
 
+
 ##
 def ismin_ne():
 	isim = input("ismin ne? ")
