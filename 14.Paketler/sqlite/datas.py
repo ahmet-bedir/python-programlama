@@ -17,4 +17,4 @@ with sqlite3.connect("kitaplar.sqlite") as vt:
     for satir in veriler:
         i += 1
         print("|{:<3}|{:<50}|{:<50}|{:<50}|".format(i, satir[0], satir[1], satir[2]))
-    print('+' + '-'*3 + '+' + '-'*50 + '+' + '-'*50 + '+' + '-'*50 + '+')
+        print('+' + '-'*3 + '+' + '-'*50 + '+' + '-'*50 + '+' + '-'*50 + '+')   
