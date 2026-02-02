@@ -11,7 +11,6 @@ with sqlite3.connect('db.sqlite') as vt:
 			   ('Veli', 'Göz', 'İskenderun'),
 			   ('Mehmet', 'Öz', 'Kilis')]
 
-
 	im.execute("""CREATE TABLE IF NOT EXISTS personel
 	(isim, soyisim, memleket)""")
 
@@ -21,7 +20,3 @@ with sqlite3.connect('db.sqlite') as vt:
 			(?, ?, ?)""", veri)
 
 			vt.commit()
-	im.execute("""INSERT INTO personel VALUES
-	('muhammed ali', 'erdi', 'bursa')""")
-
-	vt.commit()

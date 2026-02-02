@@ -7,8 +7,6 @@ with sqlite3.connect("db.sqlite") as vt:
     im.execute(sql)
     veriler = im.fetchall()
 
-
-
     dolgu = 10
 
     for satir in veriler:
@@ -21,12 +19,12 @@ with sqlite3.connect("db.sqlite") as vt:
 
     i = 0
     print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
-    print("|{:^10}|{:^10}|{:^10}|".format("İsim", "Soyisim", "Memleket"))
+    print("|{:^{d}}|{:^{d}}|{:^{d}}|".format("İsim", "Soyisim", "Memleket", d=dolgu))
     print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
 
     for satir in veriler:
         i += 1
-        print("|{:<10}|{:<10}|{:<10}|".format(satir[0], satir[1], satir[2]))
+        print("|{:<{d}}|{:<{d}}|{:<{d}}|".format(satir[0], satir[1], satir[2], d=dolgu))
         print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
 
     print(f"Toplam {i} Kayıt.")
