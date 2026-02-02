@@ -20,3 +20,6 @@ with sqlite3.connect('db.sqlite') as vt:
 			(?, ?, ?)""", veri)
 
 			vt.commit()
+
+	# im.execute("INSERT INTO personel VALUES ('ahmetxxx','dddee','iiiii')")
+	# vt.commit()
