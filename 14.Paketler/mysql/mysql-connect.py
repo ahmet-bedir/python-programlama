@@ -6,6 +6,7 @@ baglanti = my.connect(
     password = "a",
     database = "db"
 )
+
 im = baglanti.cursor()
 
-print(im)
+im.execute("CREATE TABLE tbl(id int primary key);")
