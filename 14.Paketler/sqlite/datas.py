@@ -25,6 +25,6 @@ with sqlite3.connect("db.sqlite") as vt:
     for satir in veriler:
         i += 1
         print("|{:<{d}}|{:<{d}}|{:<{d}}|".format(satir[0], satir[1], satir[2], d=dolgu))
-        print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
+    print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
 
     print(f"Toplam {i} kayıt.")
