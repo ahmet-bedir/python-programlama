@@ -9,4 +9,4 @@ baglanti = my.connect(
 
 im = baglanti.cursor()
 
-im.execute("CREATE TABLE tbl(id int primary key);")
+im.close()
