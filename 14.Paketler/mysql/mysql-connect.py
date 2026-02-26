@@ -1,12 +1,14 @@
-import mysql.connector as my
+import mysql.connector as mysql
 
-baglanti = my.connect(
+baglanti = mysql.connect(
     host = "127.0.0.1", # 192.23.45.56
     user = "ahmet",
     password = "a",
     database = "db"
 )
 
-im = baglanti.cursor()
-
-im.close()
+imlec = baglanti.cursor()
+sql = """SELECT * FROM urunler;"""
+imlec.execute(sql)
+print(imlec.fetchall())
+imlec.close()
