@@ -1,9 +1,12 @@
 import mysql.connector as mysql
+from datetime import datetime
+
+print(datetime(2002,12,21))
 
 class Urun:
     def __init__(self):
         self.baglanti = mysql.connect(
-            host = "127.0.0.1", # 192.23.45.56
+            host = "127.0.0.1",
             user = "ahmet",
             password = "a",
             database = "db"
@@ -18,7 +21,25 @@ class Urun:
         sql = """INSERT INTO urunler (urun_adi, fiyat, url, aciklama)
         VALUES (%s,%s,%s,%s);"""
         degerler = (self.urun_adi, self.fiyat, self.url, self.aciklama)
-        imlec.execute(sql,degerler)
+        imlec.execute(sql,degerler) #execute fonksiyonu, değer(value) olarak demet(tuple) alır.
+        try:
+            self.baglanti.commit()
+            print(f'{imlec.rowcount} tane kayıt eklendi')
+            print(f'son eklenen kaydın id: {imlec.lastrowid}')
+        except mysql.Error as err:
+            print('hata:', err)
+        finally:
+            self.baglanti.close()
+            print('database bağlantısı kapandı.')
+
+    def cokUrunEkle(self, liste):
+        self.liste = liste
+
+        imlec = self.baglanti.cursor()
+        sql = """INSERT  INTO urunler (urun_adi, fiyat, url, aciklama)
+        VALUES (%s,%s,%s,%s);"""
+        degerler = self.liste
+        imlec.executemany(sql,degerler) #executemany fonksiyonu, değer(value) olarak liste(list) alır.
         try:
             self.baglanti.commit()
             print(f'{imlec.rowcount} tane kayıt eklendi')
@@ -37,8 +58,20 @@ class Urun:
         for i in liste:
             print(i)
         self.baglanti.close()
+###
+# nesneUrunEkle = Urun()
+# nesneUrunEkle.urunEkle("samsung s8",9000,"s8.jpg","akıllı telefon")
 
-u1 = Urun()
-u1.urunListesi()
+###
+# liste = [
+# ('Android Tv',20000,'and.png','hd'),
+# ('Elektirikli Süpürge',15000,'supurge.jpeg','sil süpür'),
+# ('Lc Tv',20000,'lcd.png','full hd'),
+# ('Çalı Süpürge',15000,'cali.jpeg','sil süpür'),
+# ]
+# nesneCokUrunEkle = Urun()
+# nesneCokUrunEkle.cokUrunEkle(liste)
 
-# u1.urunEkle("samsung s7",5000,"s7.jpg","akıllı telefon")
+###
+nesneUrunleriListele = Urun()
+nesneUrunleriListele.urunListesi()
