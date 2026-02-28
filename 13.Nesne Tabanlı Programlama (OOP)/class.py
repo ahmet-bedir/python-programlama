@@ -1,7 +1,10 @@
 class Person:
-	def __init__(self, a):
+	def __init__(self, name):
+		self.name = name
 		print("Yapıcı Metod (constructor metod) Çalıştı.")
 
-f1 = Person(1)
+object1 = Person("ali")
+print(object1.name)
 
-f2 = Person('a')
+object2 = Person("aylin")
+print(object2.name)
