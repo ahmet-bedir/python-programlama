@@ -1,7 +1,7 @@
-class Futbolcu:
-	clup = "bjk"
-	yas = 26
+class Person:
+	def __init__(self, a):
+		print("Yapıcı Metod (constructor metod) Çalıştı.")
 
-f1 = Futbolcu()
+f1 = Person(1)
 
-print(f1.yas)
+f2 = Person('a')
