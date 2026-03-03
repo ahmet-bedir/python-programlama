@@ -1,3 +1,5 @@
 p.py
 
+__pycache__/*
+
 .idea/*
