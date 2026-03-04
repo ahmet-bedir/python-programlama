@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import sys, os
-
-print(sys.path)
-=======
 sesli_harfler = 'aeıioöuü'
 sayac = 0
 
@@ -30,4 +25,3 @@ if __name__ == '__main__':
     calistir()
     
 print(__name__)
->>>>>>> bb697a65c2b32efb574dda84397d462bf940933f
