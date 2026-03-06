@@ -1,3 +1,5 @@
+# python-programlama
+
 sesli_harfler = 'aeıioöuü'
 sayac = 0
 
