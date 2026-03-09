@@ -1,7 +1,4 @@
 import mysql.connector as mysql
-from datetime import datetime
-
-print(datetime(2002,12,21))
 
 class Urun:
     def __init__(self):
@@ -54,9 +51,13 @@ class Urun:
         imlec = self.baglanti.cursor()
         sql = """SELECT * FROM urunler;"""
         imlec.execute(sql)
-        liste = imlec.fetchall()
-        for i in liste:
-            print(i)
+        # liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
+        # for i in liste:
+        #     print(i)
+        tekKayit = imlec.fetchone(
+            ) #fetchone fonksiyonu, tek bir kayıt döndürür.
+        print(tekKayit)
+         
         self.baglanti.close()
 ###
 # nesneUrunEkle = Urun()
