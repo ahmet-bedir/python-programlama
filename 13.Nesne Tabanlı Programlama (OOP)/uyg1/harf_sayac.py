@@ -1,6 +1,5 @@
 """
-oop kullanılmadan önce:
-
+### fonksiyon kullanılarak.
 sesli_harfler = 'aeıioöuü'
 sayac = 0
 
@@ -23,10 +22,42 @@ def ekrana_bas(kelime):
 def calistir():
     kelime = kelime_sor()
     ekrana_bas(kelime)
+    
+if __name__ == "__init__":
+    calistir()
+    
+### OOP kullanılarak sadece sesli harf sayacı.
+class HarfSayaci:
+    def __init__(self):
+        self.sesliler = "aeıioöuü"
+        self.sayac = 0
+        
+    def giris(self):
+        return input("Kelime Giriniz: ")
+        
+    def seslidir(self, harf):
+        return harf in self.sesliler
 
-calistir()
+    def artir(self):
+        for harf in self.kelime:
+            if self.seslidir(harf):
+                self.sayac += 1
+        return self.sayac
 
+    def ekrana_bas(self):
+        mesaj = "{} kelimesinde {} sesli harf var."
+        sesli_harf_sayisi = self.artir()
+        print(mesaj.format(self.kelime, sesli_harf_sayisi))
+
+    def calistir(self):
+        self.kelime = self.giris()
+        self.ekrana_bas()
+
+if __name__ == '__main__':
+    sayac = HarfSayaci()
+    sayac.calistir()
 """
+### OOP kullanılarak sesli ve sessiz harf sayacı.
 class HarfSayaci:
     def __init__(self):
         self.sesli_harfler = 'aeıioöuü'
