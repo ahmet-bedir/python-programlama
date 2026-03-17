@@ -11,6 +11,11 @@ class Deneme:
     def __init__(self):
         self.b = 7
 
+print("Sınıf niteliği:", Deneme.a)
 
+# 1.yöntem
 ornek1 = Deneme()
-print(ornek1.a, ornek1.b)
+print("Örnek niteliği:", ornek1.b)
+
+# 2.yöntem
+print("Örnek niteliği:", Deneme().b)
