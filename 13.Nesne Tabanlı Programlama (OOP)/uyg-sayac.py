@@ -1,5 +1,5 @@
 """
-### fonksiyon kullanılarak.
+### fonksiyon kullanılarak girilen kelimede geçen sesli harflerin sayısını bulma.
 sesli_harfler = 'aeıioöuü'
 sayac = 0
 
@@ -26,7 +26,7 @@ def calistir():
 if __name__ == "__init__":
     calistir()
     
-### OOP kullanılarak sadece sesli harf sayacı.
+### OOP kullanılarak girilen kelimede  sadece sesli harflerin sayısını bulma.
 class HarfSayaci:
     def __init__(self):
         self.sesliler = "aeıioöuü"
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     sayac = HarfSayaci()
     sayac.calistir()
 """
-### OOP kullanılarak sesli ve sessiz harf sayacı.
+### OOP kullanılarak girilen kelimede sesli ve sessiz harf sayısını bulma.
 class HarfSayaci:
     def __init__(self):
         self.sesli_harfler = 'aeıioöuü'
