@@ -2,7 +2,7 @@
 """
 class Calisan:
     kabiliyetleri = []
-    unvan = ""
+    unvan = "işçi"
     maas = 1500
     memleketi = ''
     dogumTarihi = ''
@@ -31,7 +31,8 @@ print(f"Maaşı: {ahmet.maas}")
 print('='*45)
 
 mehmet = Calisan()
-mehmet.kabiliyetleri.append("konuşkan")
+mehmet.kabiliyetleri.append("tamir")
+mehmet.kabiliyetleri.append("tesisat")
 mehmet.maas = 23000
 
 print(f"Mehmet\nKabiliyetleri: {mehmet.kabiliyetleri}")
