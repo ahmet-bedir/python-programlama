@@ -1,5 +1,5 @@
 ### 
-class Sınıf():
+class Sinif():
     sinif_niteligi = 0
 
     def __init__(self):
@@ -11,12 +11,12 @@ class Sınıf():
 
     @classmethod
     def sinif_metodu(cls):
-        cls.sinif_niteligi += 1
+        cls.sinif_niteligi += 2
         return cls.sinif_niteligi
 
 #sınıf metodunu sınıfın ismiyle çağırıyoruz.
-print(Sınıf.sinif_metodu())
+print("Sınıf metodu:", Sinif.sinif_metodu())
 
 #örnek metodunu sınıfı örnekledikten sonra çağırıyoruz.
-ornek = Sınıf()
-print(ornek.ornek_metodu())
+ornek = Sinif()
+print("Örnek metodu:", ornek.ornek_metodu())
