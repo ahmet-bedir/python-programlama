@@ -51,16 +51,16 @@ class Urun:
         imlec = self.baglanti.cursor()
         sql = """SELECT * FROM urunler;"""
         imlec.execute(sql)
-        # liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
-        # for i in liste:
-        #     print(i)
-        tekKayit = imlec.fetchone() #fetchone fonksiyonu, tek bir kayıt döndürür.
-        print(tekKayit)
+        liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
+        for i in liste:
+            print(i)
+        # tekKayit = imlec.fetchone() #fetchone fonksiyonu, tek bir kayıt döndürür.
+        # print(tekKayit)
 
         self.baglanti.close()
 ###
-# nesneUrunEkle = Urun()
-# nesneUrunEkle.urunEkle("samsung s8",9000,"s8.jpg","akıllı telefon")
+nesneUrunEkle = Urun()
+nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
 
 ###
 # liste = [
