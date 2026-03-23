@@ -83,16 +83,16 @@ class Urun:
 
         sql = """SELECT COUNT(*) FROM urunler;""" #urunler tablosundaki kayıt sayısını çekmek istediğimiz için COUNT(*) kullanırız.
         sql = """SELECT AVG(fiyat) FROM urunler;""" #urunler tablosundaki fiyat ortalamasını çekmek istediğimiz için AVG() kullanırız.
-        # sql = """SELECT SUM(fiyat) FROM urunler;""" #urunler tablosundaki fiyat toplamını çekmek istediğimiz için SUM() kullanırız.
-        # sql = """SELECT MIN(fiyat) FROM urunler;""" #urunler tablosundaki en düşük fiyatı çekmek istediğimiz için MIN() kullanırız.
-        # sql = """SELECT MAX(fiyat) FROM urunler;""" #urunler tablosundaki en yüksek fiyatı çekmek istediğimiz için MAX() kullanırız.
-        # sql = """SELECT urun_adi,fiyat FROM urunler WHERE fiyat = (SELECT MAX(fiyat) FROM urunler);""" #urunler tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
+        sql = """SELECT SUM(fiyat) FROM urunler;""" #urunler tablosundaki fiyat toplamını çekmek istediğimiz için SUM() kullanırız.
+        sql = """SELECT MIN(fiyat) FROM urunler;""" #urunler tablosundaki en düşük fiyatı çekmek istediğimiz için MIN() kullanırız.
+        sql = """SELECT MAX(fiyat) FROM urunler;""" #urunler tablosundaki en yüksek fiyatı çekmek istediğimiz için MAX() kullanırız.
+        sql = """SELECT urun_adi,fiyat FROM urunler WHERE fiyat = (SELECT MAX(fiyat) FROM urunler);""" #urunler tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
 
         imlec.execute(sql)
 
         sonuc = imlec.fetchone()    
 
-        print(f'Sonuç: {sonuc[0]}')
+        print(f'Sonuç: {sonuc[0]}-{sonuc[1]}')
         self.baglanti.close()
 
         
