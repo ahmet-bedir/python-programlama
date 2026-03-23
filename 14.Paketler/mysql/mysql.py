@@ -54,10 +54,9 @@ class Urun:
         # liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
         # for i in liste:
         #     print(i)
-        tekKayit = imlec.fetchone(
-            ) #fetchone fonksiyonu, tek bir kayıt döndürür.
+        tekKayit = imlec.fetchone() #fetchone fonksiyonu, tek bir kayıt döndürür.
         print(tekKayit)
-         
+
         self.baglanti.close()
 ###
 # nesneUrunEkle = Urun()
