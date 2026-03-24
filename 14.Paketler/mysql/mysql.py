@@ -92,7 +92,7 @@ class Urun:
 
         sonuc = imlec.fetchone()    
 
-        print(f'Sonuç: {sonuc[0]}-{sonuc[1]}')
+        print(f'En Pahalı Ürün: {sonuc[0]} - Fiyat: {sonuc[1]}')
         self.baglanti.close()
 
         
