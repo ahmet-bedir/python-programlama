@@ -6,8 +6,9 @@ print(dir(s))
 
 s.ornek_metodu()
 
-#print(s.__gizli) #hata!
-#print(private.Sinif.__gizli) #hata!
+# print(s.__gizli) #hata!
+# print(private.Sinif.__gizli) #hata!
+
 print(private.Sinif.sinif_niteligi)
 
 '''

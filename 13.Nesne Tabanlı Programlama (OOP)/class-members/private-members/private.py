@@ -4,7 +4,7 @@ class Sinif():
 
     def ornek_metodu(self):
         print('örnek metodu')
-        print(self.__gizli) #Gizli üyeler yalnızca sınıf dışına kapalıdır. Bu üyelere sınıf içinden rahatlıkla erişebiliriz. Mesela __gizli adlı değişkene örnek_metodu() içinden normal bir şekilde erişebiliyoruz.
+        print(self.__gizli) #Gizli üyeler yalnızca sınıf dışına kapalıdır. Bu üyelere sınıf içinden rahatlıkla erişebiliriz. Mesela __gizli adlı değişkene ornek_metodu() içinden normal bir şekilde erişebiliyoruz.
 
     @classmethod
     def sinif_metodu(cls):

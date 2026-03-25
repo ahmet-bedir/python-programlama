@@ -1,11 +1,11 @@
 class Calisan:
-    __personel = []
+    __personel = [] # Sınıf değişkeni gizli (private) olarak tanımlandı.
     def __init__(self,isim):
         self.isim = isim
         self.kabiliyetleri = []
-        self.personel_ekle()
+        self.__personel_ekle()
 
-    def personel_ekle(self):
+    def __personel_ekle(self): # Gizli (private) metot tanımlandı.
         self.__personel.append(self.isim)
         print(f"'{self.isim}' adlı kişi personel listesine eklendi.")
 
