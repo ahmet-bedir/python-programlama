@@ -1,18 +1,18 @@
 class Calisan:
-    personel = []
+    __personel = []
     def __init__(self,isim):
         self.isim = isim
         self.kabiliyetleri = []
         self.personel_ekle()
 
     def personel_ekle(self):
-        self.personel.append(self.isim)
+        self.__personel.append(self.isim)
         print(f"'{self.isim}' adlı kişi personel listesine eklendi.")
 
     @classmethod
     def personel_listesi(cls):
         print("=== Personel Listesi ===")
-        for kisi in cls.personel:
+        for kisi in cls.__personel:
             print(kisi)
 
     def kabiliyet_ekle(self,kabiliyet):
@@ -25,4 +25,4 @@ class Calisan:
 
     @classmethod
     def personel_sayisi(cls):
-        print(f"Personel Sayısı: {len(cls.personel)}")
+        print(f"Personel Sayısı: {len(cls.__personel)}")
