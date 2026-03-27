@@ -1,4 +1,4 @@
-class Oyuncu(): #taban sınıf
+class Oyuncu(): #taban sınıf, üst sınıf (super class)
     def __init__(self, isim, rutbe):
         self.isim = isim
         self.rutbe = rutbe
@@ -14,7 +14,8 @@ class Oyuncu(): #taban sınıf
         print('puan kaybedildi')
         
 class Asker(Oyuncu): #alt sınıf
-    def hareket_et(self): # Taban sınıfta zaten hareket_et() adlı bir örnek metodu olduğu için, alt sınıfta tanımladığımız aynı adlı örnek metodu, taban sınıftaki metodun yerine geçip üzerine yazıyor(override).
+    def hareket_et(self):
+        # Taban sınıfta zaten hareket_et() adlı bir örnek metodu olduğu için, alt sınıfta tanımladığımız aynı adlı örnek metodu, taban sınıftaki metodun yerine geçip üzerine yazıyor(override).
         print('yeni hareket_et() metodu')
         
         
