@@ -74,7 +74,11 @@ class Oyuncu(): #taban sınıf, üst sınıf (super class)
 class Asker(Oyuncu): #alt sınıf
     def __init__(self, *args):
         super().__init__(*args)
+        #Oyuncu.__init__(self, *args)
         self.guc = 100
+    def hareket_et(self):
+        super().hareket_et()
+        print('hedefe ulaşıldı.')
         
 class Isci(Oyuncu): #alt sınıf
     def __init__(self, *args):
@@ -93,6 +97,7 @@ asker1 = Asker("ali","er")
 print("İsim:", asker1.isim)
 print("Rütbe:", asker1.rutbe)
 print("Güç:", asker1.guc)
+asker1.hareket_et()
 
 print('-'*45)
 ###
@@ -101,6 +106,7 @@ isci1 = Isci("erman","işçi")
 print("İsim:", isci1.isim)
 print("Rütbe:", isci1.rutbe)
 print("Güç:", isci1.guc)
+isci1.hareket_et()
 
 print('-'*45)
 ###
@@ -109,3 +115,4 @@ yonetici1 = Yonetici("can","yönetici")
 print("İsim:", yonetici1.isim)
 print("Rütbe:", yonetici1.rutbe)
 print("Güç:", yonetici1.guc)
+yonetici1.hareket_et()
