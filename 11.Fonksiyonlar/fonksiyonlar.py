@@ -1,20 +1,26 @@
-def kayit(isim="",soyisim="",sistem="",sehir="ankara"):
+### orn1
+def kayit(isim="",soyisim="",sistem="",sehir=""):
 	print("-"*30)
-	print("İsim :", isim)
-	print("Soyisim :", soyisim)
-	print("İşletim Sistemi :", sistem)
-	print("Şehir :", sehir)
+	print("İsim\t\t:", isim)
+	print("Soyisim\t\t:", soyisim)
+	print("İşletim Sistemi\t:", sistem)
+	print("Şehir\t\t:", sehir)
 	print("-"*30)
 
-kayit("ahmet","bedir","linux","kocaeli")
-kayit("ali","koz","windows","kars")
-kayit("unix","istanbul","ersin","şeker") #sıralama sırası değiiştimi sıkıntı oluyor.
+kayit("ahmet","bedir","linux","kocaeli") #Sıralı veya isimsiz parametreler.
+kayit("ali","koz","windows")
+kayit("unix","istanbul","ersin","şeker") #Eğer fonksiyon parametrelerini bu sırayla kullanırsak aldığımız çıktı hatalı olacaktır.
 
+kayit(sehir="muş",isim="canan",soyisim="alık",sistem="unix") #İsimli parametreler.
 kayit(sistem="dos",isim="can",soyisim="saka")
+"""
+Python’da isimli bir parametrenin ardından sıralı bir parametre gelemez.
+"""
+#kayit(soyisim="Öz", isim="Ahmet", "Debian", "Ankara")
 
 
 print("#"*40)
-###
+### orn2
 def sistem_bilgisi():
 	import sys
 	print("\nSistemde kurulu Python'ın;")
@@ -27,15 +33,16 @@ def sistem_bilgisi():
 sistem_bilgisi()
 
 
-print("-"*40)
-###
+print("#"*40)
+### orn3
 def uzunluk(kelime):
 	i = 0
 	for harf in kelime:
-		i=i+1
-	print(i)
+		i += 1
+	print(f"'{kelime}' kelimesinin uzunluğu: {i}")
 
-print("u", uzunluk("python"))
+kelime = "python"
+uzunluk(kelime)
 # diğer kodlar...
 uzunluk("ali")
 # diğer kodlar...
