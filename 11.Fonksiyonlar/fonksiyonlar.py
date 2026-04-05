@@ -1,5 +1,5 @@
 ### orn1
-def kayit(isim="",soyisim="",sistem="",sehir=""):
+def kayit(isim="",soyisim="",sistem="",sehir=""): #varsayılan değerli parametreler.
 	print("-"*30)
 	print("İsim\t\t:", isim)
 	print("Soyisim\t\t:", soyisim)
@@ -48,5 +48,3 @@ uzunluk("ali")
 # diğer kodlar...
 liste = ["bardak",'a',5,True]
 uzunluk(liste)
-
-	
