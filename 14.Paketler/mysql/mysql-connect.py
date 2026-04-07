@@ -6,7 +6,7 @@ class Urun:
             host = "127.0.0.1",
             user = "ahmet",
             password = "a",
-            database = "db")
+            database = "marketdb")
         
     ###
     def urunEkle(self, urun_adi, fiyat, url, aciklama):
@@ -86,7 +86,9 @@ class Urun:
         sql = """SELECT SUM(fiyat) FROM urunler;""" #urunler tablosundaki fiyat toplamını çekmek istediğimiz için SUM() kullanırız.
         sql = """SELECT MIN(fiyat) FROM urunler;""" #urunler tablosundaki en düşük fiyatı çekmek istediğimiz için MIN() kullanırız.
         sql = """SELECT MAX(fiyat) FROM urunler;""" #urunler tablosundaki en yüksek fiyatı çekmek istediğimiz için MAX() kullanırız.
-        sql = """SELECT urun_adi,fiyat FROM urunler WHERE fiyat = (SELECT MAX(fiyat) FROM urunler);""" #urunler tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
+        sql = """SELECT urun_adi,fiyat
+        FROM urunler
+        WHERE fiyat = (SELECT MAX(fiyat) FROM urunler);""" #urunler tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
 
         imlec.execute(sql)
 
