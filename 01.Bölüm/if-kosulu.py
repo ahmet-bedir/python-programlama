@@ -52,3 +52,7 @@ if login:
 # elif sayi > 20:
 #     print("sayı 20'den büyüktür.")
 #
+###
+_not = 51
+status = "Geçti" if _not > 50 else "Kaldı"
+print(f"{status}")

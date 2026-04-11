@@ -1,39 +1,27 @@
-class PersonClass:
-    # class attributes
-    city = "izmit"
-    
-    # constructor methods
-    def __init__(self, name, year):
-		# object attributes
-        self.name = name
-        self.year = year
-        print("Yapıcı Metod (constructor metod) Çalıştı.")
-        
-    # instance methods
-    def introFunc(self):
-        print("Selam, " + self.name)
-        
-    def ageCalcFunc(self):
-        return 2026 - self.year
 
-print('-'*40)
-# object (instance)
-object1 = PersonClass("ali",1988)
-# accessing object attributes
-print(f"İsim: {object1.name}\nDoğum Yılı: {object1.year}\nŞehir: {object1.city}")
-object1.introFunc()
-print("Yaş:", object1.ageCalcFunc())
 
-print('-'*40)
-object2 = PersonClass(year=2002,name="aylin")
-print(f"İsim: {object2.name}\nDoğum Yılı: {object2.year}\nŞehir: {object2.city}")
-object2.introFunc()
-print("Yaş:", object2.ageCalcFunc())
 
-print('-'*40)
-# updating
-object1.name = "ahmet"
-object1.city = "ankara"
+class Circle:
+    pi = 3.14159  # Class attribute — tüm daireler için aynı
 
-print(f"İsim: {object1.name}\nŞehir: {object1.city}")
-object1.introFunc()
+    def __init__(self, radius):
+        self.radius = radius  # Instance attribute — her daire için farklı
+
+    def area(self):
+        return Circle.pi * self.radius ** 2
+
+c1 = Circle(5)
+c2 = Circle(10)
+
+print(c1.area())   # 78.53975
+print(c2.area())   # 314.159
+
+# Aynı sınıftan mı?
+print(type(c1))           # <class '__main__.Circle'>
+print(type(c2))           # <class '__main__.Circle'>
+print(type(c1) == type(c2))  # True
+
+# Ama farklı nesneler
+print(c1 is c2)    # False
+print(id(c1))      # farklı bellek adresi
+print(id(c2))      # farklı bellek adresi
