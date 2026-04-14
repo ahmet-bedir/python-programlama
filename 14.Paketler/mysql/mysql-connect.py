@@ -16,7 +16,7 @@ class Urun:
         self.aciklama = aciklama
 
         imlec = self.baglanti.cursor()
-        sql = """INSERT INTO urunler (urun_adi, fiyat, url, aciklama)
+        sql = """INSERT INTO products (product_name, price, product_image, description)
         VALUES (%s,%s,%s,%s);"""
         degerler = (self.urun_adi, self.fiyat, self.url, self.aciklama)
         imlec.execute(sql,degerler) #execute fonksiyonu, değer(value) olarak demet(tuple) alır.
@@ -35,7 +35,7 @@ class Urun:
         self.liste = liste
 
         imlec = self.baglanti.cursor()
-        sql = """INSERT  INTO urunler (urun_adi, fiyat, url, aciklama)
+        sql = """INSERT  INTO products (product_name, price, product_image, description)
         VALUES (%s,%s,%s,%s);"""
         degerler = self.liste
         imlec.executemany(sql,degerler) #executemany fonksiyonu, değer(value) olarak liste(list) alır.
@@ -52,8 +52,8 @@ class Urun:
     ###
     def urunListesi(self):
         imlec = self.baglanti.cursor()
-        sql = """SELECT * FROM urunler;""" #Tüm kayıtları çekmek istediğimiz için * kullanırız.
-        sql = """SELECT * FROM urunler ORDER BY urun_adi DESC;""" #urun_adi'na göre azalan sırada sıralamak istediğimiz için ORDER BY kullanırız. Ve DESC ile azalan sırada sıralarız. Eğer artan sırada sıralamak istiyorsak ASC kullanırız.
+        sql = """SELECT * FROM products;""" #Tüm kayıtları çekmek istediğimiz için * kullanırız.
+        sql = """SELECT * FROM products ORDER BY product_name DESC;""" #product_name'na göre azalan sırada sıralamak istediğimiz için ORDER BY kullanırız. Ve DESC ile azalan sırada sıralarız. Eğer artan sırada sıralamak istiyorsak ASC kullanırız.
         imlec.execute(sql)
         try:
             liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
@@ -70,7 +70,7 @@ class Urun:
     ###
     def urunId(self, id):
         imlec = self.baglanti.cursor()
-        sql = """Select * From urunler Where id=%s""" #id'ye göre kayıt çekmek istediğimiz için, id'yi parametre olarak alırız. Ve sql sorgusunda %s ile id'yi belirtiriz.
+        sql = """SELECT * FROM products WHERE product_id=%s""" #id'ye göre kayıt çekmek istediğimiz için, id'yi parametre olarak alırız. Ve sql sorgusunda %s ile id'yi belirtiriz.
         urunId = (id,) #id'yi demet(tuple) olarak tanımlarız. Çünkü execute fonksiyonu, değer(value) olarak demet(tuple) alır.
         imlec.execute(sql,urunId)
         sonuc = imlec.fetchone()
@@ -81,14 +81,14 @@ class Urun:
     def urunBilgisi(self):
         imlec = self.baglanti.cursor()
 
-        sql = """SELECT COUNT(*) FROM urunler;""" #urunler tablosundaki kayıt sayısını çekmek istediğimiz için COUNT(*) kullanırız.
-        sql = """SELECT AVG(fiyat) FROM urunler;""" #urunler tablosundaki fiyat ortalamasını çekmek istediğimiz için AVG() kullanırız.
-        sql = """SELECT SUM(fiyat) FROM urunler;""" #urunler tablosundaki fiyat toplamını çekmek istediğimiz için SUM() kullanırız.
-        sql = """SELECT MIN(fiyat) FROM urunler;""" #urunler tablosundaki en düşük fiyatı çekmek istediğimiz için MIN() kullanırız.
-        sql = """SELECT MAX(fiyat) FROM urunler;""" #urunler tablosundaki en yüksek fiyatı çekmek istediğimiz için MAX() kullanırız.
-        sql = """SELECT urun_adi,fiyat
-        FROM urunler
-        WHERE fiyat = (SELECT MAX(fiyat) FROM urunler);""" #urunler tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
+        sql = """SELECT COUNT(*) FROM products;""" #products tablosundaki kayıt sayısını çekmek istediğimiz için COUNT(*) kullanırız.
+        sql = """SELECT AVG(price) FROM products;""" #products tablosundaki fiyat ortalamasını çekmek istediğimiz için AVG() kullanırız.
+        sql = """SELECT SUM(price) FROM products;""" #products tablosundaki fiyat toplamını çekmek istediğimiz için SUM() kullanırız.
+        sql = """SELECT MIN(price) FROM products;""" #products tablosundaki en düşük fiyatı çekmek istediğimiz için MIN() kullanırız.
+        sql = """SELECT MAX(price) FROM products;""" #products tablosundaki en yüksek fiyatı çekmek istediğimiz için MAX() kullanırız.
+        sql = """SELECT product_name,price
+        FROM products
+        WHERE price = (SELECT MAX(price) FROM products);""" #products tablosundaki en yüksek fiyata sahip ürünleri çekmek istediğimiz için bu sorguyu kullanırız.
 
         imlec.execute(sql)
 
@@ -118,7 +118,7 @@ nesneUrunleriListele.urunListesi()
 
 ###
 nesneUrunId = Urun()
-nesneUrunId.urunId(13)
+nesneUrunId.urunId(1)
 
 ###
 nesneUrunBilgisi = Urun()
