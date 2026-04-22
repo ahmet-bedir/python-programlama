@@ -39,7 +39,7 @@ def uzunluk(kelime):
 	i = 0
 	for harf in kelime:
 		i += 1
-	print(f"'{kelime}' kelimesinin uzunluğu: {i}")
+	print(f"'{kelime}' uzunluğu: {i}")
 
 kelime = "python"
 uzunluk(kelime)
