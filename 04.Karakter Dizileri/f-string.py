@@ -61,6 +61,10 @@ print(f"{sayi:-^15_}") #'----123_456----'
 
 print(f"{sayi:,}") #'123,456'
 
+# Yüzde gösterimi
+oran = 0.856
+print(f"Başarı oranı: {oran:.1%}")  # 85.6%
+
 islem = 1 / 12
 print(f"{islem:.2%}") # Sonucun 100 ile çarpılmış halini yüzde olarak çıktı verir  '8.33%'
 
@@ -74,4 +78,13 @@ for hiza, operator in hizalama.items():
  Sol: 'Hello, World!            '
 Orta: '      Hello, World!      '
  Sağ: '            Hello, World!'
+"""
+
+# Hizalama
+for urun, fiyat in [("Elma", 5), ("Portakal", 7.5), ("Muz", 12)]:
+    print(f"{urun:<10} {fiyat:>6.2f} TL")
+"""
+Elma         5.00 TL
+Portakal     7.50 TL
+Muz         12.00 TL
 """
