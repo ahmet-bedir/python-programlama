@@ -1,5 +1,5 @@
 import sqlite3
-
+# Eğer bu dizin içinde sqlite.db adlı bir veritabanı yoksa, bu ada sahip bir veritabanı oluşturulacaktır.
 db_connect = sqlite3.connect('sqlite.db')
 db_cursor = db_connect.cursor()
 
@@ -12,14 +12,16 @@ db_cursor = db_connect.cursor()
 # db_cursor.execute(sql)
 
 # tabloya veri girişi.
-sql = """INSERT INTO personel VALUES (1,'ali','tel','adana');"""
+sql = """INSERT INTO personel (isim, soyisim, memleket) VALUES ('ali','tel','adana');"""
 db_cursor.execute(sql)
 db_connect.commit()
+print("Kayıt Eklendi...")
 
 # tabloyu listeleme.
 sql = """SELECT * FROM personel;"""
 db_cursor.execute(sql)
 table_list = db_cursor.fetchall()
+print("Tablo Listesi:")
 for i in table_list:
     print(i)
 
