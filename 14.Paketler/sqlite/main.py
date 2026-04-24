@@ -1,5 +1,5 @@
 import sqlite3
-# Eğer bu dizin içinde sqlite.db adlı bir veritabanı yoksa, bu ada sahip bir veritabanı oluşturulacaktır.
+# Yeni veritabanı oluşturmak için connect() metodu kullanılır. Eğer bu dizin içinde sqlite.db adlı bir veritabanı yoksa, bu ada sahip bir veritabanı oluşturulacaktır. Halihazırda bi veritabanı varsa connect() metodu yardımıyla bağlanırız.
 db_connect = sqlite3.connect('sqlite.db')
 db_cursor = db_connect.cursor()
 
@@ -16,6 +16,11 @@ sql = """INSERT INTO personel (isim, soyisim, memleket) VALUES ('ali','tel','ada
 db_cursor.execute(sql)
 db_connect.commit()
 print("Kayıt Eklendi...")
+
+print()
+print("Bağlantı nesnesinin metodları:", dir(db_connect), sep='\n')
+print()
+print("İmleç metodları:", dir(db_cursor), sep='\n')
 
 # tabloyu listeleme.
 sql = """SELECT * FROM personel;"""
