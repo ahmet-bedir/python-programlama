@@ -1,17 +1,26 @@
 import sqlite3
 
-vt = sqlite3.connect('db.sqlite')
+db_connect = sqlite3.connect('sqlite.db')
+db_cursor = db_connect.cursor()
 
-im = vt.cursor()
+# yeni tablo oluşturma.
+# sql = """CREATE TABLE personel (id, isim, soyisim, memleket);"""
+# db_cursor.execute(sql)
 
-# sql = "CREATE TABLE personel (isim, soyisim, memleket)" # yeni tablo oluşturma sorgusu
+# koşullu tablo oluşturma (aynı isimde tablo varsa hata vermez, yoksa yeni bir tablo oluşturur).
+# sql = """CREATE TABLE IF NOT EXISTS personel (id, isim, soyisim, memleket);"""
+# db_cursor.execute(sql)
 
-tbl_sql = "CREATE TABLE IF NOT EXISTS personel (id, isim, soyisim, memleket)" # koşullu tablo oluşturma sorgusu (aynı isimde tablo varsa hata vermez, yoksa yeni bir tablo oluşturur)
+# tabloya veri girişi.
+sql = """INSERT INTO personel VALUES (1,'ali','tel','adana');"""
+db_cursor.execute(sql)
+db_connect.commit()
 
-veri_sql = "INSERT INTO personel VALUES (1,'ali','tel','adana')" # tabloya veri girişi sorgusu
+# tabloyu listeleme.
+sql = """SELECT * FROM personel;"""
+db_cursor.execute(sql)
+table_list = db_cursor.fetchall()
+for i in table_list:
+    print(i)
 
-im.execute(tbl_sql)
-im.execute(veri_sql)
-
-vt.commit()
-vt.close()
+db_connect.close()
