@@ -1,26 +1,21 @@
-import sqlite3, os
+import sqlite3
 
-dosya = 'db.sqlite'
-dosya_mevcutmu = os.path.exists(dosya)
+with sqlite3.connect('sqlite.db') as db_connect:
+	db_cursor = db_connect.cursor()
+	sql = """CREATE TABLE IF NOT EXISTS personel
+	(isim, soyisim, memleket);"""
+	db_cursor.execute(sql)
 
-with sqlite3.connect('sqlite.db') as vt:
-	im = vt.cursor()
-
-	veriler = [('Fırat', 'Özgül', 'Adana'),
+	datas = [('Fırat', 'Özgül', 'Adana'),
 			   ('Ahmet', 'Söz', 'Bolvadin'),
 			   ('Veli', 'Göz', 'İskenderun'),
 			   ('Mehmet', 'Öz', 'Kilis')]
 
-	im.execute("""CREATE TABLE IF NOT EXISTS personel
-	(isim, soyisim, memleket)""")
+	# for data in datas:
+	#	sql = """INSERT INTO personel VALUES (?, ?, ?);"""
+	# 	db_cursor.execute(sql, data)
+	# db_connect.commit()
 
-	# if not dosya_mevcutmu:
-	# 	for veri in veriler:
-	# 		im.execute("""INSERT INTO personel VALUES
-	# 		(?, ?, ?)""", veri)
-	#
-	# 		vt.commit()
-
-	im.executemany("""INSERT INTO personel VALUES
-	(?, ?, ?)""", veriler)
-	vt.commit()
+	sql = """INSERT INTO personel VALUES (?, ?, ?);"""
+	db_cursor.executemany(sql, datas)
+	db_connect.commit()

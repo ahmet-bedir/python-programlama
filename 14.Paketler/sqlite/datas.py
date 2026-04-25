@@ -1,30 +1,28 @@
-import sqlite3, os
+import sqlite3
 
-with sqlite3.connect("db.sqlite") as vt:
-    im = vt.cursor()
+with sqlite3.connect("sqlite.db") as db_connect:
+    db_cursor = db_connect.cursor()
 
-    sql = "SELECT * FROM personel"
-    im.execute(sql)
-    veriler = im.fetchall()
+    sql = """SELECT * FROM personel;"""
+    db_cursor.execute(sql)
+    datas = db_cursor.fetchall()
+    # veritabanındaki kayıtların uzunluğuna göre tablodaki her kolon uzunluğu otomatik ayarlanıyor.
+    filling = 10
+    for row in datas:
+        if len(row[0]) > filling:
+            filling = len(row[0])
+        if len(row[1]) > filling:
+            filling = len(row[1])
+        if len(row[2]) > filling:
+            filling = len(row[2])
 
-    dolgu = 10
+    register = 0
+    print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
+    print("|{:^{d}}|{:^{d}}|{:^{d}}|".format("İsim", "Soyisim", "Memleket", d=filling))
+    print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
+    for row in datas:
+        register += 1
+        print("|{:<{d}}|{:<{d}}|{:<{d}}|".format(row[0], row[1], row[2], d=filling))
+    print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
 
-    for satir in veriler:
-        if len(satir[0]) > dolgu:
-            dolgu = len(satir[0])
-        elif len(satir[1]) > dolgu:
-            dolgu = len(satir[1])
-        elif len(satir[2]) > dolgu:
-            dolgu = len(satir[2])
-
-    i = 0
-    print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
-    print("|{:^{d}}|{:^{d}}|{:^{d}}|".format("İsim", "Soyisim", "Memleket", d=dolgu))
-    print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
-
-    for satir in veriler:
-        i += 1
-        print("|{:<{d}}|{:<{d}}|{:<{d}}|".format(satir[0], satir[1], satir[2], d=dolgu))
-    print('+' + '-'*dolgu + '+' + '-'*dolgu + '+' + '-'*dolgu + '+')
-
-    print(f"Toplam {i} kayıt.")
+    print(f"Toplam {register} kayıt.")
