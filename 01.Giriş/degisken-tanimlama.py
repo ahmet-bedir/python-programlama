@@ -1,3 +1,4 @@
+###
 print("-" * 45)
 x, y, z = 1, "2", 3.0
 
@@ -13,11 +14,19 @@ print(x, y, z)
 print("-" * 45)
 import keyword
 print("Kullanabileceğimiz Fonksiyonlar (keyword) :\n", dir(keyword), sep="", end="\n\n")
+
 a = keyword.kwlist
 print("Tanımlayamayacağımız Değişken İsimleri :\n", a, sep="")
 print("-" * 45)
 print("Yasaklı Kelime Adedi :", len(a))
 print("-" * 45, end="\n\n")
+
+###
+import keyword
+
+liste = keyword.kwlist
+for i,eleman in enumerate(liste,1):
+    print(f"{i}:{eleman}")
 
 #################################################
 

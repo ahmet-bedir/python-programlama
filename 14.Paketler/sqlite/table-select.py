@@ -16,13 +16,13 @@ with sqlite3.connect("sqlite.db") as db_connect:
         if len(row[2]) > filling:
             filling = len(row[2])
 
-    register = 0
+    counter = 0
     print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
     print("|{:^{d}}|{:^{d}}|{:^{d}}|".format("İsim", "Soyisim", "Memleket", d=filling))
     print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
     for row in datas:
-        register += 1
+        counter += 1
         print("|{:<{d}}|{:<{d}}|{:<{d}}|".format(row[0], row[1], row[2], d=filling))
     print('+' + '-'*filling + '+' + '-'*filling + '+' + '-'*filling + '+')
 
-    print(f"Toplam {register} kayıt.")
+    print(f"Toplam {counter} kayıt.")

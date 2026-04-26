@@ -60,3 +60,9 @@ print('Birleşim :', toplam)
 
 toplam = float(sayi1) + float(sayi2) #ondalıklı sayı girdiğimizde hata almamak için.
 print('Toplam :', toplam)
+
+###
+# sayi = int("1.2") #hata!
+
+sayi = int(float("1.2"))
+print(type(sayi))
