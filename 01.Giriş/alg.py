@@ -9,6 +9,7 @@ Sayının karesini hesapla (Kare = A*A işlemini yap)
 Sonucu (Kare) yaz
 Dur
 """
+
 # sayi = int(input("Bir sayı girin: "))
 # kare = sayi * sayi
 # print("Girdiğiniz sayının karesi:", kare)
