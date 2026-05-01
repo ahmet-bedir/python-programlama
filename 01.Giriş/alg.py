@@ -9,7 +9,6 @@ Sayının karesini hesapla (Kare = A*A işlemini yap)
 Sonucu (Kare) yaz
 Dur
 """
-
 # sayi = int(input("Bir sayı girin: "))
 # kare = sayi * sayi
 # print("Girdiğiniz sayının karesi:", kare)
@@ -94,7 +93,7 @@ Dur
 #     print(i)
 #     top += i
 #     i += 2
-    
+
 # print("Top:", top)
 #####################################################
 """
@@ -143,7 +142,3 @@ while s < n:
     s += 1
     fak *= s
 print("Faktöriyel:", fak)
-
-
-  
-
