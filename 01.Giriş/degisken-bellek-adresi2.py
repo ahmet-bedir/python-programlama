@@ -1,0 +1,7 @@
+a = [1, 2, 3]
+b = a
+
+b.append(4)
+
+print(a)  # [1, 2, 3, 4] — a da değişti!
+print(b)  # [1, 2, 3, 4]
