@@ -1,3 +1,7 @@
+
+"""
+Sayılar immutable (değiştirilemez) olduğu için y değişkenini x'e eşitledikten sonra x'in değerini değiştirmemize rağmen, y değişkeni eski değerdedir.
+"""
 x = 42
 y = x
 

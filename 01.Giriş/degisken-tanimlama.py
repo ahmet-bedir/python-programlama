@@ -100,3 +100,33 @@ osman, mehmet = mehmet, osman
 print("Osman :", osman)
 print("Mehmet :", mehmet)
 print("-" * 45)
+
+################################################
+
+# Bir listeden değişkenlere atama
+koordinatlar = [41.01, 28.97]
+print(f"{koordinatlar} {type(koordinatlar)}")
+
+enlem, boylam = koordinatlar
+print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")
+
+################################################
+
+# Bir karakter dizisinden değişkenlere atama
+koordinatlar = "41.01, 28.97"
+print(f"{koordinatlar} {type(koordinatlar)}")
+
+enlem, boylam = koordinatlar.split(", ")
+print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")
+
+################################################
+
+# Fonksiyon dönüş değerleriyle
+def bolme_islemi(a, b):
+    bolum = a // b
+    kalan = a % b
+    return bolum, kalan
+
+sonuc, kalan = bolme_islemi(17, 5)
+print(f"17 / 5 = {sonuc}, kalan {kalan}")
+# 17 / 5 = 3, kalan 2
