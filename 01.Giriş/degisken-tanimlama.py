@@ -117,3 +117,37 @@ print(kalan, type(kalan))  # 2 <class 'int'>
 print(f"17 / 5 = {sonuc}, kalan {kalan}")  # 17 / 5 = 3, kalan 2
 
 ##################################################
+
+# İlk ve son elemanı ayır, gerisini topla
+ilk, *orta, son = [1, 2, 3, 4, 5]
+print(ilk)   # 1
+print(orta)  # [2, 3, 4]
+print(son)   # 5
+
+###################################################
+
+### type() karşılaştırma
+x = "42"
+if type(x) == int:
+    print("Bu bir tam sayı")
+
+# isinstance() kullanımı:
+if isinstance(x, int):
+    print("Bu bir tam sayı (veya int'in alt sınıfı)")
+
+print(type(True) == int)        # False
+print(isinstance(True, int))    # True — bool, int'in alt sınıfı
+
+###
+### type() ile Dinamik Kontrol
+def akilli_toplama(a, b):
+    if isinstance(a, str) and isinstance(b, str):
+        return a + " " + b
+    elif isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return a + b
+    else:
+        return str(a) + str(b)
+
+print(akilli_toplama(3, 5))           # 8
+print(akilli_toplama("Merhaba", "Dünya"))  # Merhaba Dünya
+print(akilli_toplama("Skor: ", 100))   # Skor:100

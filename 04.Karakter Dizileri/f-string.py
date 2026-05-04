@@ -88,3 +88,9 @@ Elma         5.00 TL
 Portakal     7.50 TL
 Muz         12.00 TL
 """
+
+###
+
+yy, aa, gg = "2022-12-31".split("-")
+
+print(f"{gg}/{aa}/{yy} ({type(gg)}{type(aa)}{type(yy)})")
