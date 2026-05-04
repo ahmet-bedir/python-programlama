@@ -94,6 +94,7 @@ print(koordinatlar, type(koordinatlar))  # [41.01, 28.97] <class 'list'>
 enlem, boylam = koordinatlar
 print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")  # Enlem: 41.01 <class 'float'>, Boylam: 28.97 <class 'float'>
 
+
 # Karakter dizisinden değişkenlere atama
 koordinatlar = "41.01, 28.97"
 print(koordinatlar, type(koordinatlar))  # 41.01, 28.97 <class 'str'>
@@ -102,6 +103,7 @@ enlem, boylam = koordinatlar.split(", ")
 enlem = float(enlem)
 boylam = float(boylam)
 print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")  # Enlem: 41.01 <class 'float'>, Boylam: 28.97 <class 'float'>
+
 
 # Fonksiyon dönüş değerleriyle
 def bolme_islemi(a, b):
