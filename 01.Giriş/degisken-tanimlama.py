@@ -1,17 +1,17 @@
-###
-print("-" * 45)
+### Çoklu Atama - Tek satırda birden fazla değişken atama.
+
 x, y, z = 1, "2", 3.0
 
 print(x, type(x))
 print(y, type(y))
-print(z, type(z), "\n")
+print(z, type(z))
 
-x = y = z = 4 #x, y, z = 4, 4, 4
+# Aynı Değeri Birden Fazla Değişkene Atama
+x = y = z = 4 # x, y, z = 4, 4, 4
 print(x, y, z)
 
 #################################################
 
-print("-" * 45)
 import keyword
 print("Kullanabileceğimiz Fonksiyonlar (keyword) :\n", dir(keyword), sep="", end="\n\n")
 
@@ -19,7 +19,6 @@ a = keyword.kwlist
 print("Tanımlayamayacağımız Değişken İsimleri :\n", a, sep="")
 print("-" * 45)
 print("Yasaklı Kelime Adedi :", len(a))
-print("-" * 45, end="\n\n")
 
 ###
 import keyword
@@ -56,20 +55,8 @@ pi = 3.14159
 alan = pi * yari_cap * yari_cap
 cevre = 2 * pi * yari_cap
 
-print(45 * "-")
 print("Yarıçapı " + str(int(yari_cap)) + " Olan Dairenin Alanı : " + str(alan))
 print("Yarıçapı", int(yari_cap) ,"Olan Dairenin Çevresi :", cevre)
-print(45 * "-", end="\n\n")
-
-################################################
-
-print(45 * "-")
-print("İki üzeri üç :", 2**3) #8
-print("Üç üzeri iki :", pow(3,2)) #9
-print("Dörtün karekökü :", pow(4,0.5)) #2
-print("Üç üzeri iki bölü iki kalan :", pow(3,2,2)) #1
-print("Üç üzeri iki bölü üç kalan :", pow(3,2,3)) #0
-print("-" * 45, end="\n\n")
 
 ################################################
 
@@ -82,44 +69,39 @@ mart_fatura_tutari = 273.87
 birim_fiyat = mart_fatura_tutari / mart_aylik_sarfiyat
 gunluk_sarfiyat = mart_aylik_sarfiyat / mart
 nisan_fatura = nisan * gunluk_sarfiyat * birim_fiyat
-print("-" * 45)
+
 print("Nisan Ayı Faturası : ", nisan_fatura)
-print("-" * 45, end="\n\n")
 
 ################################################
 
-print("-" * 45)
 osman = "Araştırma Geliştirme Müdürü"
 mehmet = "Proje Sorumlusu"
 
 print("Osman :", osman)
 print("Mehmet :", mehmet)
-print("·—" * 22)
+
 #Değisken değerlerini takas etme...
 osman, mehmet = mehmet, osman
 print("Osman :", osman)
 print("Mehmet :", mehmet)
-print("-" * 45)
 
-################################################
+#################################################
 
 # Bir listeden değişkenlere atama
 koordinatlar = [41.01, 28.97]
-print(f"{koordinatlar} {type(koordinatlar)}")
+print(koordinatlar, type(koordinatlar))  # [41.01, 28.97] <class 'list'>
 
 enlem, boylam = koordinatlar
-print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")
+print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")  # Enlem: 41.01 <class 'float'>, Boylam: 28.97 <class 'float'>
 
-################################################
-
-# Bir karakter dizisinden değişkenlere atama
+# Karakter dizisinden değişkenlere atama
 koordinatlar = "41.01, 28.97"
-print(f"{koordinatlar} {type(koordinatlar)}")
+print(koordinatlar, type(koordinatlar))  # 41.01, 28.97 <class 'str'>
 
 enlem, boylam = koordinatlar.split(", ")
-print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")
-
-################################################
+enlem = float(enlem)
+boylam = float(boylam)
+print(f"Enlem: {enlem} {type(enlem)}, Boylam: {boylam} {type(boylam)}")  # Enlem: 41.01 <class 'float'>, Boylam: 28.97 <class 'float'>
 
 # Fonksiyon dönüş değerleriyle
 def bolme_islemi(a, b):
@@ -128,5 +110,8 @@ def bolme_islemi(a, b):
     return bolum, kalan
 
 sonuc, kalan = bolme_islemi(17, 5)
-print(f"17 / 5 = {sonuc}, kalan {kalan}")
-# 17 / 5 = 3, kalan 2
+print(sonuc, type(sonuc))  # 3 <class 'int'>
+print(kalan, type(kalan))  # 2 <class 'int'>
+print(f"17 / 5 = {sonuc}, kalan {kalan}")  # 17 / 5 = 3, kalan 2
+
+##################################################
