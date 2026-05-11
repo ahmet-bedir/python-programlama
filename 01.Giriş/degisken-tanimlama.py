@@ -1,3 +1,34 @@
+"""
+Bir değişken oluşturduğunda:
+
+- Python önce değeri (nesneyi) bellekte oluşturur
+
+- Sonra değişken ismini bu nesneye "yapıştırır"
+
+---
+x = 42
+
+Python bellekte 42 değerini taşıyan bir int nesnesi oluşturur
+
+x ismini bu nesneye bağlar (etiketler)
+
+---
+x = 42
+y = x
+
+x de — y de aynı 42 nesnesine yapıştırılan bir etikettir. İki etiket, bir nesne.
+
+---
+x = 42
+y = x
+print(x is y)  # True — aynı nesne!
+
+x = 99
+print(y)  # 42 — y hâlâ eski nesneye bağlı
+
+x = 99 dediğinde x etiketi eski nesneden koparılıp yeni 99 nesnesine yapıştırılır. y hâlâ 42'ye bağlı kalır. Etiketler bağımsızdır.
+"""
+
 ### Çoklu Atama - Tek satırda birden fazla değişken atama.
 
 x, y, z = 1, "2", 3.0
@@ -138,7 +169,7 @@ if isinstance(x, int):
 print(type(True) == int)        # False
 print(isinstance(True, int))    # True — bool, int'in alt sınıfı
 
-###
+
 ### type() ile Dinamik Kontrol
 def akilli_toplama(a, b):
     if isinstance(a, str) and isinstance(b, str):
@@ -151,3 +182,47 @@ def akilli_toplama(a, b):
 print(akilli_toplama(3, 5))           # 8
 print(akilli_toplama("Merhaba", "Dünya"))  # Merhaba Dünya
 print(akilli_toplama("Skor: ", 100))   # Skor:100
+
+#################################################
+"""
+Değişken Türlerini Kontrol Etme
+Python dinamik tipli bir dildir. Bir değişkenin tipi çalışma zamanında belirlenir ve istediğin zaman değişebilir.
+"""
+x = 42          # int
+x = "merhaba"   # str — aynı değişken, farklı tip
+x = [1, 2, 3]   # list — yine değişti
+# Bu esneklik güçlü ama tehlikeli de olabilir. Python 3.5+ ile type hints (tip ipuçları) geldi:
+
+# Tip ipuçları — zorunlu değil ama okunabilirliği artırır
+isim: str = "Ali"
+yas: int = 25
+fiyat: float = 99.90
+aktif: bool = True
+"""
+Tip ipuçları Python tarafından zorlanmaz — sadece dokümantasyon ve araç desteği içindir. Ama büyük projelerde okunabilirliği dramatik şekilde artırır.
+"""
+def selamla(isim: str, resmi: bool = False) -> str:
+    if resmi:
+        return f"Sayın {isim}, hoş geldiniz."
+    return f"Selam {isim}!"
+
+sonuc = selamla("Ali")
+print(sonuc)  # Selam Ali!
+
+
+#################################################
+
+# Değişken Bilgilerini Görüntüleme
+
+def degisken_bilgi(isim, deger):
+    print(f"İsim:  {isim}")
+    print(f"Değer: {deger}")
+    print(f"Tip:   {type(deger).__name__}")
+    print(f"ID:    {id(deger)}")
+    print(f"Boyut: {deger.__sizeof__()} byte")
+    print("-" * 30)
+
+degisken_bilgi("sayi", 42)
+degisken_bilgi("metin", "Python")
+degisken_bilgi("liste", [1, 2, 3])
+degisken_bilgi("bos", None)

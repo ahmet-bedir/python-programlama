@@ -1,25 +1,26 @@
 ### 
 sayilar = "123456789"
 for sayi in sayilar:
-    print("{} x 2 = {}".format(sayi,int(sayi)*2))
+    print("{} x 2 = {}".format(sayi, int(sayi)*2))
+
 
 ### Karakter Dizilerinin Öğelerine Erişmek
-print('#'*40)
 a = "python"
-print(a[0],a[
-    1],a[2],a[3],a[4],a[5]) #p y t h o n
-print(a[0]) #p
+
+print(a[0], a[1], a[2], a[3], a[4], a[5]) # p y t h o n
+print(a[0]) # p
 print(len(a)) #6
 print(a[len(a)-1]) #n
 print(a[-1]) #n
 print(a[-5]) #y
-print('#'*40)
 
+
+###
 for i in range(len(a)):
-    print(a[i], end=' ') #p y t h o n
-print("\n")
+    print(a[i], end=' ') # p y t h o n
+
 for i in range(5):
-    print(a[i], end=' ') #p y t h o
+    print(a[i], end=' ') # p y t h o
 print('\n','#'*40,sep='')
 
 ###
@@ -27,20 +28,24 @@ isim = input("İsminiz : ")
 for i in range(len(isim)):
     print("isminizin {}.harfi : {}".format(i+1,isim[i]))
 
+
 ### Karakter Dizilerini Dilimlemek (karakter_dizisi[alınacak_ilk_öğenin_sırası:alınacak_son_öğenin_sırasının_bir_fazlası])
 site = "www.google.com.tr"
 print(site[0:3]) #www
 print(site[4:10]) #google
 print(site[15:18]) #tr
 
+
 ###
 site1 = "www.google.com.tr"
 site2 = "www.bing.com.tr"
 site3 = "www.yahoo.com.tr"
+
 for i in site1,site2,site3:
     print(i)
     print(i[4:-7])
     print(i[4:-4] + ".uk", "-"*25)
+
     
 ### bu atasözlerinin sonunda bulunan ünlem işaretlerini nokta işareti ile değiştirme.
 ata1 = "Akıllı bizi arayıp sormaz deli bacadan akar!"
@@ -53,6 +58,7 @@ for ata in ata1, ata2, ata3, ata4, ata5:
 
 ###    
 kardiz = "Sana Gül Bahçesi Vadetmedim"
+
 print(kardiz[0:4]) #Sana
 print(kardiz[:4]) #Sana
 print(kardiz[17:27]) #Vadetmedim
