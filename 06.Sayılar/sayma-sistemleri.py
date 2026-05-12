@@ -1,4 +1,22 @@
 ###
+# İkili (binary) — 0b öneki
+binary = 0b1010
+print(binary)  # 10
+
+# Sekizli (octal) — 0o öneki
+octal = 0o17
+print(octal)  # 15
+
+# Onaltılı (hexadecimal) — 0x öneki
+hexa = 0xFF
+print(hexa)  # 255
+
+# Dönüşüm fonksiyonları
+print(bin(255))  # '0b11111111'
+print(oct(255))  # '0o377'
+print(hex(255))  # '0xff'
+
+###
 sayi_sistemleri = ["onlu", "sekizli", "on altılı", "ikili"]
 
 print(("{:^9} "*len(sayi_sistemleri)).format(*sayi_sistemleri))
