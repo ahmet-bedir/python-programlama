@@ -9,3 +9,5 @@ print(z1 / z2)  # (-0.5+2.5j)
 # complex() fonksiyonu ile oluşturma
 z3 = complex(5, -2)  # 5 - 2j
 print(z3)  # (5-2j)
+
+#
