@@ -29,6 +29,7 @@ print(metin[-6])   # P — sondan altıncı = ilk karakter
 
 
 
+
 ###
 for i in range(len(a)):
     print(a[i], end=' ') # p y t h o n
@@ -43,11 +44,35 @@ for i in range(len(isim)):
     print("isminizin {}.harfi : {}".format(i+1,isim[i]))
 
 
-### Karakter Dizilerini Dilimlemek (karakter_dizisi[alınacak_ilk_öğenin_sırası:alınacak_son_öğenin_sırasının_bir_fazlası])
+### Karakter Dizilerini Dilimleme
+# karakter_dizisi[alınacak_ilk_öğenin_sırası:alınacak_son_öğenin_sırasının_bir_fazlası]
 site = "www.google.com.tr"
 print(site[0:3]) #www
 print(site[4:10]) #google
 print(site[15:18]) #tr
+
+
+###
+metin = "Python Programlama"
+
+# Temel dilimleme [başlangıç:bitiş]
+# başlangıç dahil, bitiş hariç!
+print(metin[0:6])     # Python
+print(metin[7:18])    # Programlama
+print(metin[7:])      # Programlama (sonuna kadar)
+print(metin[:6])      # Python (baştan)
+
+# Negatif indekslerle
+print(metin[-11:])    # Programlama
+print(metin[:-12])    # Python
+
+# Adım (step) ile
+print(metin[::2])     # Pto rgalm (her ikinci karakter)
+print(metin[::3])     # Ph ral
+
+# String'i ters çevir
+print(metin[::-1])    # amalmargorP nohtyP
+
 
 
 ###
