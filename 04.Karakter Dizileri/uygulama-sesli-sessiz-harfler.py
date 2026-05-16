@@ -10,6 +10,7 @@ for harf in kelime: #kelime değişkenindeki her karakteri 'harf' değişkenine 
         sesli += harf #'sesli' ye harf değişkenini ekle.
     else:
         sessiz += harf #yoksa 'sessiz' e ekle.
+        
 print("Kelime :", kelime)
 print("Sesliler :", sesli)
 print("Sessizler :", sessiz)

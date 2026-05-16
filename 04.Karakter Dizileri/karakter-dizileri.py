@@ -15,6 +15,20 @@ print(a[-1]) #n
 print(a[-5]) #y
 
 
+metin = "Python"
+#        P  y  t  h  o  n
+#        0  1  2  3  4  5    (pozitif indeks)
+#       -6 -5 -4 -3 -2 -1   (negatif indeks)
+
+print(metin[0])    # P — ilk karakter
+print(metin[1])    # y
+print(metin[5])    # n — son karakter
+print(metin[-1])   # n — sondan birinci
+print(metin[-2])   # o — sondan ikinci
+print(metin[-6])   # P — sondan altıncı = ilk karakter
+
+
+
 ###
 for i in range(len(a)):
     print(a[i], end=' ') # p y t h o n
