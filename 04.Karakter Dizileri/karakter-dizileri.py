@@ -73,7 +73,28 @@ print(metin[::3])     # Ph ral
 # String'i ters çevir
 print(metin[::-1])    # amalmargorP nohtyP
 
+###
+url = "https://www.example.com/sayfa"
 
+# Protokolü al
+protokol = url[:5]
+print(protokol)  # https
+
+# Domain'i al
+domain_baslangic = url.index("www")
+domain_bitis = url.index(".com") + 4
+domain = url[domain_baslangic:domain_bitis]
+print(domain)  # www.example.com
+
+# Son n karakteri al
+dosya = "rapor_2024.pdf"
+uzanti = dosya[-4:]
+print(uzanti)  # .pdf
+
+# İlk ve son karakteri at
+metin = "[önemli mesaj]"
+temiz = metin[1:-1]
+print(temiz)  # önemli mesaj
 
 ###
 site1 = "www.google.com.tr"

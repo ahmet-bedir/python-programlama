@@ -1,3 +1,4 @@
+######################
 ### capitalize() metodunun görevi karakter dizilerinin yalnızca ilk harfini büyütmektir.
 print("python".capitalize()) #Python
 a = "python programlama dili"
@@ -14,6 +15,7 @@ if a.startswith("i"):
 a = a.capitalize()
 print(a) #İstanbul
 
+########################
 ### title() metodu birden fazla kelimeden oluşan karakter dizilerinin her kelimesinin ilk harflerini büyütür.
 a = "python programlama dili"
 print(a.title()) #Python Programlama Dili
@@ -31,7 +33,8 @@ for kelime in metin.split():
         kelime = 'İ' + kelime[1:]
     kelime = kelime.title()
     print(kelime, end=' ') #Hükümet İstifa! On İki Ada
-    
+
+########################    
 ### swapcase() metodu bir karakter dizisi içindeki büyük harfleri küçük harfe; küçük harfleri de büyük harfe dönüştürür.
 kelime = "python"
 print(kelime.swapcase()) #PYTHON
@@ -57,6 +60,7 @@ print("ß".lower()) #ß
 
 print("ß".casefold()) #ss
 
+######################
 ### strip() metodu parametresiz olarak kullanıldığında, bir karakter dizisinin sağında veya solunda bulunan belli başlı karakterleri(boşluk, \n, \t vb) kırpar.
 ### lstrip() metodu karakter dizisinin sadece sol tarafındaki karakterleri kırpar.
 ### rstrip() metodu karakter dizisinin sadece sağ tarafındaki karakterleri kırpar.
@@ -65,7 +69,7 @@ print(kelime) #' istihza '
 
 print(kelime.strip()) #'istihza'
 
-print("kazak".strip('k').lstrip('a').rstrip('a')) #aza za z
+print("kazak".strip('k').lstrip('a').rstrip('a'))  # aza  za  z
 
 metin = """
 > Python programlama dili Guido Van Rossum adlı Hollandalı bir programcı tarafından
@@ -80,6 +84,16 @@ metin = """
 for i in metin.split():
     print(i.strip("> "), end=" ")
 
+###
+# Belirli karakterleri de temizleyebilirsin
+url = "///sayfa///"
+print(url.strip("/"))  # "sayfa"
+
+dosya = "rapor.txt\n"
+print(dosya.strip())   # "rapor.txt" — \n de temizlenir
+
+
+########################
 ### join() metodu karakter dizisine ait bölünmüş parçaları tekrar bir araya getirir.
 liste = ["Bjk","Jimnastik","Kulübü"]
 print(' '.join(liste)) #Bjk Jimnastik Kulübü

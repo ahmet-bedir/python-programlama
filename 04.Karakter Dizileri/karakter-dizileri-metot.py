@@ -1,9 +1,13 @@
+######################
+## String Metodları ##
+###################### 
 i = 0
 for metot in dir(str):
     if '_' not in metot:
         i += 1
         print("{}.{}".format(i,metot))
 
+#####################
 ### replace() bir karakter dizisi içindeki karakterleri başka karakterlerle değiştirmek için kullanılır.
 kelime = "elma"
 print(kelime.replace("e","E")) #Elma
@@ -11,6 +15,7 @@ print(kelime) #elma
 print("memleket".replace('e','')) #mmlkt
 print("memleket".replace('e','',2)) #mmlket
 
+#####################
 ### split() metodu üzerine uygulandığı karakter dizilerini parçalarına ayırır ve kelime kelime ayırarak böler, rsplit() metodu bölme işlemine sağdan başlar, splitlines() metodu bir karakter dizisini satır satır ayırmak için kullanılır.
 metin = "İstanbul Büyükşehir Belediyesi"
 
@@ -26,6 +31,26 @@ for i in range(len(kelimeler)):
 
 for kelime in metin.split():
     print(kelime[0], end='') #İBB
+
+##
+# split — string'i listeye çevir
+cumle = "Python çok güzel bir dil"
+kelimeler = cumle.split()
+print(kelimeler)  # ['Python', 'çok', 'güzel', 'bir', 'dil']
+
+# Belirli bir ayraçla
+tarih = "2024-01-15"
+parcalar = tarih.split("-")
+print(parcalar)  # ['2024', '01', '15']
+
+# CSV verisi
+satir = "Ali,25,İstanbul"
+alanlar = satir.split(",")
+print(alanlar)  # ['Ali', '25', 'İstanbul']
+
+# Maksimum bölme sayısı
+metin = "bir-iki-üç-dört"
+print(metin.split("-", 2))  # ['bir', 'iki', 'üç-dört']
     
 ##
 giris = input("Kısaltmasını öğrenmek istediğiniz kurum adını girin : ")
@@ -61,6 +86,7 @@ piton yılanından gelmez..."""
 print(metin.splitlines())
 print(metin.splitlines(True))
 
+###########################
 ### lower() metodu, karakter dizisindeki bütün harfleri küçük harfe çeviriyor.
 print("Kocaeli".lower()) #kocaeli
 
@@ -73,12 +99,14 @@ else:
 
 print("İstanbul Iğdır".replace('İ','i').replace('I','ı').lower()) #istanbul ığdır
 
+###########################
 ### upper() metodu, karakter dizisindeki bütün harfleri büyük harfe çeviriyor.
 print("konya".upper()) #KONYA
 
 print("izmit".upper()) #IZMIT
 print("izmit".replace('i','İ').upper()) #İZMİT
 
+###########################
 ### islower() metodu karakter dizisinin tamamen küçük harflerden oluşup oluşmadığını sorguluyor.
 print("python".islower()) #True
 print("Python".islower()) #False
@@ -89,6 +117,7 @@ if not ad.islower():
 else:
     print("İsminiz : ", ad)
 
+#########################
 ### isupper() metodu karakter dizisinin tamamen büyük harflerden oluşup oluşmadığını sorguluyor.
 print("PYTHON".isupper()) #True
 print("Python".isupper()) #False
@@ -103,6 +132,7 @@ for i in bol:
        print("Tamamı Büyük Harf Olmamalı!")
        break
 
+########################
 ### endswith() metodu bir karakter dizisinin hangi karakter dizisi ile bittiğini sorguluyor.
 print("izmit".endswith('it')) #True
 print("izmit".endswith('il')) #False
@@ -118,6 +148,7 @@ d8 = "dosya.avi"
 d9 = "perl.ogg"
 d10 = "c.avi"
 d11 = "c++.mp3"
+
 ## mp3 uzantılı dosyaları listeleme.
 for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11: #bütün değişkenleri for döngüsü içine alıyoruz.
     if i.endswith(".mp3"): #değişkenlerin herbirinin içeriğini tek tek kontrol ediyoruz, eğer baktığımız bu değişkenlerin değerleri “.mp3” ifadesi ile bitiyorsa...
@@ -127,6 +158,7 @@ for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11:
     if i[-4:len(i)] == ".ogg":
         print(i)
 
+########################
 ### startswith() metodu bir karakter dizisinin hangi karakter dizisi ile başladığını sorguluyor.
 for i in d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11:
     if i.startswith("p"): #yada (if i[0] == "p":)
