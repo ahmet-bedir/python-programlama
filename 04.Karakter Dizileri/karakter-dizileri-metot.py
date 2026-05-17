@@ -49,7 +49,7 @@ for i in range(len(kelimeler)):
 for kelime in metin.split():
     print(kelime[0], end='') #İBB
 
-##
+
 # split — string'i listeye çevir
 cumle = "Python çok güzel bir dil"
 kelimeler = cumle.split()
@@ -85,7 +85,7 @@ print(kardiz.split(', ')) #[Bolvadin', 'Kilis', 'Siverek', 'İskenderun', 'İsta
 print(metin.split(' ',1)) #['İstanbul', 'Büyükşehir Belediyesi']
 print(metin.rsplit(' ',1)) #['İstanbul Büyükşehir', 'Belediyesi']
 
-## split() metoduyla boşluklardan bölerek bir liste elde ettik. Bu listenin ilk öğesi, kullandığımız Python serisinin sürüm numarasını verecektir.
+# split() metoduyla boşluklardan bölerek bir liste elde ettik. Bu listenin ilk öğesi, kullandığımız Python serisinin sürüm numarasını verecektir.
 import sys
 print(sys.version.split()[0]) #3.12.1
 
@@ -180,3 +180,18 @@ for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11:
 for i in d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11:
     if i.startswith("p"): #yada (if i[0] == "p":)
         print(i)
+        
+###
+dosya = "rapor_2024.pdf"
+
+print(dosya.startswith("rapor"))   # True
+print(dosya.endswith(".pdf"))      # True
+print(dosya.endswith(".txt"))      # False
+
+# Birden fazla seçenekle (tuple)
+print(dosya.endswith((".pdf", ".doc", ".txt")))  # True
+
+# URL kontrolü
+url = "https://example.com"
+if url.startswith(("http://", "https://")):
+    print("Geçerli URL")

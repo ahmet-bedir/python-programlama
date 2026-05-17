@@ -76,14 +76,15 @@ print(metin)
 print(metin.translate(çeviri_tablosu))
 
 
-### isalpha() metodu bir karakter dizisinin ‘alfabetik’ olup olmadığını denetlemek için kullanılır.
+#######################
+### isalpha() metodu bir karakter dizisinin tamamının ‘alfabetik’ olup olmadığını denetlemek için kullanılır.
 a = "izmit"
 print(a.isalpha()) #True
 
 a = "izmit41"
 print(a.isalpha()) #False
 
-
+#######################
 ### isdigit() metodu bir karakter dizisinin 'sayı değerli karakter dizisi' olup olmadığını denetlemek için kullanılır.
 a = "123"
 print(a.isdigit()) #True
@@ -91,7 +92,7 @@ print(a.isdigit()) #True
 a = "123a"
 print(a.isdigit()) #False
 
-
+#######################
 ### isalnum() metodu bir karakter dizisinin ‘alfanümerik’ olup olmadığını denetlememizi sağlar.(sayı ve/veya harflerden oluşan karakter dizilerine alfanümerik karakter dizileri adı verilir)
 a = "123abc"
 print(a.isalnum()) #True
@@ -99,7 +100,24 @@ print(a.isalnum()) #True
 a = "123abc."
 print(a.isalnum()) #False
 
+###
+print("12345".isdigit())    # True
+print("123.45".isdigit())   # False (nokta rakam değil)
+print("12 34".isdigit())    # False (boşluk rakam değil)
 
+# isalpha — sadece harf mi?
+print("Python".isalpha())   # True
+print("Python3".isalpha())  # False
+
+# isalnum — harf veya rakam mı?
+print("Python3".isalnum())  # True
+print("Python 3".isalnum()) # False (boşluk)
+
+# isspace — sadece boşluk karakteri mi?
+print("   ".isspace())      # True
+print(" \t\n".isspace())    # True
+
+#######################
 ### isdecimal() metodu bir karakter dizisinin ondalık sayı cinsinden olup olmadığını denetlemek için kullanılır.
 a = "123"
 print(a.isdecimal()) #True
@@ -107,7 +125,7 @@ print(a.isdecimal()) #True
 a = "2.5"
 print(a.isdecimal()) #False
 
-
+#######################
 ### isidentifier() metodu, neyin tanımlayıcı olup neyin tanımlayıcı olamayacağını denetlememizi sağlar.(python’da değişkenler, fonksiyon ve modül adlarına ‘tanımlayıcı’ denir)
 #1a = 12 #değişken adları sayı ile başlayamaz.
 print("1a".isidentifier()) #False
@@ -115,13 +133,13 @@ print("1a".isidentifier()) #False
 a1 = 12
 print("a1".isidentifier()) #True
 
-
+#######################
 ### isnumeric() metodu bir karakter dizisinin nümerik olup olmadığını denetler. Yani bu metot yardımıyla bir karakter dizisinin sayı değerli olup olmadığını denetleyebiliriz.
 print("12".isnumeric()) #True
 
 print("dasd".isnumeric()) #False
 
-
+#######################
 ### isspace() bu metot yardımıyla bir karakter dizisinin tamamen boşluklardan oluşup oluşmadığını denetleyebiliriz.
 a = " "
 print(a.isspace()) #True
@@ -135,7 +153,7 @@ print(a.isspace()) #False
 a = "fd"
 print(a.isspace()) #False
 
-
+#######################
 ### isprintable() metodu bir karakterin basılabilen bir karakter mi yoksa basılmayan bir karakter mi olduğunu sorgular.(ekranda görünmeyen karakterlere ‘basılmayan karakterler’ (non-printing characters) adı verilir. ‘b’, ‘c’, ‘z’, ‘x’, ‘=’, ‘?’, ‘!’ ve benzeri karakterler ise ‘basılabilen karakterler’ (printable characters) olarak adlandırılır)
 karakter = "a"
 print(karakter.isprintable()) #True

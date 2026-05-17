@@ -1,10 +1,34 @@
+#######################
+# String Immutable'dır
+# Python'da string'ler immutable (değiştirilemez) nesnelerdir. Bir string oluşturduktan sonra onu doğrudan değiştiremezsin.
+mesaj = "Merhaba"
+
+# ❌ Bu hata verir
+# mesaj[0] = "m"  # TypeError: 'str' does not support item assignment
+
+# ✅ Yeni bir string oluştur
+mesaj = "merhaba"  # Yeni nesne, eski nesne çöpe gider
+
+# ✅ String metodları da yeni string döner
+buyuk = mesaj.upper()
+print(mesaj)  # merhaba — orijinal değişmedi
+print(buyuk)  # MERHABA — yeni String
+
+# id() ler farklı
+mesaj = "hello"
+print(id(mesaj))  # 140234567890
+
+mesaj = mesaj + " world"
+print(id(mesaj))  # 140234567999 — farklı id, farklı nesne!
+
+
 ### 
 sayilar = "123456789"
 for sayi in sayilar:
     print("{} x 2 = {}".format(sayi, int(sayi)*2))
 
 
-### Karakter Dizilerinin Öğelerine Erişmek
+### Karakter Dizilerinin Öğelerine Erişmek (indexleme)
 a = "python"
 
 print(a[0], a[1], a[2], a[3], a[4], a[5]) # p y t h o n
@@ -26,8 +50,6 @@ print(metin[5])    # n — son karakter
 print(metin[-1])   # n — sondan birinci
 print(metin[-2])   # o — sondan ikinci
 print(metin[-6])   # P — sondan altıncı = ilk karakter
-
-
 
 
 ###
@@ -72,6 +94,15 @@ print(metin[::3])     # Ph ral
 
 # String'i ters çevir
 print(metin[::-1])    # amalmargorP nohtyP
+
+# Dilimleme asla IndexError vermez. Sınır dışına çıksan bile Python sessizce uygun sonucu döner. "abc"[0:100] → "abc", "abc"[10:20] → "". Bu, indekslemeden farklıdır — tek karakter erişiminde sınır dışı hata verir.
+metin = "kısa"
+print(metin[0:100])   # kısa — hata yok
+print(metin[100:200]) # "" — boş string, hata yok
+
+# Ama indeksleme değil
+# print(metin[100])   # IndexError!
+
 
 ###
 url = "https://www.example.com/sayfa"
