@@ -98,6 +98,36 @@ print(dosya.strip())   # "rapor.txt" — \n de temizlenir
 liste = ["Bjk","Jimnastik","Kulübü"]
 print(' '.join(liste)) #Bjk Jimnastik Kulübü
 
+# join — listeyi string'e çevir
+kelimeler = ['Python', 'çok', 'güzel']
+
+print(" ".join(kelimeler))     # Python çok güzel
+print("-".join(kelimeler))     # Python-çok-güzel
+print(", ".join(kelimeler))    # Python, çok, güzel
+print("".join(kelimeler))      # Pythonçokgüzel
+
+# Dosya yolu oluşturma
+parcalar = ["home", "user", "documents", "rapor.txt"]
+yol = "/".join(parcalar)
+print(yol)  # home/user/documents/rapor.txt
+
+# join() sadece string listesiyle çalışır. Sayı listesini birleştirmek istiyorsan önce string'e çevir:
+print(", ".join(str(x) for x in [1, 2, 3]))  # "1, 2, 3"
+
+
+sayilar = [1, 2, 3]
+print(type(sayilar[0]))
+
+sayilar2 = []
+for i in sayilar:
+    sayilar2.append(str(i))
+    
+metin = ' '.join(sayilar2)
+print(metin)
+print(type(metin[0]))
+
+
+###################
 ### count() metodunun görevi bir karakter dizisi içinde belli bir karakterin kaç kez geçtiğini sorgulamaktır. 
 sehir = "Kahramanmaraş"
 print(sehir.count("a")) #5

@@ -15,6 +15,23 @@ print(kelime) #elma
 print("memleket".replace('e','')) #mmlkt
 print("memleket".replace('e','',2)) #mmlket
 
+###
+metin = "Python 2 harika, Python 2 hızlı"
+
+# Tüm eşleşmeleri değiştir
+yeni = metin.replace("Python 2", "Python 3")
+print(yeni)  # Python 3 harika, Python 3 hızlı
+
+# Sadece ilk n eşleşmeyi değiştir
+yeni2 = metin.replace("Python 2", "Python 3", 1)
+print(yeni2)  # Python 3 harika, Python 2 hızlı
+
+# Karakter silme
+metin = "  M e r h a b a  "
+temiz = metin.replace(" ", "")
+print(temiz)  # Merhaba
+
+
 #####################
 ### split() metodu üzerine uygulandığı karakter dizilerini parçalarına ayırır ve kelime kelime ayırarak böler, rsplit() metodu bölme işlemine sağdan başlar, splitlines() metodu bir karakter dizisini satır satır ayırmak için kullanılır.
 metin = "İstanbul Büyükşehir Belediyesi"

@@ -19,18 +19,42 @@ sayi1 = 3
 sayi2 = 2
 print(F'{sayi1} + {sayi2} = {sayi1+sayi2}')
 
+#
 fstring = "f-string"
 print(f"{{ {fstring} : f'{{ifade}}' şeklinde kullanılır. }}")
+# { f-string : f'{ifade}' şeklinde kullanılır. }
 
+# = ile değişken adını ve değerini birlikte gösterme.
 kaynak = "Python"
 sene = 2022
 print(f"{kaynak = } {sene = }")
+# kaynak = 'Python' sene = 2022
 
+x = 42
+y = "merhaba"
+z = [1, 2, 3]
+
+# = ile değişken adını ve değerini birlikte göster
+print(f"{x = }")    # x = 42
+print(f"{y = }")    # y = 'merhaba'
+print(f"{z = }")    # z = [1, 2, 3]
+
+# İfadelerle de çalışır
+print(f"{x * 2 = }")         # x * 2 = 84
+print(f"{len(z) = }")        # len(z) = 3
+print(f"{y.upper() = }")     # y.upper() = 'MERHABA'
+
+###
 print(f"|{kaynak:^20}|")
-print(f"{kaynak:#^20}")
+# |       Python       |
+print(f"|{kaynak:#^20}|")
+# |#######Python#######|
 print(f"|{kaynak:<20}|")
+# |Python              |
 print(f"|{kaynak:>20}|")
+# |              Python|
 print(f"|{kaynak:<020}|")
+# |Python00000000000000|
 
 #
 print(f'Sayıların toplamı {int(input("Birinci sayıyı girin: ")) + int(input("İkinci sayıyı girin: "))} eder.')
@@ -43,9 +67,47 @@ print(f"{sayi:0>+6}") #'00+123'
 
 print(f"{sayi:0=+6}") #'+00123'
 
+
+# Genişlik ve hizalama
+isim = "Ali"
+print(f"|{isim:<10}|")   # |Ali       | (sola hizalı)
+print(f"|{isim:>10}|")   # |       Ali| (sağa hizalı)
+print(f"|{isim:^10}|")   # |   Ali    | (ortalı)
+print(f"|{isim:*^10}|")  # |***Ali****| (yıldızla doldur)
+
+# Sayı formatlama
+sayi = 1234567.89
+print(f"{sayi:,.2f}")    # 1,234,567.89
+print(f"{sayi:>15,.2f}") #   1,234,567.89
+
+# Yüzde
+oran = 0.856
+print(f"{oran:.1%}")     # 85.6%
+
+# Sayı sistemleri
+x = 255
+print(f"{x:b}")   # 11111111
+print(f"{x:o}")   # 377
+print(f"{x:x}")   # ff
+print(f"{x:#x}")  # 0xff
+
+
 print(f"Binary: {sayi:b} | Octal: {sayi:o} | Hexadecimal: {sayi:x}") #'Binary: 1111011 | Octal: 173 | Hexadecimal: 7b'
 
 print(f"Binary: {sayi:#b} | Octal: {sayi:#o} | Hexadecimal: {sayi:#x}") #'Binary: 0b1111011 | Octal: 0o173 | Hexadecimal: 0x7b'
+
+# Çok Satırlı f-string
+isim = "Ali"
+yas = 25
+sehir = "İstanbul"
+
+bilgi = (
+    f"İsim: {isim}\n"
+    f"Yaş: {yas}\n"
+    f"Şehir: {sehir}"
+)
+print(bilgi)
+
 
 ondalik = 0.123
 print(f"{ondalik:.2f}") # f | F ondalık formatlama  '0.12'
