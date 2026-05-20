@@ -24,6 +24,18 @@ fstring = "f-string"
 print(f"{{ {fstring} : f'{{ifade}}' şeklinde kullanılır. }}")
 # { f-string : f'{ifade}' şeklinde kullanılır. }
 
+# Çok satırlı f-string
+isim = "Ali"
+yas = 25
+sehir = "İstanbul"
+
+bilgi = (
+    f"İsim: {isim}\n"
+    f"Yaş: {yas}\n"
+    f"Şehir: {sehir}"
+)
+print(bilgi)
+
 # = ile değişken adını ve değerini birlikte gösterme.
 kaynak = "Python"
 sene = 2022

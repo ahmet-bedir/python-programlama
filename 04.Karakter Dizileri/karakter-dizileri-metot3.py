@@ -1,3 +1,4 @@
+#######################
 ### str.maketrans(), translate()
 kaynak = "a"
 hedef  = "A"
@@ -84,6 +85,7 @@ print(a.isalpha()) #True
 a = "izmit41"
 print(a.isalpha()) #False
 
+
 #######################
 ### isdigit() metodu bir karakter dizisinin 'sayı değerli karakter dizisi' olup olmadığını denetlemek için kullanılır.
 a = "123"
@@ -91,6 +93,7 @@ print(a.isdigit()) #True
 
 a = "123a"
 print(a.isdigit()) #False
+
 
 #######################
 ### isalnum() metodu bir karakter dizisinin ‘alfanümerik’ olup olmadığını denetlememizi sağlar.(sayı ve/veya harflerden oluşan karakter dizilerine alfanümerik karakter dizileri adı verilir)
@@ -117,6 +120,7 @@ print("Python 3".isalnum()) # False (boşluk)
 print("   ".isspace())      # True
 print(" \t\n".isspace())    # True
 
+
 #######################
 ### isdecimal() metodu bir karakter dizisinin ondalık sayı cinsinden olup olmadığını denetlemek için kullanılır.
 a = "123"
@@ -124,6 +128,7 @@ print(a.isdecimal()) #True
 
 a = "2.5"
 print(a.isdecimal()) #False
+
 
 #######################
 ### isidentifier() metodu, neyin tanımlayıcı olup neyin tanımlayıcı olamayacağını denetlememizi sağlar.(python’da değişkenler, fonksiyon ve modül adlarına ‘tanımlayıcı’ denir)
@@ -133,11 +138,13 @@ print("1a".isidentifier()) #False
 a1 = 12
 print("a1".isidentifier()) #True
 
+
 #######################
 ### isnumeric() metodu bir karakter dizisinin nümerik olup olmadığını denetler. Yani bu metot yardımıyla bir karakter dizisinin sayı değerli olup olmadığını denetleyebiliriz.
 print("12".isnumeric()) #True
 
 print("dasd".isnumeric()) #False
+
 
 #######################
 ### isspace() bu metot yardımıyla bir karakter dizisinin tamamen boşluklardan oluşup oluşmadığını denetleyebiliriz.
@@ -153,6 +160,7 @@ print(a.isspace()) #False
 a = "fd"
 print(a.isspace()) #False
 
+
 #######################
 ### isprintable() metodu bir karakterin basılabilen bir karakter mi yoksa basılmayan bir karakter mi olduğunu sorgular.(ekranda görünmeyen karakterlere ‘basılmayan karakterler’ (non-printing characters) adı verilir. ‘b’, ‘c’, ‘z’, ‘x’, ‘=’, ‘?’, ‘!’ ve benzeri karakterler ise ‘basılabilen karakterler’ (printable characters) olarak adlandırılır)
 karakter = "a"
@@ -160,5 +168,3 @@ print(karakter.isprintable()) #True
 
 karakter = "\n"
 print(karakter.isprintable()) #False
-
-#############################

@@ -7,6 +7,7 @@ for metot in dir(str):
         i += 1
         print("{}.{}".format(i,metot))
 
+
 #####################
 ### replace() bir karakter dizisi içindeki karakterleri başka karakterlerle değiştirmek için kullanılır.
 kelime = "elma"
@@ -103,6 +104,7 @@ piton yılanından gelmez..."""
 print(metin.splitlines())
 print(metin.splitlines(True))
 
+
 ###########################
 ### lower() metodu, karakter dizisindeki bütün harfleri küçük harfe çeviriyor.
 print("Kocaeli".lower()) #kocaeli
@@ -116,12 +118,14 @@ else:
 
 print("İstanbul Iğdır".replace('İ','i').replace('I','ı').lower()) #istanbul ığdır
 
+
 ###########################
 ### upper() metodu, karakter dizisindeki bütün harfleri büyük harfe çeviriyor.
 print("konya".upper()) #KONYA
 
 print("izmit".upper()) #IZMIT
 print("izmit".replace('i','İ').upper()) #İZMİT
+
 
 ###########################
 ### islower() metodu karakter dizisinin tamamen küçük harflerden oluşup oluşmadığını sorguluyor.
@@ -133,6 +137,7 @@ if not ad.islower():
     print("Sadece Küçük Harf Kullanın!")
 else:
     print("İsminiz : ", ad)
+
 
 #########################
 ### isupper() metodu karakter dizisinin tamamen büyük harflerden oluşup oluşmadığını sorguluyor.
@@ -148,6 +153,7 @@ for i in bol:
     if i.isupper():
        print("Tamamı Büyük Harf Olmamalı!")
        break
+
 
 ########################
 ### endswith() metodu bir karakter dizisinin hangi karakter dizisi ile bittiğini sorguluyor.
@@ -174,6 +180,7 @@ for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11: #bütün değişkenleri f
 for i in d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11:
     if i[-4:len(i)] == ".ogg":
         print(i)
+
 
 ########################
 ### startswith() metodu bir karakter dizisinin hangi karakter dizisi ile başladığını sorguluyor.

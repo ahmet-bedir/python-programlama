@@ -15,6 +15,7 @@ if a.startswith("i"):
 a = a.capitalize()
 print(a) #İstanbul
 
+
 ########################
 ### title() metodu birden fazla kelimeden oluşan karakter dizilerinin her kelimesinin ilk harflerini büyütür.
 a = "python programlama dili"
@@ -33,6 +34,7 @@ for kelime in metin.split():
         kelime = 'İ' + kelime[1:]
     kelime = kelime.title()
     print(kelime, end=' ') #Hükümet İstifa! On İki Ada
+    
 
 ########################    
 ### swapcase() metodu bir karakter dizisi içindeki büyük harfleri küçük harfe; küçük harfleri de büyük harfe dönüştürür.
@@ -55,11 +57,13 @@ for k in kelime:
         kelime = kelime.replace(k, k.swapcase())
 print(kelime) #İSTANBUL
 
+
 #######################
 ### casefold()
 print("ß".lower()) #ß
 
 print("ß".casefold()) #ss
+
 
 #######################
 ### strip() metodu parametresiz olarak kullanıldığında, bir karakter dizisinin sağında veya solunda bulunan belli başlı karakterleri(boşluk, \n, \t vb) kırpar.
@@ -155,6 +159,7 @@ print("Metnin Tekrarlanmayan Harfleri :", tekle)
 for harf in tekle:
     print("'{}' harfi '{}' metni içinde {} kez geçiyor...".format(harf,metin,metin.count(harf)))
 
+
 ######################
 ### index() metodu karakter dizisi içinde aranan karakterin hangi sırada bulunduğunu öğrenmek için kullanılır.(soldan sağa doğru okur)
 ### rindex() metodu karakter dizisi içinde aranan karakterin hangi sırada bulunduğunu öğrenmek için kullanılır.(sağdan sola doğru okur)
@@ -194,6 +199,7 @@ for i in range(len(kelime)):
 print("adana".index('a')) #0
 print("adana".rindex('a')) #4
 
+
 ######################
 ### find() ve rfind() metotlarının görevi de bir karakter dizisi içindeki bir karakterin konumunu sorgulamaktır.
 kardiz = "adana"
@@ -232,6 +238,7 @@ print(metin.rfind("a"))  # 21 (son 'a')
 # Belirli bir aralıkta arama
 print(metin.find("o", 5))  
 
+
 #######################
 ### center() metodu karakter dizilerini ortalamak için kullanır.
 print('|' + 'a'.center(5) + '|') #|  a  |
@@ -259,6 +266,7 @@ print('5'.zfill(2)) #05
 for i in range(1,11):
     print(str(i).zfill(2), end=' ') #01 02 03 04 05 06 07 08 09 10
 
+
 #######################
 ### partition() metodu bir karakter dizisini belli bir ölçüte göre üçe böler.partition metodu karakter dizilerini soldan sağa doğru okur. rpartition() metodu ise sağdan sola doğru okur.
 print("istanbul".partition("an")) #('ist', 'an', 'bul')
@@ -266,9 +274,11 @@ print("istanbul".partition('f')) #('istanbul', '', '')
 print("istizha".partition('i')) #('', 'i', 'stizha')
 print("istizha".rpartition('i')) #('ist', 'i', 'zha')
 
+
 #######################
 ### encode() karakter dizilerini istediğimiz kodlama sistemine göre kodlamak için kullanır.
 print("çilek".encode("cp1254")) #b'\xe7ilek'
+
 
 #######################
 ### expandtabs() metodu karakter dizisi içindeki sekme boşluklarını genişletmek için kullanır.
