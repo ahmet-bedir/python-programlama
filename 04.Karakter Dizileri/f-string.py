@@ -108,18 +108,6 @@ print(f"Binary: {sayi:b} | Octal: {sayi:o} | Hexadecimal: {sayi:x}") #'Binary: 1
 
 print(f"Binary: {sayi:#b} | Octal: {sayi:#o} | Hexadecimal: {sayi:#x}") #'Binary: 0b1111011 | Octal: 0o173 | Hexadecimal: 0x7b'
 
-# Çok Satırlı f-string
-isim = "Ali"
-yas = 25
-sehir = "İstanbul"
-
-bilgi = (
-    f"İsim: {isim}\n"
-    f"Yaş: {yas}\n"
-    f"Şehir: {sehir}"
-)
-print(bilgi)
-
 
 ondalik = 0.123
 print(f"{ondalik:.2f}") # f | F ondalık formatlama  '0.12'
@@ -164,7 +152,46 @@ Muz         12.00 TL
 """
 
 ###
-
 yy, aa, gg = "2022-12-31".split("-")
 
 print(f"{gg}/{aa}/{yy} ({type(gg)}{type(aa)}{type(yy)})")
+
+
+##################
+### String Karşılaştırma
+## Her karakter unicode değerine göre karşılaştırılır.
+print("apple" < "banana")   # True (a < b)
+print("apple" < "apricot")  # True (3. karakter: p < r)
+print("ABC" < "abc")        # True (A=65, a=97)
+
+# Büyük/küçük harf duyarsız karşılaştırma
+s1 = "Python"
+s2 = "python"
+print(s1 == s2)                # False
+print(s1.lower() == s2.lower()) # True
+
+# in operatorü
+metin = "Python programlama dili"
+
+print("Python" in metin)      # True
+print("Java" in metin)        # False
+print("python" in metin)      # False (büyük-küçük harf duyarlı)
+print("program" in metin)     # True (alt string arama)
+
+# not in
+print("Java" not in metin)    # True
+
+# Koşulda kullanım
+email = "ali@example.com"
+if "@" in email and "." in email:
+    print("Geçerli e-posta formatı")
+    
+# Üyelik Kontrolü Deseni
+# Yasaklı kelime kontrolü
+yasak_kelimeler = ["spam", "reklam", "dolandırıcılık"]
+mesaj = "Bu bir reklam mesajıdır"
+
+for kelime in yasak_kelimeler:
+    if kelime in mesaj.lower():
+        print(f"Yasaklı kelime bulundu: {kelime}")
+        break
