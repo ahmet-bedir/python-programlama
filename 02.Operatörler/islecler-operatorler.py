@@ -30,6 +30,27 @@ print('#' * 45) #buradaki * işleci çarpma yerine string değeri verilen sayı 
 # <=    küçük veya eşittir  #
 #############################
 
+###
+x = 15
+
+# Zincirleme karşılaştırma — daha  okunaklı
+print(10 < x < 20)     # True (x, 10 ile 20 arasında mı?)
+print(1 <= x <= 100)    # True
+print(20 < x < 30)      # False
+
+# Diğer dillerde böyle yazmak gerekir:
+print(10 < x and x < 20)  # True — aynı şey ama daha uzun
+
+# Üçlü zincir
+a, b, c = 1, 2, 3
+print(a < b < c)        # True
+print(a < b > c)        # False
+
+# Eşitlik zinciri
+print(1 == 1 == 1)      # True
+print(1 == 1 == 2)      # False
+
+###
 parola = "123"
 giris = input("Parolayı Giriniz : ")
 
@@ -37,8 +58,8 @@ if parola == giris:
     print("Girilen Parola Doğru!")
 elif parola != giris:
     print("Girilen Parola Yanlış!")
-  
-  
+
+###
 sayi = input("sayı giriniz : ")
 
 if int(sayi) <= 100:
