@@ -170,4 +170,38 @@ print(selamla())         # Merhaba, Dünya!
 print(selamla("Ali"))    # Merhaba, Ali!
 
 ##############
-### 
+### None: Python'un "hiçbir şey" değeridir. Bir değişkenin henüz bir değeri olmadığını veya bir fonksiyonun bir şey döndürmediğini belirtir.
+
+# None şunlardan farklıdır:
+# 0 (bir sayı — değeri var, o değer sıfır)
+# "" (bir string — değeri var, o değer boş metin)
+# False (bir boolean — değeri var, o değer yanlış)
+# [] (bir liste — değeri var, o değer boş bir koleksiyon)
+# None ise "değer yok, tanımsız, belirsiz" demektir.
+print(type(None))      # <class 'NoneType'>
+print(type(0))         # <class 'int'>
+print(type(""))        # <class 'str'>
+print(type(False))     # <class 'bool'>
+
+#
+print(None == 0)       # False
+print(None == "")      # False
+print(None == False)   # False
+print(None == None)    # True
+
+##############
+# None kontrolünde her zaman is operatörü kullanılır, == değil.
+x = None
+
+# ✅ Doğru
+if x is None:
+    print("x None")
+
+# ✅ Doğru
+if x is not None:
+    print("x None değil")
+
+# ❌ Yanlış (çalışır ama doğru değil)
+if x == None:
+    print("x None")
+    
