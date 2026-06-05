@@ -168,3 +168,6 @@ def selamla(isim=None):
 
 print(selamla())         # Merhaba, Dünya!
 print(selamla("Ali"))    # Merhaba, Ali!
+
+##############
+### 
