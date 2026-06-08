@@ -205,3 +205,59 @@ if x is not None:
 if x == None:
     print("x None")
     
+##############
+# Bir fonksiyon açıkça return ifadesi kullanmazsa veya return tek başına kullanılırsa, None döner.
+def selamla(isim):
+    print(f"Merhaba, {isim}!")
+    # return yok → None döner
+
+sonuc = selamla("Ali")
+print(sonuc)       # None
+print(type(sonuc)) # <class 'NoneType'>
+
+###
+# return tek başına da None döner
+def ara_ve_dur(liste, hedef):
+    for eleman in liste:
+        if eleman == hedef:
+            print(f"{hedef} bulundu!")
+            return  # None döner
+    print(f"{hedef} bulunamadı")
+    # return yok → None döner
+
+sonuc = ara_ve_dur([1, 2, 3], 2)
+print(sonuc)  # None
+
+##############
+### any() — En az bir True varsa True döner
+print(any([False, False, True]))   # True
+print(any([False, False, False]))  # False
+print(any([]))                      # False (boş → False)
+
+# Pratik kullanım
+notlar = [45, 72, 38, 91, 55]
+gecen_var_mi = any(n >= 50 for n in notlar)
+print(f"Geçen öğrenci var mı? {gecen_var_mi}")  # True
+
+# String kontrolü
+sifre = "MyPassword123"
+has_digit = any(c.isdigit() for c in sifre)
+len_digit = 0
+for c in sifre:
+    if c.isdigit():
+        len_digit += 1
+        
+has_upper = any(c.isupper() for c in sifre)
+len_upper = 0
+for c in sifre:
+    if c.isupper():
+        len_upper += 1
+
+has_lower = any(c.islower() for c in sifre)
+len_lower = 0
+for c in sifre:
+    if c.islower():
+        len_lower += 1
+
+print(f"Şifre: {sifre}")
+print(f"Rakam: {has_digit} -> {len_digit}\nBüyük: {has_upper} -> {len_upper}\nKüçük: {has_lower} -> {len_lower}")
