@@ -38,7 +38,7 @@ falsy_degerler = [
 
 for deger in falsy_degerler:
     print(f"bool({str(deger)}) = {bool(deger)}")
-    
+
 # Bunların hepsi True olarak değerlendirilir
 truthy_degerler = [
     True,           # bool True
@@ -54,9 +54,13 @@ truthy_degerler = [
 
 for deger in truthy_degerler:
     print(f"bool({str(deger):15s}) = {bool(deger)}")
-    
-    
+
+
 ###
+liste = []
+aktif = True
+isim = "ali"
+
 # ❌ Gereksiz karşılaştırma
 if len(liste) > 0:
     print("Liste dolu")
@@ -76,16 +80,16 @@ if aktif:
 
 if isim:
     print("İsim var")
-    
+
 # Boş kontrolleri
 def kullanici_bilgi(isim, email=None, telefon=None):
     print(f"İsim: {isim}")
-    
+
     if email:
         print(f"E-posta: {email}")
     else:
         print("E-posta belirtilmemiş")
-    
+
     if telefon:
         print(f"Telefon: {telefon}")
     else:
@@ -118,13 +122,13 @@ print("5" == 5)    # False — hata vermez ama False döner
 def giris_kontrol(kullanici_adi, sifre, aktif_mi):
     if not kullanici_adi or not sifre:
         return "Kullanıcı adı ve şifre gerekli!"
-    
+
     if not aktif_mi:
         return "Hesabınız aktif değil!"
-    
+
     if len(sifre) < 8:
         return "Şifre en az 8 karakter olmalı!"
-    
+
     return "Giriş başarılı!"
 
 print(giris_kontrol("ali", "12345678", True))   # Giriş başarılı!
@@ -145,13 +149,13 @@ else:
 liste = []
 if liste and liste[0] > 5:  # Boş liste → IndexError olmaz!
     print("İlk eleman 5'ten büyük")
-    
+
 # or operatöründe ilk değer True ise, ikinci değere bakmaya gerek yok — sonuç zaten True
 # İlk koşul True → ikinci koşul hiç çalışmaz
 x = 10
 if x > 5 or cok_pahali_fonksiyon():  # Bu fonksiyon çağrılmaz!
     print("Koşul sağlandı")
-    
+
 ##############
 # Varsayılan Değer Deseni
 # or operatörünün bu davranışı, varsayılan değer atamak için kullanılır:
@@ -204,7 +208,7 @@ if x is not None:
 # ❌ Yanlış (çalışır ama doğru değil)
 if x == None:
     print("x None")
-    
+
 ##############
 # Bir fonksiyon açıkça return ifadesi kullanmazsa veya return tek başına kullanılırsa, None döner.
 def selamla(isim):
@@ -246,7 +250,7 @@ len_digit = 0
 for c in sifre:
     if c.isdigit():
         len_digit += 1
-        
+
 has_upper = any(c.isupper() for c in sifre)
 len_upper = 0
 for c in sifre:
