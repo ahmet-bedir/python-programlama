@@ -45,10 +45,8 @@ print(f"{buyuk:.3e}")   # 6.022e+23
 print(f"{kucuk:.2e}")   # 1.60e-19
 print(f"{buyuk:.3E}")   # 6.022E+23 (büyük E)
 
-Farklı Sayı Sistemleri
-python
+# Farklı Sayı Sistemleri
 
-Kopyala
 sayi = 255
 
 print(f"{sayi:b}")   # 11111111 (binary)
@@ -61,10 +59,8 @@ print(f"{sayi:d}")   # 255 (decimal)
 print(f"{sayi:#b}")  # 0b11111111
 print(f"{sayi:#o}")  # 0o377
 print(f"{sayi:#x}")  # 0xff
-İşaret Gösterimi
-python
 
-Kopyala
+# İşaret Gösterimi
 # Pozitif sayılarda da + göster
 print(f"{42:+d}")    # +42
 print(f"{-42:+d}")   # -42
