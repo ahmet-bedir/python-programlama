@@ -265,3 +265,23 @@ for c in sifre:
 
 print(f"Şifre: {sifre}")
 print(f"Rakam: {has_digit} -> {len_digit}\nBüyük: {has_upper} -> {len_upper}\nKüçük: {has_lower} -> {len_lower}")
+
+##############
+### all() - Hepsi True ise True döner
+print(all([True, True, True]))    # True
+print(all([True, False, True]))   # False
+print(all([]))                     # True (boş → True, dikkat!)
+
+# Pratik kullanım
+notlar = [65, 72, 58, 91, 55]
+hepsi_gecti_mi = all(n >= 50 for n in notlar)
+print(f"Herkes geçti mi? {hepsi_gecti_mi}")  # True
+
+# Form doğrulama
+form = {
+    "isim": "Ali",
+    "email": "ali@test.com",
+    "sifre": "12345678",
+}
+tum_alanlar_dolu = all(form.values())
+print(f"Tüm alanlar dolu mu? {tum_alanlar_dolu}")  # True
