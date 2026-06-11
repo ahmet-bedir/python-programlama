@@ -38,7 +38,7 @@ class Urun:
         sql = """INSERT  INTO products (product_name, price, product_image, description)
         VALUES (%s,%s,%s,%s);"""
         degerler = self.liste
-        imlec.executemany(sql,degerler) #executemany fonksiyonu, değer(value) olarak liste(list) alır.
+        imlec.executemany(sql,degerler)  # executemany fonksiyonu, değer(value) olarak liste(list) alır.
         try:
             self.baglanti.commit()
             print(f'{imlec.rowcount} tane kayıt eklendi')
@@ -52,7 +52,7 @@ class Urun:
     ###
     def urunListesi(self):
         imlec = self.baglanti.cursor()
-        sql = """SELECT * FROM products;""" #Tüm kayıtları çekmek istediğimiz için * kullanırız.
+        sql = """SELECT * FROM products;"""  # Tüm kayıtları çekmek istediğimiz için * kullanırız.
         # sql = """SELECT * FROM products ORDER BY product_name DESC;""" # product_name'na göre azalan sırada sıralamak istediğimiz için ORDER BY kullanırız. Ve DESC ile azalan sırada sıralarız. Eğer artan sırada sıralamak istiyorsak ASC kullanırız.
         imlec.execute(sql)
         try:
@@ -99,8 +99,8 @@ class Urun:
 
         
 ###
-nesneUrunEkle = Urun()
-nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
+# nesneUrunEkle = Urun()
+# nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
 
 ###
 # liste = [
@@ -115,10 +115,12 @@ nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
 ###
 nesneUrunleriListele = Urun()
 nesneUrunleriListele.urunListesi()
+print('-'*75)
 
 ###
 nesneUrunId = Urun()
 nesneUrunId.urunId(1)
+print('-'*75)
 
 ###
 nesneUrunBilgisi = Urun()
