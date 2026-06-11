@@ -66,3 +66,21 @@ print('Toplam :', toplam)
 
 sayi = int(float("1.2"))
 print(type(sayi))
+
+################
+# ord() — karakter → sayı (Unicode code point)
+print(ord('A'))    # 65
+print(ord('a'))    # 97
+print(ord('0'))    # 48
+print(ord('Z'))    # 90
+print(ord(' '))    # 32
+print(ord('ş'))    # 351
+print(ord('€'))    # 8364
+print(ord('🐍'))   # 128013
+
+# chr() — sayı → karakter
+print(chr(65))     # A
+print(chr(97))     # a
+print(chr(48))     # 0
+print(chr(351))    # ş
+print(chr(128013)) # 🐍

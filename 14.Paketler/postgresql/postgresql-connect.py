@@ -1,6 +1,6 @@
-import psycopg2
+import psycopg_binary
 
-dbConnect = psycopg2.connect(
+dbConnect = psycopg_binary.connect(
     host="127.0.0.1",
     database="postgres",
     user="postgres",

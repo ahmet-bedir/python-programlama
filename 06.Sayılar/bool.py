@@ -1,3 +1,4 @@
+################
 print(isinstance(True, int))   # True — bool, int'in alt sınıfı
 print(True == 1)    # True
 print(False == 0)   # True
@@ -15,7 +16,7 @@ print(f"5'ten büyük: {buyuk_sayisi}")  # 3 (Bu, her True bir 1 olduğu için �
 
 
 ################
-# Pratik: doğru cevap yüzdesi
+# Doğru cevap yüzdesi
 cevaplar = [True, False, True, True]
 basari_orani = sum(cevaplar) / len(cevaplar)
 print(f"Başarı: {basari_orani:.0%}")  # Başarı: 75%
