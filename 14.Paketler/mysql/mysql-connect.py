@@ -4,9 +4,9 @@ class Urun:
     def __init__(self):
         self.baglanti = mysql.connect(
             host = "127.0.0.1",
-            user = "ahmet",
-            password = "a",
-            database = "marketdb")
+            user = "user1",
+            password = "u1",
+            database = "market_vt")
         
     ###
     def urunEkle(self, urun_adi, fiyat, url, aciklama):
@@ -53,7 +53,7 @@ class Urun:
     def urunListesi(self):
         imlec = self.baglanti.cursor()
         sql = """SELECT * FROM products;""" #Tüm kayıtları çekmek istediğimiz için * kullanırız.
-        sql = """SELECT * FROM products ORDER BY product_name DESC;""" #product_name'na göre azalan sırada sıralamak istediğimiz için ORDER BY kullanırız. Ve DESC ile azalan sırada sıralarız. Eğer artan sırada sıralamak istiyorsak ASC kullanırız.
+        # sql = """SELECT * FROM products ORDER BY product_name DESC;""" # product_name'na göre azalan sırada sıralamak istediğimiz için ORDER BY kullanırız. Ve DESC ile azalan sırada sıralarız. Eğer artan sırada sıralamak istiyorsak ASC kullanırız.
         imlec.execute(sql)
         try:
             liste = imlec.fetchall() #fetchall fonksiyonu, tüm kayıtları liste(list) olarak döndürür.
@@ -99,8 +99,8 @@ class Urun:
 
         
 ###
-# nesneUrunEkle = Urun()
-# nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
+nesneUrunEkle = Urun()
+nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
 
 ###
 # liste = [
