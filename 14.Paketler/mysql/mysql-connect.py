@@ -6,7 +6,7 @@ class Urun:
             host = "127.0.0.1",
             user = "user1",
             password = "u1",
-            database = "market_vt")
+            database = "storedb")
         
     ###
     def urunEkle(self, urun_adi, fiyat, url, aciklama):
@@ -18,8 +18,11 @@ class Urun:
         imlec = self.baglanti.cursor()
         sql = """INSERT INTO products (product_name, price, product_image, description)
         VALUES (%s,%s,%s,%s);"""
-        degerler = (self.urun_adi, self.fiyat, self.url, self.aciklama)
-        imlec.execute(sql,degerler) #execute fonksiyonu, değer(value) olarak demet(tuple) alır.
+        degerler = (self.urun_adi,
+                    self.fiyat,
+                    self.url,
+                    self.aciklama)
+        imlec.execute(sql, degerler)  # execute fonksiyonu, değer(value) olarak demet(tuple) alır.
         try:
             self.baglanti.commit()
             print(f'{imlec.rowcount} tane kayıt eklendi')
@@ -104,10 +107,11 @@ class Urun:
 
 ###
 liste = [
-('Android Tv',20000,'and.png','hd'),
-('Elektirikli Süpürge',15000,'supurge.jpeg','sil süpür'),
-('Lc Tv',20000,'lcd.png','full hd'),
-('Çalı Süpürge',15000,'cali.jpeg','sil süpür'),
+('android tv',20000,'and.png','hd'),
+('elektirikli süpürge',15000,'supurge.jpeg','sil süpür'),
+('lc tv',20000,'lcd.png','full hd'),
+('dell laptop',15000,'dell.jpeg','güçlü pc'),
+('samsung s3',15000,'tel.jpeg','akıllı tel')
 ]
 nesneCokUrunEkle = Urun()
 nesneCokUrunEkle.cokUrunEkle(liste)
