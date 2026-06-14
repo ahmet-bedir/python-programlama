@@ -103,14 +103,14 @@ class Urun:
 # nesneUrunEkle.urunEkle("dell laptop",21000,"dell.jpg","dizüstü bilgisayar")
 
 ###
-# liste = [
-# ('Android Tv',20000,'and.png','hd'),
-# ('Elektirikli Süpürge',15000,'supurge.jpeg','sil süpür'),
-# ('Lc Tv',20000,'lcd.png','full hd'),
-# ('Çalı Süpürge',15000,'cali.jpeg','sil süpür'),
-# ]
-# nesneCokUrunEkle = Urun()
-# nesneCokUrunEkle.cokUrunEkle(liste)
+liste = [
+('Android Tv',20000,'and.png','hd'),
+('Elektirikli Süpürge',15000,'supurge.jpeg','sil süpür'),
+('Lc Tv',20000,'lcd.png','full hd'),
+('Çalı Süpürge',15000,'cali.jpeg','sil süpür'),
+]
+nesneCokUrunEkle = Urun()
+nesneCokUrunEkle.cokUrunEkle(liste)
 
 ###
 nesneUrunleriListele = Urun()
