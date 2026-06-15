@@ -61,6 +61,17 @@ print('Birleşim :', toplam)
 toplam = float(sayi1) + float(sayi2) #ondalıklı sayı girdiğimizde hata almamak için.
 print('Toplam :', toplam)
 
+
+###
+while True:
+    girdi = input("Bir tam sayı girin: ")
+    try:
+        sayi = int(girdi)
+        print(f"Girdiğiniz sayı: {sayi}")
+        break
+    except ValueError:
+        print(f"'{girdi}' geçerli bir tam sayı değil! Tekrar deneyin.")
+
 ###
 # sayi = int("1.2") #hata!
 
