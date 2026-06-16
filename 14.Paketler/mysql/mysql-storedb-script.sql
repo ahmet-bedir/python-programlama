@@ -1,8 +1,11 @@
--- 1. Veritabanı
+------------------------------------------------------
+-- sudo mysql -u root -p < mysql-storedb-script.sql --
+------------------------------------------------------
+-- Veritabanını oluştur
 CREATE DATABASE IF NOT EXISTS storedb;
 USE storedb;
 
--- 2. Tablolar
+-- Tabloları oluştur
 CREATE TABLE categories (
     category_id INT UNSIGNED AUTO_INCREMENT,
     category_name VARCHAR(30),
@@ -23,7 +26,7 @@ CREATE TABLE products (
         REFERENCES categories(category_id)
 ) ENGINE=InnoDB;
 
--- 3. Kategoriler tablosuna veri girişi
+-- Kategoriler tablosuna veri girişi
 INSERT INTO categories (category_name) VALUES
 ('Bilgisayarlar'),
 ('Çevre Birimleri'),
@@ -36,7 +39,7 @@ INSERT INTO categories (category_name) VALUES
 ('Ağ Ürünleri'),
 ('Görüntü Sistemleri');
 
--- 4. Ürünler tablosuna veri girişi
+-- Ürünler tablosuna veri girişi
 INSERT INTO products
 (product_name, price, product_image, description, registration_date, categoryid)
 VALUES
@@ -46,9 +49,10 @@ VALUES
 ('27 Inch Monitör', 7999.00, 'monitor.jpg', '2K IPS', '2026-01-22', 1),
 ('USB Bellek', 349.90, 'usb.jpg', '64GB', '2026-01-25', 3);
 
--- 5. Kullanıcı (SAFE)
+-- Kullanıcı (SAFE)
 DROP USER IF EXISTS 'user1'@'localhost';
 CREATE USER 'user1'@'localhost' IDENTIFIED BY 'u1';
+-- Kullanıcıya tam yetki ver
 GRANT ALL PRIVILEGES ON storedb.* TO 'user1'@'localhost';
 
 -- Kullanıcıları listele
