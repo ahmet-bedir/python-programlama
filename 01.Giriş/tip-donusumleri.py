@@ -122,3 +122,7 @@ print(buyuk)  # A
 
 # Tabii ki .upper() kullanmak daha iyi:
 print('a'.upper())  # A
+
+##################
+### bin(), oct(), hex(): Sayı Sistemleri
+
