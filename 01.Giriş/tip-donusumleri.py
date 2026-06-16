@@ -78,6 +78,7 @@ while True:
 sayi = int(float("1.2"))
 print(type(sayi))
 
+
 ################
 # ord() — karakter → sayı (Unicode code point)
 print(ord('A'))    # 65
@@ -95,3 +96,29 @@ print(chr(97))     # a
 print(chr(48))     # 0
 print(chr(351))    # ş
 print(chr(128013)) # 🐍
+
+
+###
+# ASCII tablosu yazdır
+for i in range(32, 127):
+    print(f"{i:3d} = {chr(i)}", end="  ")
+    if (i - 31) % 8 == 0:
+        print()
+
+# Harf → sıra numarası
+harf = 'C'
+sira = ord(harf) - ord('A') + 1
+print(f"'{harf}' alfabenin {sira}. harfi")  # 'C' alfabenin 3. harfi
+
+# Karakterleri kontrol et
+print(chr(65).isalpha())   # True — A
+print(chr(48).isdigit())   # True — 0
+print(chr(32).isspace())   # True — boşluk
+
+# Büyük-küçük harf dönüşümü (elle)
+karakter = 'a'
+buyuk = chr(ord(karakter) - 32)  # a(97) - 32 = A(65)
+print(buyuk)  # A
+
+# Tabii ki .upper() kullanmak daha iyi:
+print('a'.upper())  # A
