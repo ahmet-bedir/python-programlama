@@ -1,6 +1,7 @@
 ------------------------------------------------------
 -- sudo mysql -u root -p < mysql-storedb-script.sql --
 ------------------------------------------------------
+
 -- Veritabanını oluştur
 CREATE DATABASE IF NOT EXISTS storedb;
 USE storedb;
@@ -41,7 +42,8 @@ INSERT INTO categories (category_name) VALUES
 
 -- Ürünler tablosuna veri girişi
 INSERT INTO products
-(product_name, price, product_image, description, registration_date, categoryid)
+(product_name, price, product_image,
+description, registration_date, categoryid)
 VALUES
 ('Laptop', 34999.99, 'laptop.jpg', '16 GB RAM', '2026-01-15', 1),
 ('Mekanik Klavye', 2499.90, 'klavye.jpg', 'RGB', '2026-01-18', 2),
