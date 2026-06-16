@@ -126,3 +126,57 @@ print('a'.upper())  # A
 ##################
 ### bin(), oct(), hex(): Sayı Sistemleri
 
+sayi = 255
+
+# İkili (binary) — taban 2
+print(bin(sayi))   # '0b11111111'
+
+# Sekizli (octal) — taban 8
+print(oct(sayi))   # '0o377'
+
+# Onaltılı (hexadecimal) — taban 16
+print(hex(sayi))   # '0xff'
+
+# Ön ek olmadan
+print(bin(sayi)[2:])   # '11111111'
+print(oct(sayi)[2:])   # '377'
+print(hex(sayi)[2:])   # 'ff'
+
+# f-string ile (ön ek olmadan)
+print(f"{sayi:b}")     # 11111111
+print(f"{sayi:o}")     # 377
+print(f"{sayi:x}")     # ff
+print(f"{sayi:X}")     # FF (büyük harf)
+
+# Ön ek ile
+print(f"{sayi:#b}")    # 0b11111111
+print(f"{sayi:#o}")    # 0o377
+print(f"{sayi:#x}")    # 0xff
+
+# geri dönüşümü
+# String → int (belirli tabandan)
+print(int('11111111', 2))   # 255
+print(int('377', 8))        # 255
+print(int('ff', 16))        # 255
+print(int('0xff', 16))      # 255 (ön ekle de çalışır)
+print(int('0b11111111', 2)) # 255
+
+# Pratik: Renk kodu dönüşümü
+renk_hex = "#FF8C00"  # Koyu turuncu
+r = int(renk_hex[1:3], 16)  # 255
+g = int(renk_hex[3:5], 16)  # 140
+b = int(renk_hex[5:7], 16)  # 0
+print(f"RGB({r}, {g}, {b})")  # RGB(255, 140, 0)
+
+
+# Bit İşlemleri Gösterimi
+a = 0b1100  # 12
+b = 0b1010  # 10
+
+print(f"a       = {a:04b} ({a})")    # 1100 (12)
+print(f"b       = {b:04b} ({b})")    # 1010 (10)
+print(f"a & b   = {a & b:04b} ({a & b})")    # 1000 (8)
+print(f"a | b   = {a | b:04b} ({a | b})")    # 1110 (14)
+print(f"a ^ b   = {a ^ b:04b} ({a ^ b})")    # 0110 (6)
+
+
