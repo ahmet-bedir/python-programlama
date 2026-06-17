@@ -1,4 +1,8 @@
-### Python Programlama Dersleri
+<p align="center">
+    <img src="https://p1.hiclipart.com/preview/349/901/98/alternative-python-icons-and-folder-icon-python-1-png-clipart-thumbnail.jpg" width="457" />
+</p>
+
+### Python Programlama
 #### Sıfırdan İleri Seviye Python Programlama Dili 
 
 Dosya Yükleme İşlemi Devam Etmektedir...
