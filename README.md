@@ -1,4 +1,4 @@
-![](https://p1.hiclipart.com/preview/349/901/98/alternative-python-icons-and-folder-icon-python-1-png-clipart-thumbnail.jpg)
+![](https://u7.uidownload.com/vector/803/603/vector-python-logo-sketch-file-sketch.jpg)
 ### Python Programlama
 #### Sıfırdan İleri Seviye Python Programlama Dili 
 
