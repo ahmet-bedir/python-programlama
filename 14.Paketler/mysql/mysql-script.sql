@@ -1,6 +1,6 @@
-------------------------------------------------------
--- sudo mysql -u root -p < mysql-storedb-script.sql --
-------------------------------------------------------
+----------------------------------------------------
+----- sudo mysql -u root -p < mysql-script.sql -----
+----------------------------------------------------
 
 -- Veritabanını oluştur
 CREATE DATABASE IF NOT EXISTS storedb;
