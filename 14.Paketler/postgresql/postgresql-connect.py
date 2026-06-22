@@ -1,6 +1,6 @@
-import psycopg_binary
+import psycopg2
 
-dbConnect = psycopg_binary.connect(
+dbConnect = psycopg2.connect(
     host="127.0.0.1",
     database="postgres",
     user="postgres",
@@ -9,7 +9,7 @@ dbConnect = psycopg_binary.connect(
 )
 
 cur = dbConnect.cursor()
-sql = """SELECT * FROM kullanicilar;"""
+sql = """show data_directory;;"""
 cur.execute(sql)
 
 tableList = cur.fetchall()
