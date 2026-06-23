@@ -21,10 +21,14 @@ db_cursor.execute(sql)
 db_connect.commit()
 
 sql_insert = """
-INSERT INTO users (useruser_name) VALUES ('ahmet','ali');
+INSERT INTO users
+    (user_name)
+VALUES
+    ('ahmet'),
+    ('ali');
 """
 
-db_cursor.execute(sql_insert)
+db_cursor.execute(sql)
 db_connect.commit()
   
 db_connect.close()
