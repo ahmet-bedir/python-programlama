@@ -11,13 +11,20 @@ db_connect = psycopg2.connect(
 db_cursor = db_connect.cursor()
 
 sql = """
-CREATE TABLE public.users (
-	user_id SERIAL NOT NULL,
+CREATE TABLE IF NOT EXISTS public.users (
+	user_id SERIAL,
 	user_name VARCHAR(20) NULL,
 	CONSTRAINT users_pk PRIMARY KEY (user_id)
 );"""
 
-db_cursor.execute("select 4+4;")
-print(db_cursor.fetchone())
+db_cursor.execute(sql)
+db_connect.commit()
+
+sql_insert = """
+INSERT INTO users (useruser_name) VALUES ('ahmet','ali');
+"""
+
+db_cursor.execute(sql_insert)
+db_connect.commit()
   
 db_connect.close()
