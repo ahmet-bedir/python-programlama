@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS public.users (
 db_cursor.execute(sql)
 db_connect.commit()
 
-sql_insert = """
+sql = """
 INSERT INTO users
     (user_name)
 VALUES
@@ -30,5 +30,11 @@ VALUES
 
 db_cursor.execute(sql)
 db_connect.commit()
+
+sql = """SELECT * FROM users;"""
+db_cursor.execute(sql)
+user_list = db_cursor.fetchall()
+for user in user_list:
+    print(f"{user[0]} -> {user[1]}")
   
 db_connect.close()
