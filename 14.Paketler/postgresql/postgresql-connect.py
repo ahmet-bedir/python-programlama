@@ -1,6 +1,6 @@
-import psycopg2
+import psycopg
 
-db_connect = psycopg2.connect(
+db_connect = psycopg.connect(
     host="127.0.0.1",
     database="postgres",
     user="postgres",
