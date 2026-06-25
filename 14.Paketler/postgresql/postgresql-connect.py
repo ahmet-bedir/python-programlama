@@ -1,40 +1,41 @@
-import psycopg2
+import sys
+print(sys.path)
 
-db_connect = psycopg2.connect(
-    host="127.0.0.1",
-    database="postgres",
-    user="postgres",
-    password="postgres",
-    port="5432"
-)
+# db_connect = psycopg2_binary.connect(
+#     host="127.0.0.1",
+#     database="postgres",
+#     user="postgres",
+#     password="postgres",
+#     port="5432"
+# )
 
-db_cursor = db_connect.cursor()
+# db_cursor = db_connect.cursor()
 
-sql = """
-CREATE TABLE IF NOT EXISTS public.users (
-	user_id SERIAL,
-	user_name VARCHAR(20) NULL,
-	CONSTRAINT users_pk PRIMARY KEY (user_id)
-);"""
+# sql = """
+# CREATE TABLE IF NOT EXISTS public.users (
+# 	user_id SERIAL,
+# 	user_name VARCHAR(20) NULL,
+# 	CONSTRAINT users_pk PRIMARY KEY (user_id)
+# );"""
 
-db_cursor.execute(sql)
-db_connect.commit()
+# db_cursor.execute(sql)
+# db_connect.commit()
 
-sql = """
-INSERT INTO users
-    (user_name)
-VALUES
-    ('ahmet'),
-    ('ali');
-"""
+# sql = """
+# INSERT INTO users
+#     (user_name)
+# VALUES
+#     ('ahmet'),
+#     ('ali');
+# """
 
-db_cursor.execute(sql)
-db_connect.commit()
+# db_cursor.execute(sql)
+# db_connect.commit()
 
-sql = """SELECT * FROM users;"""
-db_cursor.execute(sql)
-user_list = db_cursor.fetchall()
-for user in user_list:
-    print(f"{user[0]} -> {user[1]}")
+# sql = """SELECT * FROM users;"""
+# db_cursor.execute(sql)
+# user_list = db_cursor.fetchall()
+# for user in user_list:
+#     print(f"{user[0]} -> {user[1]}")
   
-db_connect.close()
+# db_connect.close()
