@@ -52,3 +52,13 @@ print(data)
 # Kullanıcı şunu girerse:
 # __import__('os').system('rm -rf /')  → Tüm sistemi siler!
 # __import__('os').system('cat /etc/passwd')  → Şifreleri okur!
+
+###
+import ast
+
+a = ast.literal_eval(input("Güvenli Giriş: "))
+
+print(a)
+# ast.literal_eval tehlikeli kodu çalıştırmaz:
+# ast.literal_eval("__import__('os').system('ls')")  # ValueError!
+
