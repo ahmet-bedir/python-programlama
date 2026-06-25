@@ -44,6 +44,11 @@
 
 # print(d2)
 
+
+# ❌ Tip dönüşümü gibi kullanmak tehlikeli
 data = eval(input("Giriş: "))
 
 print(data)
+# Kullanıcı şunu girerse:
+# __import__('os').system('rm -rf /')  → Tüm sistemi siler!
+# __import__('os').system('cat /etc/passwd')  → Şifreleri okur!
