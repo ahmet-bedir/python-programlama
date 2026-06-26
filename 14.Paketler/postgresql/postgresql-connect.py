@@ -2,7 +2,7 @@ import psycopg
 
 db_connect = psycopg.connect(
     host="127.0.0.1",
-    database="postgres",
+    dbname="postgres",
     user="postgres",
     password="postgres",
     port="5432"
