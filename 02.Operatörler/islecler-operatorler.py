@@ -237,7 +237,17 @@ toplam = a + b + (c[0] + c[1])
 
 sonuc = carpim - toplam
 
-#
+# Walrus Operatörü (:=) ifadeyi değerlendirirken aynı anda değişkene atama yapar.
+# Walrus olmadan
+n = len("merhaba")
+if n > 5:
+    print(f"Uzun string: {n} karakter")
+
+# Walrus ile — atama ve kontrol tek satırda
+if (n := len("merhaba")) > 5:
+    print(f"Uzun string: {n} karakter")
+
+# walrus olmadan
 giris = len(input("Adın ne? "))
 if giris < 4:
     print("Adın kısaymış.")
@@ -254,7 +264,16 @@ elif giris < 6:
 else:
     print("Çok uzun bir adın var.")
 
-print('#' * 45)
+
+# Walrus olmadan
+satir = input("Giriş (q=çıkış): ")
+while satir != "q":
+    print(f"Yazdığınız: {satir}")
+    satir = input("Giriş (q=çıkış): ")
+
+# Walrus ile — daha temiz
+while (satir := input("Giriş (q=çıkış): ")) != "q":
+    print(f"Yazdığınız: {satir}")
 
 ################################
 # 5.Bitwise (Bitsel) İşleçleri #
