@@ -8,17 +8,32 @@
 # %   modülüs          #
 # //  taban bölme      #
 ########################
+
 print('#' * 45)
-print(2 + 3, 2.3 + 3.2)
-print(2 - 3, 9.3 - 1.2)
-print(2 * 3, 92.63 * 2.8)
-print(2 / 3, 8.4 / 2.2)
-print(2 ** 3)
+print(2.3 + 3.2)
+print(9.3 - 1.2)
+print(2.63 * 2.8)
+print(8.4 / 2.2)
+print(2 ** 3)  # 8
 print(4 ** 0.5) #bir sayının 0.5'inci kuvveti, o sayının kareköküdür.
 print("Python" + "Programlama") #buradaki + işleci toplama yerine string değerleri birleştirme işlemi yapıyor. 
-print(4 % 3) #kalanı verir.
-print(9 // 2) #tam bölme işlemi yapar.
-print('#' * 45) #buradaki * işleci çarpma yerine string değeri verilen sayı kadar tekrarlama işlemi yapıyor. 
+print(4 % 3)  # 1 (kalanı verir)
+print(9 // 2)  # 4 (tam bölme işlemi yapar)
+print('#' * 45)  # buradaki * işleci çarpma yerine string değeri verilen sayı kadar tekrarlama işlemi yapıyor. 
+
+### Çift/tek kontrolü
+for i in range(1, 11):
+    durum = "Çift" if i % 2 == 0 else "Tek"
+    print(f"{i:2d} → {durum}")
+
+##############
+### Tekli (Unary) Operatörler
+x = 5
+print(+x)   # 5 (pozitif — genellikle bir etkisi yok)
+print(-x)   # -5 (negatif)
+
+y = -3
+print(-y)   # 3 (negatifin negatifi)
 
 #############################
 # 2.Karşılaştırma İşleçleri #
@@ -30,10 +45,36 @@ print('#' * 45) #buradaki * işleci çarpma yerine string değeri verilen sayı 
 # <=    küçük veya eşittir  #
 #############################
 
-###
+x, y = 10, 20
+
+print(f"{x} == {y}: {x == y}")   # False
+print(f"{x} != {y}: {x != y}")   # True
+print(f"{x} <  {y}: {x < y}")    # True
+print(f"{x} >  {y}: {x > y}")    # False
+print(f"{x} <= {y}: {x <= y}")   # True
+print(f"{x} >= {y}: {x >= y}")   # False
+
+# Farklı Tiplerde Karşılaştırma
+# int ve float karşılaştırılabilir
+print(1 == 1.0)      # True
+print(1 < 1.5)        # True
+
+# bool ve int
+print(True == 1)       # True (bool int'in alt sınıfı)
+print(False == 0)      # True
+
+# String karşılaştırma (leksikografik — Unicode sırasına göre)
+print("apple" < "banana")   # True
+print("abc" == "abc")        # True
+print("A" < "a")             # True (A=65, a=97)
+
+# String'lerde büyüklük karşılaştırması karakter karakter yapılır
+print("abc" < "abd")    # True (3. karakter: c < d)
+print("abc" < "abcd")   # True (eşit başlangıç, kısa olan küçük)
+
+### Zincirleme karşılaştırma — daha  okunaklı
 x = 15
 
-# Zincirleme karşılaştırma — daha  okunaklı
 print(10 < x < 20)     # True (x, 10 ile 20 arasında mı?)
 print(1 <= x <= 100)    # True
 print(20 < x < 30)      # False
@@ -76,17 +117,17 @@ print('#' * 45)
 ### not    değil     ###
 ########################
 
-# 1- And 
+# 1- And (Her İkisi de True)
 # True, True => True
 # True, False => False
 # False, False => False
 
-# 2- Or
+# 2- Or (En Az Biri True)
 # True, True => True
 # True, False => True
 # False, False => False
 
-# 3- Not
+# 3- Not (Tersine Çevir)
 # False => True
 # True => False
 
@@ -118,6 +159,32 @@ print(not parola) #True
 parola = "123"
 print(bool(parola)) #True
 print(not parola) #False
+
+aktif = False
+if not aktif:
+    print("Hesap pasif")
+
+############
+### Short-Circuit (Kısa Devre)
+# and: İlk False'ta durur
+x = 0
+if x != 0 and 10 / x > 2:  # 10/0 hatası oluşmaz!
+    print("OK")
+
+# or: İlk True'da durur
+isim = "" or "Anonim"  # "Anonim"
+print(isim)
+
+# and ve or aslında operandlardan birini döner
+print(1 and 2 and 3)        # 3 (hepsi truthy → son değer)
+print(1 and 0 and 3)        # 0 (ilk falsy)
+print(0 or "" or "hello")   # "hello" (ilk truthy)
+print(0 or "" or [])         # [] (hepsi falsy → son değer)
+
+# Varsayılan Değer Deseni
+kullanici_adi = input("Kullanıcı adı: ") or "misafir"
+print(kullanici_adi)  # Kullanıcı ismini girerse ismi, enter ile boş değer girerse "misafir" değeri görünecektir.
+
 print('#' * 45)
 
 ###########################
@@ -135,18 +202,32 @@ print('#' * 45)
 
 a = 13
 
-a += 5 #a = a + 5 işlemiyle aynı işi yapar.
-a -= 5
-a *= 2 #a = a * 2
-a /= 2
-a %= 5 #a = a % 5
-a **= 2
-a //= 2 #a = a // 2
-print("Değer Atama İşleçleri :", a) #4
+a += 5  # 18 (a = a + 5 işlemiyle aynı işi yapar)
+a -= 5  # 13
+a *= 2  # 26 (a = a * 2)
+a /= 2  # 13
+a %= 5  # 3 (a = a % 5)
+a **= 2  # 9
+a //= 2  # 4 (a = a // 2)
+print(a)  # 4
 
-a, b, c = 4, 8, (12, 2)
+# String'lerle de çalışır
+mesaj = "Merhaba"
+mesaj += " Dünya"
+print(mesaj)  # Merhaba Dünya
+
+# Listelerle
+liste = [1, 2]
+liste += [3, 4]    # liste.extend([3, 4]) ile aynı
+print(liste)  # [1, 2, 3, 4]
+
+# *= ile tekrarlama
+cizgi = "-"
+cizgi *= 40
+print(cizgi)  # ----------------------------------------
 
 ### Kullanıcıdan aldığınız 2 sayının çarpımı ile a,b,c toplamının farkı nedir?
+a, b, c = 4, 8, (12, 2)
 
 sayi1 = int(input("sayı 1: "))
 sayi2 = int(input("sayı 2: "))
