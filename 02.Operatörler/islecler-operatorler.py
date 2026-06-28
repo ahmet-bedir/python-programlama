@@ -143,22 +143,22 @@ print("or :", 'a'=='ab' or 5==-6) #False
 print("not :", not 5==5) #False
 print("not :", not 5!=5) #True
 
-print(bool(3)) #True
-print(bool("py")) #True
-print(bool(" ")) #True
-print(bool("    ")) #True
-print(bool("0")) #True (0 bir sayı, “0”’ın ise bir karakter dizisidir. Sayı olan 0’ın bool değeri False’tur, ama karakter dizisi olan “0”’ın bool değeri True’dur)
-print(bool(0)) #False
-print(bool("")) #False
+print(bool(3))  # True
+print(bool("py"))  # True
+print(bool(" "))  # True
+print(bool("    "))  # True
+print(bool("0"))  # True (0 bir sayı, “0”’ın ise bir karakter dizisidir. Sayı olan 0’ın bool değeri False’tur, ama karakter dizisi olan “0”’ın bool değeri True’dur)
+print(bool(0))  # False
+print(bool(""))  # False
 
 
 parola = ""
-print(bool(parola)) #False
-print(not parola) #True
+print(bool(parola))  # False
+print(not parola)  # True
 
 parola = "123"
-print(bool(parola)) #True
-print(not parola) #False
+print(bool(parola))  # True
+print(not parola)  # False
 
 aktif = False
 if not aktif:
@@ -246,7 +246,7 @@ elif giris < 6:
 else:
     print("Çok uzun bir adın var.")
     
-#walrus operatörü ile
+# walrus operatörü ile
 if (giris := len(input("Adın ne? "))) < 4:
     print("Adın kısaymış.")
 elif giris < 6:
@@ -337,9 +337,9 @@ print('#' * 45)
 # in    aitlik işleci    #
 ##########################
 a = "abcd"
-print("a" in a) #True
+print("a" in a)  # True
 
-print("f" in a) #False
+print("f" in a)  # False
 print('#' * 45)
 
 ##########################
@@ -349,21 +349,21 @@ print('#' * 45)
 ##########################
 
 a = 100
-print("id :", id(a)) #137990748
+print("id :", id(a))  # 137990748
 
 k = "Dünya!"
-print("id :", id(k)) #14461728
+print("id :", id(k))  # 14461728
 
 
 a = 256
-print(a is 256) #True
+print(a is 256)  # True
 
 a = 257
-print(a is 257) #False
+print(a is 257)  # False
 
 a = -5
-print(a is -5) #True
+print(a is -5)  # True
 
 a = -6
-print(a is -6) #False
+print(a is -6)  # False
 print('#' * 45)
