@@ -362,6 +362,16 @@ print(85 in notlar.values())    # True (value'da aramak için)
 izinli = {"admin", "moderator", "editor"}
 print("admin" in izinli)       # True
 
+#############
+### Kullanıcı girdisi doğrulama
+gecerli_secenekler = ["EVET", "HAYIR", "E", "H"]
+
+cevap = input("Devam? (evet/hayır): ").upper().strip()
+if cevap in gecerli_secenekler:
+    print(f"Seçiminiz: {cevap}")
+else:
+    print("Geçersiz seçenek!")
+
 ##########################
 ### 7.Kimlik İşleçleri ###
 # id() identity (kimlik) #
