@@ -334,13 +334,33 @@ print('#' * 45)
 
 ##########################
 ### 6.Aitlik İşleçleri ###
-# in    aitlik işleci    #
+# in      aitlik işleci  #
+# not in  olumsuz        #
 ##########################
-a = "abcd"
-print("a" in a)  # True
+# Liste
+meyveler = ["elma", "armut", "muz"]
+print("elma" in meyveler)       # True
+print("portakal" in meyveler)   # False
+print("portakal" not in meyveler)  # True
 
-print("f" in a)  # False
-print('#' * 45)
+# String (alt string arama)
+metin = "Python programlama dili"
+print("Python" in metin)        # True
+print("Java" in metin)          # False
+
+# Tuple
+renkler = ("kırmızı", "yeşil", "mavi")
+print("yeşil" in renkler)      # True
+
+# Dictionary (key'lerde arar)
+notlar = {"Ali": 85, "Veli": 72}
+print("Ali" in notlar)          # True (key arar)
+print(85 in notlar)             # False (value'da aramaz)
+print(85 in notlar.values())    # True (value'da aramak için)
+
+# Set
+izinli = {"admin", "moderator", "editor"}
+print("admin" in izinli)       # True
 
 ##########################
 ### 7.Kimlik İşleçleri ###
