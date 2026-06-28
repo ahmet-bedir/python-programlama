@@ -397,3 +397,19 @@ print(a is -5)  # True
 a = -6
 print(a is -6)  # False
 print('#' * 45)
+
+# is operatörünün en yaygın kullanımı None kontrolüdür:
+x = None
+
+# ✅ Doğru yol
+if x is None:
+    print("x tanımsız")
+
+if x is not None:
+    print("x'in bir değeri var")
+
+# ❌ Yanlış yol (çalışır ama PEP 8'e aykırı)
+if x == None:
+    print("Bu da çalışır ama önerilmez")
+
+# ⚠️ Dikkat: Değer karşılaştırması için her zaman == kullan, is değil. is sadece None kontrolü ve özel durumlar için. is ile True/False kontrolü de yapma — if x is True: yerine if x: yaz.
