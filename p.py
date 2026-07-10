@@ -1,11 +1,14 @@
-import math
+not_ortalamasi = 78
 
-sayilar = [2, 5, 10, 15, 20, 25, 30]
+if not_ortalamasi >= 90:
+    harf = "AA"
+elif not_ortalamasi >= 80:
+    harf = "BA"
+elif not_ortalamasi >= 70:
+    harf = "BB"
+elif not_ortalamasi >= 60:
+    harf = "CB"
+else:
+    harf = "FF"
 
-# Walrus olmadan
-sonuclar = []
-for s in sayilar:
-    kok = math.sqrt(s)
-    if kok > 3:
-        sonuclar.append(kok)
-        print(sonuclar)
+print(f"Harf notun: {harf}")  # Harf notun: BB
