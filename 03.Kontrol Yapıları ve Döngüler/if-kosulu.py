@@ -72,6 +72,20 @@ else:
 print(f"Harf notun: {harf}")  # Harf notun: BB
 
 
+### Ternary Expression (Üçlü İfade)
+# değer_true if koşul else değer_false
+n = 7
+
+# Klasik yol
+if n > 0:
+    sonuc = "pozitif"
+else:
+    sonuc = "negatif"
+
+# Ternary yol
+sonuc = "pozitif" if n > 0 else "negatif"
+print(sonuc)  # pozitif
+
 
 ###
 _not = 51
