@@ -1,4 +1,4 @@
-not_ortalamasi = 78
+not_ortalamasi = 8
 
 if not_ortalamasi >= 90:
     harf = "AA"
