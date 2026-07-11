@@ -1,4 +1,4 @@
-not_ortalamasi = 8
+not_ortalamasi = 89
 
 if not_ortalamasi >= 90:
     harf = "AA"
@@ -12,7 +12,4 @@ else:
     harf = "FF"
 
 print(f"Harf notun: {harf}")  # Harf notun: BB
-
-kosul = (3 == 3)
-if kosul:
-    print("koşul sağlandığında çalışacak kod bloğu...")
+# ilk önce if bloğundaki koşula bakar 
