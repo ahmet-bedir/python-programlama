@@ -54,6 +54,25 @@ if login:
 # elif sayi > 20:
 #     print("sayı 20'den büyüktür.")
 #
+
+### Python koşulları yukarıdan aşağıya doğru sırayla kontrol eder. İlk True olan koşulun bloğu çalışır ve geri kalanlar atlanır.
+not_ortalamasi = 79
+
+if not_ortalamasi >= 90:
+    harf = "AA"
+elif not_ortalamasi >= 80:
+    harf = "BA"
+elif not_ortalamasi >= 70:
+    harf = "BB"
+elif not_ortalamasi >= 60:
+    harf = "CB"
+else:
+    harf = "FF"
+
+print(f"Harf notun: {harf}")  # Harf notun: BB
+
+
+
 ###
 _not = 51
 status = "Geçti" if _not > 50 else "Kaldı"
