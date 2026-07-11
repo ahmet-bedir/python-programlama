@@ -12,3 +12,7 @@ else:
     harf = "FF"
 
 print(f"Harf notun: {harf}")  # Harf notun: BB
+
+kosul = (3 == 3)
+if kosul:
+    print("koşul sağlandığında çalışacak kod bloğu...")

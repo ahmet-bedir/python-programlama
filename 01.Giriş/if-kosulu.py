@@ -1,22 +1,24 @@
-"""
-if <koşul>: #koşul True olduğunda kod bloğu çalışır, False olduğunda kod bloğu çalışmaz.
-    <kod bloğu>
-"""
+# koşul True olduğunda kod bloğu çalışır, False olduğunda kod bloğu çalışmaz.
+# if <koşul>: 
+#    <kod bloğu>
+
 # if True:
 #     print("kod bloğu...")
 #
 # if (False):
 #     print("kod bloğu...")
 
-#
+###
 kosul = (3 == 5)
 if kosul:
     print("koşul sağlandığında çalışacak kod bloğu...")
 
+###
 login = False
 if login:
     print("giriş başarılı...")
 
+###
 email = "info@gmail.com"
 parola = "123"
 login = (email == "inf@gmail.com") and (parola == "123")
