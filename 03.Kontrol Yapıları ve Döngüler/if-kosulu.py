@@ -101,3 +101,39 @@ def mutlak_deger(n):
 
 # f-string içinde
 print(f"Sayı {'çift' if n % 2 == 0 else 'tek'}")
+
+
+#################
+# Bunların hepsi False olarak değerlendirilir:
+falsy_degerler = [
+    False,      # Boolean False
+    None,       # None
+    0,          # Sıfır (int)
+    0.0,        # Sıfır (float)
+    0j,         # Sıfır (complex)
+    "",          # Boş string
+    [],         # Boş liste
+    {},         # Boş dictionary
+    set(),      # Boş set
+    (),         # Boş tuple
+    range(0),   # Boş range
+]
+
+for deger in falsy_degerler:
+    print(f"{str(deger):12} -> bool: {bool(deger)}")# Bunların hepsi False olarak değerlendirilir:
+falsy_degerler = [
+    False,      # Boolean False
+    None,       # None
+    0,          # Sıfır (int)
+    0.0,        # Sıfır (float)
+    0j,         # Sıfır (complex)
+    "",          # Boş string
+    [],         # Boş liste
+    {},         # Boş dictionary
+    set(),      # Boş set
+    (),         # Boş tuple
+    range(0),   # Boş range
+]
+
+for deger in falsy_degerler:
+    print(f"{str(deger):12} -> bool: {bool(deger)}")

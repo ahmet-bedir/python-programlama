@@ -23,6 +23,7 @@ match gun:
         print("Gün değil!")
 
 
+### Yapısal Desen Eşleştirme
 # Tuple pattern matching
 nokta = (3, 0)
 
@@ -35,3 +36,16 @@ match nokta:
         print(f"Y ekseninde, y={y}")
     case (x, y):
         print(f"Genel nokta: ({x}, {y})")
+
+# Guard (Koşullu Case)
+yas = 25
+
+match yas:
+    case n if n < 0:
+        print("Geçersiz yaş")
+    case n if n < 18:
+        print("Çocuk")
+    case n if n < 65:
+        print("Yetişkin")
+    case _:
+        print("Emekli")
