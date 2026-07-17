@@ -137,3 +137,21 @@ falsy_degerler = [
 
 for deger in falsy_degerler:
     print(f"{str(deger):12} -> bool: {bool(deger)}")
+
+###############
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a == b)   # True  — değerleri aynı
+print(a is b)   # False — farklı nesneler
+print(a is c)   # True  — aynı nesne
+
+# None kontrolünde her zaman is kullan
+x = None
+if x is None:      # ✅ Doğru
+    print("x None")
+if x == None:      # ❌ Çalışır ama tavsiye edilmez
+    print("x None")
+# == değer eşitliği, is kimlik eşitliği (aynı nesne mi?) kontrol eder. None, True, False kontrollerinde her zaman is kullan.
+
