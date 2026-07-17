@@ -91,3 +91,13 @@ print(sonuc)  # pozitif
 _not = 51
 status = "Geçti" if _not > 50 else "Kaldı"
 print(f"{status}")
+
+# Değişken ataması
+durum = "yetişkin" if yas >= 18 else "çocuk"
+
+# Return ifadesinde
+def mutlak_deger(n):
+    return n if n >= 0 else -n
+
+# f-string içinde
+print(f"Sayı {'çift' if n % 2 == 0 else 'tek'}")
