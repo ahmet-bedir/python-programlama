@@ -31,8 +31,15 @@ import numpy as np
 # print(f"Kaç boyutlu? {array3.ndim}")
 
 ###########
-array_list = np.array([1, 3, 5, 7, 9], ndmin=3)
-print(array_list)
+# array_list = np.array([1, 3, 5, 7, 9], ndmin=3)
+# print(array_list)
 
-array_list = np.arange(5, 16, 1)
-print(array_list)
+# array_list = np.arange(5, 16, 1)
+# print(array_list)
+# print(array_list[0])
+
+array_2d = np.array([
+    [4, 6, 8, 9],
+    [3, 1, 77, 87]
+])
+print(array_2d[0,2])
