@@ -6,5 +6,11 @@ print(arr.dtype)  # int64 (=8byte) (varsayılan uzunluk)
 arr = np.array(1, dtype=np.int8)
 print(arr.dtype)  # int8 (=1byte) (uzunluğu kendimiz belirledik)
 
-arr = np.array([1.22,5.38, dtype=np.int8)
+arr = np.array([1.22,5.38,8.41], dtype=np.float32)
 print(arr.dtype)  # int8 (=1byte)
+
+arr = np.array("ananaslar")
+print(arr.dtype)  # <U9
+
+# tür dönüşümü [float->int]
+arr = np.array([4.32, 6.41, 8.4])
