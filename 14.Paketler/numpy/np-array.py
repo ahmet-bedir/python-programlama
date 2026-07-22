@@ -38,10 +38,27 @@ import numpy as np
 # print(array_list)
 # print(array_list[0])
 
-array_2d = np.array([
-    [4, 6, 8, 9],
-    [3, 1, 77, 87]
+# array_2d = np.array([
+#     [4, 6, 8, 9],
+#     [3, 1, 77, 87]
+# ])
+# print(array_2d[0,2])  # 8
+# print(array_2d[:,0])  # [4 3]
+# print(array_2d[array_2d>75])  # [77 87]
+
+array_3d = np.array([
+    [
+        [1,2,3],
+        [4,5,6]
+    ],
+    [
+        [7,8,9],
+        [10,11,12]
+    ],
+    [
+        [13,14,15],
+        [16,17,18]
+    ]
 ])
-print(array_2d[0,2])  # 8
-print(array_2d[:,0])  # [4 3]
-print(array_2d[array_2d>75])  # [77 87]
+print(array_3d[0,0])  # [1 2 3]
+print(array_3d[0,0,2])  # 3
