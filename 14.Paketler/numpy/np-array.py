@@ -42,4 +42,6 @@ array_2d = np.array([
     [4, 6, 8, 9],
     [3, 1, 77, 87]
 ])
-print(array_2d[0,2])
+print(array_2d[0,2])  # 8
+print(array_2d[:,0])  # [4 3]
+print(array_2d[array_2d>75])  # [77 87]
